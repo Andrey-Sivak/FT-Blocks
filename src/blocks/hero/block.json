@@ -1,0 +1,47 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ft-blocks/hero",
+    "version": "0.1.0",
+    "title": "Hero Section",
+    "category": "design",
+    "icon": "cover-image",
+    "description": "A high-impact hero section with background and CTA.",
+    "supports": {
+        "html": false,
+        "align": [
+            "full",
+            "wide"
+        ]
+    },
+    "textdomain": "ft-blocks",
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": ""
+        },
+        "subHeading": {
+            "type": "string",
+            "default": ""
+        },
+        "backgroundImageId": {
+            "type": "number"
+        },
+        "backgroundImageUrl": {
+            "type": "string"
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "ctaUrl": {
+            "type": "string"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 0.5
+        }
+    },
+    "editorScript": "file:../../index.js",
+    "render": "file:./render.php"
+}

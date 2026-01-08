@@ -1,0 +1,40 @@
+# Directories
+/.git
+/.github
+/node_modules
+/vendor
+/tests
+/src
+
+# Files
+.distignore
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+.gitignore
+.prettierrc
+.prettierignore
+composer.json
+composer.lock
+package.json
+package-lock.json
+phpcs.xml.dist
+phpunit.xml
+phpunit.xml.dist
+README.md
+SECURITY.md
+CHANGELOG.md
+
+# Development files
+*.log
+*.map
+.DS_Store
+Thumbs.db
+*.zip
+
+# IDE files
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace

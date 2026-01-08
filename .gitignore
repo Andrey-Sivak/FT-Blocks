@@ -1,0 +1,11 @@
+# Node
+node_modules/
+build/
+*.log
+
+# PHP
+vendor/
+.phpunit.result.cache
+
+# System
+.DS_Store
