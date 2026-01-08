@@ -16,7 +16,7 @@ If you discover a potential security vulnerability in this project, please repor
 
 ### Where to report
 
-Please send an email to: [andrey.sivak.dev@gmail.com](mailto:andrey.sivak.dev@gmail.com)    
+Please send an email to: [andrey.sivak.dev@gmail.com](mailto:andrey.sivak.dev@gmail.com)
 
 ### What to include
 
