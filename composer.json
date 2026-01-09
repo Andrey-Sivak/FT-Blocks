@@ -1,6 +1,6 @@
 {
 	"name": "fotograf/ft-blocks",
-	"description": "Custom blocks for Fotograf",
+	"description": "Custom blocks for Fotografkadomca website",
 	"type": "wordpress-plugin",
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
