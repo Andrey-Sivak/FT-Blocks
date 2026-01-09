@@ -76,6 +76,9 @@ ft-blocks/
 ├── src/                # Source files
 │   ├── blocks/        # Block components
 │   │   └── hero/      # Hero block
+│   ├── components/    # Reusable UI components (e.g., ImageUploader)
+│   │   └── component/ # Hero block
+│   ├── shared/        # Shared utilities/constants (e.g., block icon config)
 │   └── index.js       # Main entry point
 ├── tests/             # PHPUnit tests
 ├── ft-blocks.php      # Main plugin file
