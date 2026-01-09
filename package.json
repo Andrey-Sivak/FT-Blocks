@@ -1,7 +1,6 @@
 {
   "name": "ft-blocks",
   "version": "1.0.0",
-  "author": "Antigravity",
   "license": "GPL-2.0-or-later",
   "main": "build/index.js",
   "scripts": {
@@ -18,4 +17,5 @@
     "prettier": "npm:wp-prettier@^3.0.3"
   }
 	"description": "Custom blocks for Fotografkadomca website",
+	"author": "Andrii Sivak",
 }
