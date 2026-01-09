@@ -1,37 +1,37 @@
 .ft-image-uploader {
 
-  &__frame {
-    position: relative;
-  }
+	&__frame {
+		position: relative;
+	}
 
-  &__image-button {
-    position: relative;
-    z-index: 1;
-    height: auto;
-    padding: 0;
-    border-radius: 0;
-  }
+	&__image-button {
+		position: relative;
+		z-index: 1;
+		height: auto;
+		padding: 0;
+		border-radius: 0;
+	}
 
-  &__image {
-    display: block;
-    max-width: 100%;
-  }
+	&__image {
+		display: block;
+		max-width: 100%;
+	}
 
-  &__actions {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.25rem;
-    z-index: 2;
-    top: 2%;
-    left: auto;
-    right: 2%;
+	&__actions {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.25rem;
+		z-index: 2;
+		top: 2%;
+		left: auto;
+		right: 2%;
 
-    &_btn {
-      background-color: #fff;
-      border-radius: 2px;
-      border: 1px solid #ccc;
-    }
-  }
+		&_btn {
+			background-color: #fff;
+			border-radius: 2px;
+			border: 1px solid #ccc;
+		}
+	}
 }
