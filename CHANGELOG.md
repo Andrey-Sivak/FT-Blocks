@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional custom blocks for photography websites.
 - Advanced customization options for existing blocks.
 - Performance optimization strategies.
+- Reusable ImageUploader component for manage images.
 
 ## [1.0.0] - 2026-01-08
 

@@ -12,6 +12,7 @@ FT Blocks is a WordPress plugin that provides custom Gutenberg blocks designed s
 - **Bilingual Support**: Full internationalization support for English and Czech languages
 - **Modern Development**: Built with React, JSX, and WordPress block editor APIs
 - **Code Quality**: Integrated linting and formatting tools (ESLint, Prettier, PHPCS)
+- **ImageUploader**: Reusable component to manage images directly in the editor.
 
 ## Requirements
 
