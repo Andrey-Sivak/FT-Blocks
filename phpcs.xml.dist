@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress Coding Standards for FT Blocks">
-	<description>A custom set of rules to check for FT Blocks</description>
+	<description>Strict ruleset for FT Blocks plugin</description>
 
-	<!--
-	Prevent errors caused by WordPress Coding Standards not supporting PHP 8.0+.
-	See https://github.com/WordPress/WordPress-Coding-Standards/issues/2035
-	-->
-	<ini name="error_reporting" value="E_ALL &#38; ~E_DEPRECATED" />
+	<!-- Avoid noisy deprecation notices from sniffs on newer PHP -->
+	<ini name="error_reporting" value="E_ALL &amp; ~E_DEPRECATED" />
 
+	<!-- Scan everything except vendor/node_modules/build and non-PHP assets -->
 	<file>.</file>
 	<exclude-pattern>/vendor/</exclude-pattern>
 	<exclude-pattern>/node_modules/</exclude-pattern>
@@ -15,24 +13,44 @@
 	<exclude-pattern>*.js</exclude-pattern>
 	<exclude-pattern>*.json</exclude-pattern>
 
-	<!-- Include the WordPress-Extra standard. -->
-	<rule ref="WordPress-Extra">
-		<!--
-		We may want a middle ground though. The best way to use this setup is
-		to migrate over to the new project structure first.
-		-->
-		<exclude name="WordPress.NamingConventions.PrefixAllGlobals" />
-	</rule>
+	<!-- WordPress coding standards (Extra) -->
+	<rule ref="WordPress-Extra" />
 
+	<!-- Enforce text domain for i18n -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="ft-blocks" />
+			<property name="text_domain" type="array">
+				<element value="ft-blocks"/>
+			</property>
 		</properties>
 	</rule>
 
+	<!-- Enforce prefixing for globals/functions/classes/constants/etc. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="ft_blocks"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Whitespace strictness -->
 	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
 		<properties>
 			<property name="blank_line_check" value="true" />
 		</properties>
 	</rule>
+
+	<!-- PHP compatibility checks for WordPress context -->
+	<rule ref="PHPCompatibilityWP">
+		<properties>
+			<!-- Target PHP version: adjust if you raise your plugin’s minimum -->
+			<property name="testVersion" value="7.4-"/>
+			<!-- Set minimum supported WP version (align with plugin readme/headers) -->
+			<property name="minimum_supported_wp_version" value="6.0"/>
+		</properties>
+	</rule>
+
+	<!-- Make sure WordPress functions are safe for installations before WP 6.0 -->
+    <config name="minimum_wp_version" value="6.0"/>
 </ruleset>
