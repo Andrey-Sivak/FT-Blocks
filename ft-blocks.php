@@ -16,15 +16,15 @@
  * @package FT_Blocks
  */
 
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 /**
  * Define Constants
  */
-define('FT_BLOCKS_PATH', plugin_dir_path(__FILE__));
-define('FT_BLOCKS_URL', plugin_dir_url(__FILE__));
+define( 'FT_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
+define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -33,8 +33,7 @@ define('FT_BLOCKS_URL', plugin_dir_url(__FILE__));
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function ft_blocks_init()
-{
+function ft_blocks_init() {
 	// Register all blocks in the build directory
 	// logic: we will iterate over subfolders in build/blocks if we structure it that way,
 	// or manually register specific blocks if they are distinct.
@@ -44,9 +43,9 @@ function ft_blocks_init()
 		'hero',
 	);
 
-	foreach ($blocks as $block) {
+	foreach ( $blocks as $block ) {
 		// We will target the build directory for block.json
-		register_block_type(FT_BLOCKS_PATH . 'build/blocks/' . $block);
+		register_block_type( FT_BLOCKS_PATH . 'build/blocks/' . $block );
 	}
 }
-add_action('init', 'ft_blocks_init');
+add_action( 'init', 'ft_blocks_init' );
