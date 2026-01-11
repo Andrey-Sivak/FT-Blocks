@@ -5,17 +5,12 @@ import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
 	RichText,
-	MediaUpload,
-	MediaUploadCheck,
 	InspectorControls,
 	URLInput,
 } from '@wordpress/block-editor';
-import {
-	Button,
-	PanelBody,
-	RangeControl,
-	TextControl,
-} from '@wordpress/components';
+import { PanelBody, TextControl } from '@wordpress/components';
+import { ImageUploader } from '../../components';
+import './editor.scss';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -27,18 +22,11 @@ import {
  * @param {Object}   props.attributes    Available block attributes.
  * @param {Function} props.setAttributes Function to update attributes.
  *
- * @return {Element} Element to render.
+ * @return {JSX.Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const {
-		heading,
-		subHeading,
-		backgroundImageUrl,
-		backgroundImageId,
-		ctaText,
-		ctaUrl,
-		overlayOpacity,
-	} = attributes;
+	const { heading, subHeading, backgroundImageUrl, ctaText, ctaUrl } =
+		attributes;
 
 	const onSelectImage = ( media ) => {
 		setAttributes( {
@@ -47,7 +35,15 @@ export default function Edit( { attributes, setAttributes } ) {
 		} );
 	};
 
+	const onRemoveImage = () => {
+		setAttributes( {
+			backgroundImageId: undefined,
+			backgroundImageUrl: undefined,
+		} );
+	};
+
 	const blockProps = useBlockProps( {
+		className: 'wp-block-ft-hero',
 		style: {
 			backgroundImage: backgroundImageUrl
 				? `url( ${ backgroundImageUrl } )`
@@ -70,43 +66,10 @@ export default function Edit( { attributes, setAttributes } ) {
 		<>
 			<InspectorControls>
 				<PanelBody title={ __( 'Background Settings', 'ft-blocks' ) }>
-					<MediaUploadCheck>
-						<MediaUpload
-							onSelect={ onSelectImage }
-							allowedTypes={ [ 'image' ] }
-							value={ backgroundImageId }
-							render={ ( { open } ) => (
-								<Button variant="secondary" onClick={ open }>
-									{ ! backgroundImageUrl
-										? __( 'Upload Image', 'ft-blocks' )
-										: __( 'Replace Image', 'ft-blocks' ) }
-								</Button>
-							) }
-						/>
-					</MediaUploadCheck>
-					{ backgroundImageUrl && (
-						<Button
-							variant="link"
-							isDestructive
-							onClick={ () =>
-								setAttributes( {
-									backgroundImageId: undefined,
-									backgroundImageUrl: undefined,
-								} )
-							}
-						>
-							{ __( 'Remove Image', 'ft-blocks' ) }
-						</Button>
-					) }
-					<RangeControl
-						label={ __( 'Overlay Opacity', 'ft-blocks' ) }
-						value={ overlayOpacity }
-						onChange={ ( value ) =>
-							setAttributes( { overlayOpacity: value } )
-						}
-						min={ 0 }
-						max={ 1 }
-						step={ 0.1 }
+					<ImageUploader
+						image={ backgroundImageUrl }
+						onSelect={ onSelectImage }
+						onRemove={ onRemoveImage }
 					/>
 				</PanelBody>
 				<PanelBody title={ __( 'CTA Settings', 'ft-blocks' ) }>
@@ -127,21 +90,6 @@ export default function Edit( { attributes, setAttributes } ) {
 			</InspectorControls>
 
 			<div { ...blockProps }>
-				{ /* Overlay */ }
-				<div
-					style={ {
-						position: 'absolute',
-						top: 0,
-						left: 0,
-						right: 0,
-						bottom: 0,
-						backgroundColor: `rgba( 0,0,0,${ overlayOpacity } )`,
-						zIndex: 0,
-					} }
-				>
-					{ ' ' }
-				</div>
-
 				<div style={ { position: 'relative', zIndex: 1 } }>
 					<RichText
 						tagName="h1"

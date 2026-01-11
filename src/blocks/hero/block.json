@@ -1,47 +1,46 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
-    "name": "ft-blocks/hero",
-    "version": "0.1.0",
-    "title": "Hero Section",
-    "category": "design",
-    "icon": "cover-image",
-    "description": "A high-impact hero section with background and CTA.",
-    "supports": {
-        "html": false,
-        "align": [
-            "full",
-            "wide"
-        ]
-    },
-    "textdomain": "ft-blocks",
-    "attributes": {
-        "heading": {
-            "type": "string",
-            "default": ""
-        },
-        "subHeading": {
-            "type": "string",
-            "default": ""
-        },
-        "backgroundImageId": {
-            "type": "number"
-        },
-        "backgroundImageUrl": {
-            "type": "string"
-        },
-        "ctaText": {
-            "type": "string",
-            "default": "Learn More"
-        },
-        "ctaUrl": {
-            "type": "string"
-        },
-        "overlayOpacity": {
-            "type": "number",
-            "default": 0.5
-        }
-    },
-    "editorScript": "file:../../index.js",
-    "render": "file:./render.php"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ft-blocks/hero",
+	"version": "0.1.0",
+	"title": "Hero Section",
+	"category": "design",
+	"description": "A high-impact hero section with background and CTA.",
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"align": [ "full", "wide" ]
+	},
+	"attributes": {
+		"anchor": {
+			"type": "string",
+			"default": ""
+		},
+		"heading": {
+			"type": "string",
+			"default": ""
+		},
+		"subHeading": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundImageId": {
+			"type": "number"
+		},
+		"backgroundImageUrl": {
+			"type": "string"
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Learn More"
+		},
+		"ctaUrl": {
+			"type": "string"
+		}
+	},
+	"textdomain": "ft-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
 }
