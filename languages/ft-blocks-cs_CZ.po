@@ -1,90 +1,89 @@
-# Copyright (C) 2026 Andrii Sivak
-# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: FT Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/app\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Czech <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-11T16:56:20+00:00\n"
+"POT-Creation-Date: 2026-01-10T20:14:48+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: cs_CZ\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
 
 #. Plugin Name of the plugin
 #: ft-blocks.php
 msgid "FT Blocks"
-msgstr ""
+msgstr "FT Blocks"
 
 #. Plugin URI of the plugin
 #: ft-blocks.php
 msgid "https://github.com/Andrey-Sivak/ft-blocks"
-msgstr ""
+msgstr "https://github.com/Andrey-Sivak/ft-blocks"
 
 #. Description of the plugin
 #: ft-blocks.php
 msgid "Custom Gutenberg blocks for fotografkadomca website."
-msgstr ""
+msgstr "Vlastní bloky Gutenberg pro web fotografkadomca."
 
 #. Author of the plugin
 #: ft-blocks.php
 msgid "Andrii Sivak"
-msgstr ""
+msgstr "Andrii Sivak"
 
 #. Author URI of the plugin
 #: ft-blocks.php
 msgid "https://github.com/Andrey-Sivak"
-msgstr ""
+msgstr "https://github.com/Andrey-Sivak"
 
 #: src/blocks/hero/edit.js:68
 msgid "Background Settings"
-msgstr ""
+msgstr "Nastavení pozadí"
 
 #: src/blocks/hero/edit.js:75
 msgid "CTA Settings"
-msgstr ""
+msgstr "Nastavení CTA"
 
 #: src/blocks/hero/edit.js:77
 msgid "Button Text"
-msgstr ""
+msgstr "Text tlačítka"
 
 #: src/blocks/hero/edit.js:87
 msgid "Link URL"
-msgstr ""
+msgstr "URL odkazu"
 
 #: src/blocks/hero/edit.js:100
 msgid "Enter Heading…"
-msgstr ""
+msgstr "Zadejte nadpis…"
 
 #: src/blocks/hero/edit.js:110
 msgid "Enter Subheading…"
-msgstr ""
+msgstr "Zadejte podnadpis…"
 
 #: src/components/ImageUploader/ImageUploader.jsx:13
 msgid "Add Image"
-msgstr ""
+msgstr "Přidat obrázek"
 
 #: src/components/ImageUploader/ImageUploader.jsx:23
 msgid "Image"
-msgstr ""
+msgstr "Obrázek"
 
 #: src/components/ImageUploader/ImageUploader.jsx:45
 msgid "Change image"
-msgstr ""
+msgstr "Změnit obrázek"
 
 #: src/components/ImageUploader/ImageUploader.jsx:56
 msgid "Remove image"
-msgstr ""
+msgstr "Odebrat obrázek"
 
 #: src/blocks/hero/block.json
 msgctxt "block title"
 msgid "Hero Section"
-msgstr ""
+msgstr "Hero sekce"
 
 #: src/blocks/hero/block.json
 msgctxt "block description"
 msgid "A high-impact hero section with background and CTA."
-msgstr ""
+msgstr "Výrazná hero sekce s pozadím a CTA."
