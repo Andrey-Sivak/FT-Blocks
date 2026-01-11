@@ -3,9 +3,7 @@
 	"apiVersion": 3,
 	"name": "ft-blocks/hero",
 	"version": "0.1.0",
-	"title": "Hero Section",
 	"category": "design",
-	"description": "A high-impact hero section with background and CTA.",
 	"supports": {
 		"anchor": true,
 		"html": false,

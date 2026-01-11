@@ -27,6 +27,20 @@ define( 'FT_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
 /**
+ * Load plugin text domain for translations
+ */
+if ( ! function_exists( 'ft_blocks_load_textdomain' ) ) {
+	function ft_blocks_load_textdomain() {
+		load_plugin_textdomain(
+			'ft-blocks',
+			false,
+			dirname( plugin_basename( __FILE__ ) ) . '/languages'
+		);
+	}
+}
+add_action( 'plugins_loaded', 'ft_blocks_load_textdomain' );
+
+/**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it also registers the assets so they can be enqueued
  * through the block editor in the corresponding context.
@@ -34,22 +48,44 @@ define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 if ( ! function_exists( 'ft_blocks_init' ) ) {
-    function ft_blocks_init()
-    {
-        // Register all blocks in the build directory
-        // logic: we will iterate over subfolders in build/blocks if we structure it that way,
-        // or manually register specific blocks if they are distinct.
-        // For now, let's look for known blocks.
+	function ft_blocks_init() {
+		$blocks = array(
+			'hero',
+		);
 
-        $blocks = array(
-            'hero',
-        );
-
-        foreach ($blocks as $block) {
-            // We will target the build directory for block.json
-            register_block_type(FT_BLOCKS_PATH . 'build/blocks/' . $block);
-        }
-    }
+		foreach ( $blocks as $block ) {
+			register_block_type(
+				FT_BLOCKS_PATH . 'build/blocks/' . $block,
+				array(
+					'title'       => __( 'Hero Section', 'ft-blocks' ),
+					'description' => __( 'A high-impact hero section with background and CTA.', 'ft-blocks' ),
+				)
+			);
+		}
+	}
 }
 
 add_action( 'init', 'ft_blocks_init' );
+
+/**
+ * Set script translations for block editor
+ */
+if ( ! function_exists( 'ft_blocks_set_script_translations' ) ) {
+	function ft_blocks_set_script_translations() {
+		$block_types = WP_Block_Type_Registry::get_instance()->get_all_registered();
+
+		foreach ( $block_types as $block_type ) {
+			// Only process our blocks
+			if ( str_starts_with( $block_type->name, 'ft-' ) ) {
+				$handle = str_replace( '/', '-', $block_type->name ) . '-editor-script';
+
+				wp_set_script_translations(
+					$handle,
+					'ft-blocks',
+					FT_BLOCKS_PATH . 'languages'
+				);
+			}
+		}
+	}
+}
+add_action( 'init', 'ft_blocks_set_script_translations', 20 );
