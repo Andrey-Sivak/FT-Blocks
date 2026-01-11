@@ -38,52 +38,50 @@ msgstr "Andrii Sivak"
 msgid "https://github.com/Andrey-Sivak"
 msgstr "https://github.com/Andrey-Sivak"
 
-#: src/blocks/hero/edit.js:68
+#: build/blocks/hero/index.js:1
 msgid "Background Settings"
 msgstr "Nastavení pozadí"
 
-#: src/blocks/hero/edit.js:75
+#: build/blocks/hero/index.js:1
 msgid "CTA Settings"
 msgstr "Nastavení CTA"
 
-#: src/blocks/hero/edit.js:77
+#: build/blocks/hero/index.js:1
 msgid "Button Text"
 msgstr "Text tlačítka"
 
-#: src/blocks/hero/edit.js:87
+#: build/blocks/hero/index.js:1
 msgid "Link URL"
 msgstr "URL odkazu"
 
-#: src/blocks/hero/edit.js:100
+#: build/blocks/hero/index.js:1
 msgid "Enter Heading…"
 msgstr "Zadejte nadpis…"
 
-#: src/blocks/hero/edit.js:110
+#: build/blocks/hero/index.js:1
 msgid "Enter Subheading…"
 msgstr "Zadejte podnadpis…"
 
-#: src/components/ImageUploader/ImageUploader.jsx:13
+#: build/blocks/hero/index.js:1
 msgid "Add Image"
 msgstr "Přidat obrázek"
 
-#: src/components/ImageUploader/ImageUploader.jsx:23
+#: build/blocks/hero/index.js:1
 msgid "Image"
 msgstr "Obrázek"
 
-#: src/components/ImageUploader/ImageUploader.jsx:45
+#: build/blocks/hero/index.js:1
 msgid "Change image"
 msgstr "Změnit obrázek"
 
-#: src/components/ImageUploader/ImageUploader.jsx:56
+#: build/blocks/hero/index.js:1
 msgid "Remove image"
 msgstr "Odebrat obrázek"
 
-#: src/blocks/hero/block.json
-msgctxt "block title"
+#: ft-blocks.php:60
 msgid "Hero Section"
 msgstr "Hero sekce"
 
-#: src/blocks/hero/block.json
-msgctxt "block description"
+#: ft-blocks.php:61
 msgid "A high-impact hero section with background and CTA."
-msgstr "Výrazná hero sekce s pozadím a CTA."
+msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."

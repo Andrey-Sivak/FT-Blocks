@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-11T16:56:20+00:00\n"
+"POT-Creation-Date: 2026-01-11T17:54:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -39,52 +39,50 @@ msgstr ""
 msgid "https://github.com/Andrey-Sivak"
 msgstr ""
 
-#: src/blocks/hero/edit.js:68
-msgid "Background Settings"
-msgstr ""
-
-#: src/blocks/hero/edit.js:75
-msgid "CTA Settings"
-msgstr ""
-
-#: src/blocks/hero/edit.js:77
-msgid "Button Text"
-msgstr ""
-
-#: src/blocks/hero/edit.js:87
-msgid "Link URL"
-msgstr ""
-
-#: src/blocks/hero/edit.js:100
-msgid "Enter Heading…"
-msgstr ""
-
-#: src/blocks/hero/edit.js:110
-msgid "Enter Subheading…"
-msgstr ""
-
-#: src/components/ImageUploader/ImageUploader.jsx:13
-msgid "Add Image"
-msgstr ""
-
-#: src/components/ImageUploader/ImageUploader.jsx:23
-msgid "Image"
-msgstr ""
-
-#: src/components/ImageUploader/ImageUploader.jsx:45
-msgid "Change image"
-msgstr ""
-
-#: src/components/ImageUploader/ImageUploader.jsx:56
-msgid "Remove image"
-msgstr ""
-
-#: src/blocks/hero/block.json
-msgctxt "block title"
+#: ft-blocks.php:60
 msgid "Hero Section"
 msgstr ""
 
-#: src/blocks/hero/block.json
-msgctxt "block description"
+#: ft-blocks.php:61
 msgid "A high-impact hero section with background and CTA."
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Add Image"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Image"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Change image"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Remove image"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Background Settings"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "CTA Settings"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Button Text"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Link URL"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Enter Heading…"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Enter Subheading…"
 msgstr ""
