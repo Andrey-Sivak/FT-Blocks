@@ -6,7 +6,8 @@
 			"@wordpress/block-editor",
 			"@wordpress/components",
 			"@wordpress/i18n",
-			"@wordpress/icons"
+			"@wordpress/icons",
+			"@wordpress/element"
 		]
 	}
 }
