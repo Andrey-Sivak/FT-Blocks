@@ -1,4 +1,18 @@
 @use "../styles/breakpoints" as *;
+@use '../styles/mixins/container-query' as *;
+
+.is-root-container,
+.is-root-container * {
+	box-sizing: border-box;
+}
+
+body:not(.wp-admin),
+.is-root-container {
+	container-type: inline-size;
+	container-name: ft-main;
+	position: relative;
+	max-width: 100%;
+}
 
 .ft-blocks {
 
@@ -6,9 +20,8 @@
 		padding-left: 16px;
 		padding-right: 16px;
 
-		@media (min-width: #{$bp-md}) {
-			padding-left: 20px;
-			padding-right: 20px;
+		@include responsive(ft-main, $bp-md) {
+			padding: 20px;
 		}
 	}
 
