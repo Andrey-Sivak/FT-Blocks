@@ -2,15 +2,17 @@ import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 import { Button, Icon } from '@wordpress/components';
 import { pencil, trash } from '@wordpress/icons';
 import { __ } from '@wordpress/i18n';
+import config from '../../../config.json';
 import './style.scss';
 
-const baseClass = 'ft-image-uploader';
+const { textDomain, prefix } = config;
+const baseClass = `${ prefix }-image-uploader`;
 
 const ImageUploader = ( {
 	image,
 	onSelect,
 	onRemove,
-	buttonText = __( 'Add Image', 'ft-blocks' ),
+	buttonText = __( 'Add Image', textDomain ),
 	allowedTypes = [ 'image' ],
 } ) => {
 	const buttonClass = image
@@ -20,7 +22,7 @@ const ImageUploader = ( {
 	const Image = ( { src } ) => (
 		<img
 			src={ src }
-			alt={ __( 'Image', 'ft-blocks' ) }
+			alt={ __( 'Image', textDomain ) }
 			className={ `${ baseClass }__image` }
 		/>
 	);
@@ -44,7 +46,7 @@ const ImageUploader = ( {
 										icon={ <Icon icon={ pencil } /> }
 										label={ __(
 											'Change image',
-											'ft-blocks'
+											textDomain
 										) }
 										onClick={ open }
 										size="medium"
@@ -55,7 +57,7 @@ const ImageUploader = ( {
 											icon={ <Icon icon={ trash } /> }
 											label={ __(
 												'Remove image',
-												'ft-blocks'
+												textDomain
 											) }
 											onClick={ onRemove }
 											size="medium"
