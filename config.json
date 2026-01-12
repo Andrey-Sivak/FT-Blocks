@@ -4,6 +4,7 @@
 	"classes": {
 		"baseBlock": "ft-blocks",
 		"wrapper": "ft-blocks__wrapper",
-		"container": "ft-blocks__container"
+		"container": "ft-blocks__container",
+		"button": "ft-button"
 	}
 }

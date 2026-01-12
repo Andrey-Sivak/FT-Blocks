@@ -32,6 +32,11 @@ define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 require_once FT_BLOCKS_PATH . 'includes/config.php';
 
 /**
+ * Load components
+ */
+require_once FT_BLOCKS_PATH . 'includes/components/button.php';
+
+/**
  * Load plugin text domain for translations
  */
 if ( ! function_exists( 'ft_blocks_load_textdomain' ) ) {
