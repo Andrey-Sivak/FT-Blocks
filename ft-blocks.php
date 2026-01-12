@@ -27,6 +27,11 @@ define( 'FT_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
 /**
+ * Load plugin configuration
+ */
+require_once FT_BLOCKS_PATH . 'includes/config.php';
+
+/**
  * Load plugin text domain for translations
  */
 if ( ! function_exists( 'ft_blocks_load_textdomain' ) ) {

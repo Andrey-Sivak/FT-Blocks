@@ -1,0 +1,9 @@
+{
+	"textDomain": "ft-blocks",
+	"prefix": "ft",
+	"classes": {
+		"baseBlock": "ft-blocks",
+		"wrapper": "ft-blocks__wrapper",
+		"container": "ft-blocks__container"
+	}
+}
