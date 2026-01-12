@@ -68,6 +68,25 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 add_action( 'init', 'ft_blocks_init' );
 
 /**
+ * Enqueue global styles for frontend and editor
+ */
+if ( ! function_exists( 'ft_blocks_enqueue_global_styles' ) ) {
+	function ft_blocks_enqueue_global_styles() {
+		$version = filemtime( FT_BLOCKS_PATH . 'build/style-ft-blocks-global-styles.css' );
+
+		wp_enqueue_style(
+			'ft-blocks-global-styles',
+			FT_BLOCKS_URL . 'build/style-ft-blocks-global-styles.css',
+			array(),
+			$version
+		);
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_global_styles' );
+add_action( 'enqueue_block_editor_assets', 'ft_blocks_enqueue_global_styles' );
+
+/**
  * Set script translations for block editor
  */
 if ( ! function_exists( 'ft_blocks_set_script_translations' ) ) {
