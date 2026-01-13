@@ -38,29 +38,13 @@ msgstr "Andrii Sivak"
 msgid "https://github.com/Andrey-Sivak"
 msgstr "https://github.com/Andrey-Sivak"
 
-#: build/blocks/hero/index.js:1
-msgid "Background Settings"
-msgstr "Nastavení pozadí"
+#: ft-blocks.php:72
+msgid "Hero Section"
+msgstr "Hero sekce"
 
-#: build/blocks/hero/index.js:1
-msgid "CTA Settings"
-msgstr "Nastavení CTA"
-
-#: build/blocks/hero/index.js:1
-msgid "Button Text"
-msgstr "Text tlačítka"
-
-#: build/blocks/hero/index.js:1
-msgid "Link URL"
-msgstr "URL odkazu"
-
-#: build/blocks/hero/index.js:1
-msgid "Enter Heading…"
-msgstr "Zadejte nadpis…"
-
-#: build/blocks/hero/index.js:1
-msgid "Enter Subheading…"
-msgstr "Zadejte podnadpis…"
+#: ft-blocks.php:73
+msgid "A high-impact hero section with background and CTA."
+msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
 
 #: build/blocks/hero/index.js:1
 msgid "Add Image"
@@ -78,10 +62,30 @@ msgstr "Změnit obrázek"
 msgid "Remove image"
 msgstr "Odebrat obrázek"
 
-#: ft-blocks.php:60
-msgid "Hero Section"
-msgstr "Hero sekce"
+#: build/blocks/hero/index.js:1
+msgid "Hide preview"
+msgstr "Skrýt náhled"
 
-#: ft-blocks.php:61
-msgid "A high-impact hero section with background and CTA."
-msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
+#: build/blocks/hero/index.js:1
+msgid "Show preview"
+msgstr "Zobrazit náhled"
+
+#: build/blocks/hero/index.js:1
+msgid "Add First Image"
+msgstr "Přidat první obrázek"
+
+#: build/blocks/hero/index.js:1
+msgid "Button text"
+msgstr "Text tlačítka"
+
+#: build/blocks/hero/index.js:1
+msgid "Enter decor text"
+msgstr "Zadejte dekorativní text"
+
+#: build/blocks/hero/index.js:1
+msgid "Enter Heading…"
+msgstr "Zadejte nadpis…"
+
+#: build/blocks/hero/index.js:1
+msgid "Enter Subheading…"
+msgstr "Zadejte podnadpis…"

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-11T17:54:04+00:00\n"
+"POT-Creation-Date: 2026-01-12T23:21:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -39,11 +39,11 @@ msgstr ""
 msgid "https://github.com/Andrey-Sivak"
 msgstr ""
 
-#: ft-blocks.php:60
+#: ft-blocks.php:72
 msgid "Hero Section"
 msgstr ""
 
-#: ft-blocks.php:61
+#: ft-blocks.php:73
 msgid "A high-impact hero section with background and CTA."
 msgstr ""
 
@@ -64,19 +64,23 @@ msgid "Remove image"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
-msgid "Background Settings"
+msgid "Hide preview"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
-msgid "CTA Settings"
+msgid "Show preview"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
-msgid "Button Text"
+msgid "Add First Image"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
-msgid "Link URL"
+msgid "Button text"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+msgid "Enter decor text"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
