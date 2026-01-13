@@ -5,14 +5,14 @@ import { __ } from '@wordpress/i18n';
 import config from '../../../config.json';
 import './style.scss';
 
-const { textDomain, prefix } = config;
+const { prefix } = config;
 const baseClass = `${ prefix }-image-uploader`;
 
 const ImageUploader = ( {
 	image,
 	onSelect,
 	onRemove,
-	buttonText = __( 'Add Image', textDomain ),
+	buttonText = __( 'Add Image', 'ft-blocks' ),
 	allowedTypes = [ 'image' ],
 } ) => {
 	const buttonClass = image
@@ -22,7 +22,7 @@ const ImageUploader = ( {
 	const Image = ( { src } ) => (
 		<img
 			src={ src }
-			alt={ __( 'Image', textDomain ) }
+			alt={ __( 'Image', 'ft-blocks' ) }
 			className={ `${ baseClass }__image` }
 		/>
 	);
@@ -46,7 +46,7 @@ const ImageUploader = ( {
 										icon={ <Icon icon={ pencil } /> }
 										label={ __(
 											'Change image',
-											textDomain
+											'ft-blocks'
 										) }
 										onClick={ open }
 										size="medium"
@@ -57,7 +57,7 @@ const ImageUploader = ( {
 											icon={ <Icon icon={ trash } /> }
 											label={ __(
 												'Remove image',
-												textDomain
+												'ft-blocks'
 											) }
 											onClick={ onRemove }
 											size="medium"

@@ -3,7 +3,6 @@ import { RichText } from '@wordpress/block-editor';
 import config from '../../../config.json';
 
 const FTButton = ( { baseClass, variant = 'primary', value, onChange } ) => {
-	const { textDomain } = config;
 	const { button } = config.classes;
 
 	return (
@@ -12,7 +11,7 @@ const FTButton = ( { baseClass, variant = 'primary', value, onChange } ) => {
 			className={ `${ baseClass }__button ${ button } ${ button }-${ variant }` }
 			value={ value }
 			onChange={ onChange }
-			placeholder={ __( 'Button text', textDomain ) }
+			placeholder={ __( 'Button text', 'ft-blocks' ) }
 			allowedFormats={ [ 'core/link' ] }
 		/>
 	);
