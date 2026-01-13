@@ -94,7 +94,7 @@ if ( ! function_exists( 'ft_blocks_enqueue_global_styles' ) ) {
 }
 
 add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_global_styles' );
-add_action( 'enqueue_block_editor_assets', 'ft_blocks_enqueue_global_styles' );
+add_action( 'enqueue_block_assets', 'ft_blocks_enqueue_global_styles' );
 
 /**
  * Set script translations for block editor
