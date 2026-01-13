@@ -2,14 +2,11 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
-import {
-	useBlockProps,
-	RichText,
-	InspectorControls,
-	URLInput,
-} from '@wordpress/block-editor';
-import { PanelBody, TextControl } from '@wordpress/components';
-import { ImageUploader } from '../../components';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useState } from '@wordpress/element';
+import ImagesSlider from './ImagesSlider';
+import FTButton from '../../components/FTButton/FTButton';
+import config from '../../../config.json';
 import './editor.scss';
 
 /**
@@ -25,100 +22,85 @@ import './editor.scss';
  * @return {JSX.Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const { heading, subHeading, backgroundImageUrl, ctaText, ctaUrl } =
-		attributes;
+	const [ previewImageIndex, setPreviewImageIndex ] = useState( 0 );
 
-	const onSelectImage = ( media ) => {
-		setAttributes( {
-			backgroundImageId: media.id,
-			backgroundImageUrl: media.url,
-		} );
-	};
+	const { heading, text, decorText, images, button } = attributes;
+	const { baseBlock, container, wrapper } = config.classes;
 
-	const onRemoveImage = () => {
-		setAttributes( {
-			backgroundImageId: undefined,
-			backgroundImageUrl: undefined,
-		} );
-	};
+	const baseClass = `${ baseBlock }-hero`;
+
+	const previewImageUrl =
+		previewImageIndex !== null && images[ previewImageIndex ]
+			? images[ previewImageIndex ].url
+			: null;
 
 	const blockProps = useBlockProps( {
-		className: 'wp-block-ft-hero',
-		style: {
-			backgroundImage: backgroundImageUrl
-				? `url( ${ backgroundImageUrl } )`
-				: undefined,
-			backgroundSize: 'cover',
-			backgroundPosition: 'center',
-			minHeight: '400px',
-			display: 'flex',
-			flexDirection: 'column',
-			justifyContent: 'center',
-			alignItems: 'center',
-			position: 'relative',
-			color: '#fff',
-			textAlign: 'center',
-			padding: '20px',
-		},
+		className: `${ baseClass } ${ wrapper }`,
+		style: previewImageUrl
+			? {
+					backgroundImage: `url(${ previewImageUrl })`,
+			  }
+			: {},
 	} );
 
 	return (
 		<>
-			<InspectorControls>
-				<PanelBody title={ __( 'Background Settings', 'ft-blocks' ) }>
-					<ImageUploader
-						image={ backgroundImageUrl }
-						onSelect={ onSelectImage }
-						onRemove={ onRemoveImage }
-					/>
-				</PanelBody>
-				<PanelBody title={ __( 'CTA Settings', 'ft-blocks' ) }>
-					<TextControl
-						label={ __( 'Button Text', 'ft-blocks' ) }
-						value={ ctaText }
-						onChange={ ( value ) =>
-							setAttributes( { ctaText: value } )
-						}
-					/>
-					<URLInput
-						className="block-editor-url-input__input"
-						value={ ctaUrl }
-						onChange={ ( url ) => setAttributes( { ctaUrl: url } ) }
-						label={ __( 'Link URL', 'ft-blocks' ) }
-					/>
-				</PanelBody>
-			</InspectorControls>
-
 			<div { ...blockProps }>
-				<div style={ { position: 'relative', zIndex: 1 } }>
-					<RichText
-						tagName="h1"
-						value={ heading }
-						onChange={ ( value ) =>
-							setAttributes( { heading: value } )
-						}
-						placeholder={ __( 'Enter Heading…', 'ft-blocks' ) }
-						style={ { color: '#fff' } }
-					/>
+				<div className={ `${ baseClass }__container ${ container }` }>
+					<div className={ `${ baseClass }__heading` }>
+						<RichText
+							tagName="span"
+							className={ `${ baseClass }__decor-text` }
+							value={ decorText }
+							onChange={ ( value ) =>
+								setAttributes( { decorText: value } )
+							}
+							placeholder={ __(
+								'Enter decor text',
+								'ft-blocks'
+							) }
+						/>
+
+						<RichText
+							tagName="p"
+							value={ heading }
+							onChange={ ( value ) =>
+								setAttributes( { heading: value } )
+							}
+							placeholder={ __( 'Enter Heading…', 'ft-blocks' ) }
+						/>
+					</div>
 					<RichText
 						tagName="p"
-						className="hero-subheading"
-						value={ subHeading }
+						className={ `${ baseClass }__text` }
+						value={ text }
 						onChange={ ( value ) =>
-							setAttributes( { subHeading: value } )
+							setAttributes( { text: value } )
 						}
 						placeholder={ __( 'Enter Subheading…', 'ft-blocks' ) }
-						style={ {
-							color: '#fff',
-							fontSize: '1.2rem',
-							margin: '20px 0',
-						} }
+						allowedFormats={ [ 'bold', 'italic' ] }
 					/>
-					{ ctaText && (
-						<span className="wp-block-button__link">
-							{ ctaText }
-						</span>
-					) }
+					<FTButton
+						baseClass={ baseClass }
+						value={ button }
+						onChange={ ( value ) =>
+							setAttributes( { button: value } )
+						}
+						variant="primary"
+					/>
+				</div>
+			</div>
+
+			<div className={ wrapper }>
+				<div className={ container }>
+					<ImagesSlider
+						images={ images }
+						imagesAttrName="images"
+						setAttributes={ setAttributes }
+						baseClass={ baseClass }
+						previewImageIndex={ previewImageIndex }
+						setPreviewImageIndex={ setPreviewImageIndex }
+					/>
 				</div>
 			</div>
 		</>

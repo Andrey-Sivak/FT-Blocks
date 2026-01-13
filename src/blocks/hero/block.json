@@ -18,27 +18,37 @@
 			"type": "string",
 			"default": ""
 		},
-		"subHeading": {
+		"text": {
 			"type": "string",
 			"default": ""
 		},
-		"backgroundImageId": {
-			"type": "number"
-		},
-		"backgroundImageUrl": {
-			"type": "string"
-		},
-		"ctaText": {
+		"decorText": {
 			"type": "string",
-			"default": "Learn More"
+			"default": ""
 		},
-		"ctaUrl": {
-			"type": "string"
+		"images": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object",
+				"properties": {
+					"type": "object",
+					"default": {
+						"id": 0,
+						"url": ""
+					}
+				}
+			}
+		},
+		"button": {
+			"type": "string",
+			"default": ""
 		}
 	},
 	"textdomain": "ft-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
+	"viewScript": "file:./view-script.js",
 	"render": "file:./render.php"
 }
