@@ -5,6 +5,15 @@
 	"author": "Andrii Sivak",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"files": [
+		"build/",
+		"includes/",
+		"languages/",
+		"config.json",
+		"ft-blocks.php",
+		"LICENSE",
+		"readme.txt"
+	],
 	"scripts": {
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
