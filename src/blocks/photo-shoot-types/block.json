@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ft-blocks/photo-shoot-types",
+	"version": "0.1.0",
+	"category": "design",
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"align": [ "full", "wide" ]
+	},
+	"attributes": {
+		"anchor": {
+			"type": "string",
+			"default": ""
+		},
+		"heading": {
+			"type": "string",
+			"default": ""
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"activeTab": {
+			"type": "number",
+			"default": 0
+		},
+		"tabs": {
+			"type": "array",
+			"default": [
+				{
+					"tabLabel": "Tab 1",
+					"title": "",
+					"text": "",
+					"button": "",
+					"image": {
+						"id": null,
+						"url": ""
+					}
+				},
+				{
+					"tabLabel": "Tab 2",
+					"title": "",
+					"text": "",
+					"button": "",
+					"image": {
+						"id": null,
+						"url": ""
+					}
+				},
+				{
+					"tabLabel": "Tab 3",
+					"title": "",
+					"text": "",
+					"button": "",
+					"image": {
+						"id": null,
+						"url": ""
+					}
+				}
+			]
+		}
+	},
+	"textdomain": "ft-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view-script.js",
+	"render": "file:./render.php"
+}

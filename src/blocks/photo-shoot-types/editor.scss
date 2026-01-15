@@ -1,0 +1,28 @@
+.ft-blocks-photo-shoot-types {
+  .ft-image-uploader__image-button {
+    width: 100%;
+  }
+
+  .ft-blocks-photo-shoot-types__tab-panel{
+    &:has(.ft-admin-button) {
+      
+      .ft-blocks-photo-shoot-types__tab-title,
+      .ft-blocks-photo-shoot-types__tab-text {
+        color: #000;
+      }
+
+      .ft-blocks-photo-shoot-types__tab-image:before {
+        content: none;
+      }
+
+      .ft-image-uploader__frame {
+        padding-top: 20px;
+
+        .ft-admin-button {
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+  }
+}
