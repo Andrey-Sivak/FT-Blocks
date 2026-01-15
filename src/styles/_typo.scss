@@ -1,0 +1,26 @@
+@use "../styles/fonts" as *;
+@use "../styles/breakpoints" as *;
+@use "../styles/mixins/container-query" as *;
+@use "../styles/mixins/ft-cqw" as *;
+
+.ft-heading {
+
+  &__h2 {
+    @include ft-cqw(font-size, 6);
+    font-family: $MontserratAlternates;
+    line-height: 1;
+    font-weight: 500;
+
+    @include responsive(ft-main, $bp-md) {
+      font-size: 32px;
+    }
+
+    @include responsive(ft-main, $bp-lg) {
+      font-size: 44px;
+    }
+
+    &.ft-centered {
+      text-align: center;
+    }
+  }
+}

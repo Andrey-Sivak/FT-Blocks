@@ -4,6 +4,8 @@
 		"baseBlock": "ft-blocks",
 		"wrapper": "ft-blocks__wrapper",
 		"container": "ft-blocks__container",
-		"button": "ft-button"
+		"button": "ft-button",
+		"h2": "ft-heading__h2",
+		"centered": "ft-centered"
 	}
 }

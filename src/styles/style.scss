@@ -2,6 +2,7 @@
 @use "../styles/mixins/container-query" as *;
 @use "../styles/fonts" as *;
 @use "../styles/buttons" as *;
+@use "../styles/typo" as *;
 
 .is-root-container,
 .is-root-container * {
