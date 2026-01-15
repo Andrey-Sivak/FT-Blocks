@@ -1,16 +1,19 @@
 @use "./colors" as *;
 @use "./fonts" as *;
 @use "./breakpoints" as *;
+@use "../styles/mixins/container-query" as *;
 
 $border-radius: 12px;
 $desktop-min-width: 220px;
+$mobile-min-width: 150px;
 $desktop-padding: 10px 18px;
+$mobile-padding: 10px 18px;
 
 @mixin primary-button {
-	color: #fff;
+	color: #fff!important;
 	background-color: $terakotova;
 
-	&:hover {
+	&:hover:not(:disabled) {
 		background-color: $terakotova-tmava;
 	}
 }
@@ -20,7 +23,7 @@ $desktop-padding: 10px 18px;
 	border: 1px solid $terakotova;
 	background-color: $bezova;
 
-	&:hover {
+	&:hover:not(:disabled) {
 		background-color: $bezova-svetla;
 	}
 }
@@ -33,17 +36,20 @@ $desktop-padding: 10px 18px;
 	text-align: center;
 	text-transform: uppercase;
 	transition: all ease-in-out 0.2s;
-	min-width: 200px !important;
+	min-width: 150px !important;
 	font-family: $Belleza;
-	padding: $desktop-padding;
+	padding: $mobile-padding;
+	height: auto;
 	border-radius: $border-radius;
-	font-size: 16px;
-	line-height: 1.7;
+	font-size: 15px;
+	line-height: 1.2;
+
+	@include responsive(ft-main, $bp-md) {
+		padding: $desktop-padding;
+		font-size: 16px;
+	}
 
 	@container ft-main (min-width: #{$bp-lg}) {
-		//border-radius: 20px;
-		//font-size: 16px;
-		//padding: 20px 20px;
 		min-width: $desktop-min-width !important;
 	}
 
@@ -60,8 +66,16 @@ $desktop-padding: 10px 18px;
 		a {
 			display: block;
 			border-radius: $border-radius;
-			min-width: $desktop-min-width !important;
-			padding: $desktop-padding;
+			min-width: $mobile-min-width !important;
+			padding: $mobile-padding;
+
+			@include responsive(ft-main, $bp-md) {
+				padding: $desktop-padding;
+			}
+
+			@container ft-main (min-width: #{$bp-lg}) {
+				min-width: $desktop-min-width !important;
+			}
 		}
 
 		&.ft-button-primary a {
@@ -82,7 +96,7 @@ $desktop-padding: 10px 18px;
 		text-transform: unset;
 		justify-self: center;
 		align-self: center;
-
+		border: none !important;
 		@include primary-button;
 
 		.admin_link-wrapper {
