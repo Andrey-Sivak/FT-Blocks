@@ -38,27 +38,35 @@ msgstr "Andrii Sivak"
 msgid "https://github.com/Andrey-Sivak"
 msgstr "https://github.com/Andrey-Sivak"
 
-#: ft-blocks.php:72
+#: ft-blocks.php:64
 msgid "Hero Section"
 msgstr "Hero sekce"
 
-#: ft-blocks.php:73
+#: ft-blocks.php:65
 msgid "A high-impact hero section with background and CTA."
 msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Add Image"
 msgstr "Přidat obrázek"
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Image"
 msgstr "Obrázek"
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Change image"
 msgstr "Změnit obrázek"
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Remove image"
 msgstr "Odebrat obrázek"
 
@@ -75,6 +83,7 @@ msgid "Add First Image"
 msgstr "Přidat první obrázek"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Button text"
 msgstr "Text tlačítka"
 
@@ -82,10 +91,66 @@ msgstr "Text tlačítka"
 msgid "Enter decor text"
 msgstr "Zadejte dekorativní text"
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Enter Heading…"
 msgstr "Zadejte nadpis…"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Enter Subheading…"
 msgstr "Zadejte podnadpis…"
+
+#: ft-blocks.php:68
+msgid "Photo Shoot Types"
+msgstr "Typy fotografování"
+
+#: ft-blocks.php:69
+msgid "Display different photo shoot types with tabbed navigation."
+msgstr "Zobrazení různých typů fotografování s navigací pomocí záložek."
+
+#: ft-blocks.php:72
+msgid "Features"
+msgstr "Vlastnosti"
+
+#: ft-blocks.php:73
+msgid "Display features in a grid with icons, titles and descriptions."
+msgstr "Zobrazení vlastností v mřížce s ikonami, nadpisy a popisy."
+
+#: build/blocks/features/index.js:1
+msgid "Feature title…"
+msgstr "Název vlastnosti…"
+
+#: build/blocks/features/index.js:1
+msgid "Feature description…"
+msgstr "Popis vlastnosti…"
+
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Tab Label"
+msgstr "Popisek záložky"
+
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Enter title…"
+msgstr "Zadejte název…"
+
+#: build/blocks/features/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Enter text…"
+msgstr "Zadejte text…"
+
+#: build/blocks/features/index.js:1
+msgid "Remove"
+msgstr "Odebrat"
+
+#: build/blocks/features/index.js:1
+msgid "Remove Feature"
+msgstr "Odebrat vlastnost"
+
+#: build/blocks/features/index.js:1
+msgid "Add Feature"
+msgstr "Přidat vlastnost"
+
+#: build/blocks/features/index.js:1
+msgid "Add First Feature"
+msgstr "Přidat první vlastnost"

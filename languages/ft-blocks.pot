@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-12T23:21:56+00:00\n"
+"POT-Creation-Date: 2026-01-16T20:35:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -39,28 +39,92 @@ msgstr ""
 msgid "https://github.com/Andrey-Sivak"
 msgstr ""
 
-#: ft-blocks.php:72
+#: ft-blocks.php:64
 msgid "Hero Section"
 msgstr ""
 
-#: ft-blocks.php:73
+#: ft-blocks.php:65
 msgid "A high-impact hero section with background and CTA."
 msgstr ""
 
+#: ft-blocks.php:68
+msgid "Photo Shoot Types"
+msgstr ""
+
+#: ft-blocks.php:69
+msgid "Display different photo shoot types with tabbed navigation."
+msgstr ""
+
+#: ft-blocks.php:72
+msgid "Features"
+msgstr ""
+
+#: ft-blocks.php:73
+msgid "Display features in a grid with icons, titles and descriptions."
+msgstr ""
+
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Add Image"
 msgstr ""
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Image"
 msgstr ""
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Change image"
 msgstr ""
 
+#: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
 msgid "Remove image"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+msgid "Remove"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+#: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Enter Heading…"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Enter text…"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+msgid "Remove Feature"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+msgid "Feature title…"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+msgid "Feature description…"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+msgid "Add Feature"
+msgstr ""
+
+#: build/blocks/features/index.js:1
+msgid "Add First Feature"
+msgstr ""
+
+#: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Button text"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
@@ -76,17 +140,18 @@ msgid "Add First Image"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
-msgid "Button text"
-msgstr ""
-
-#: build/blocks/hero/index.js:1
 msgid "Enter decor text"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
-msgid "Enter Heading…"
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Enter Subheading…"
 msgstr ""
 
-#: build/blocks/hero/index.js:1
-msgid "Enter Subheading…"
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Tab Label"
+msgstr ""
+
+#: build/blocks/photo-shoot-types/index.js:1
+msgid "Enter title…"
 msgstr ""
