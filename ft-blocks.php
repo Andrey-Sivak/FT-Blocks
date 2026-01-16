@@ -59,27 +59,27 @@ add_action( 'plugins_loaded', 'ft_blocks_load_textdomain' );
  */
 if ( ! function_exists( 'ft_blocks_init' ) ) {
 	function ft_blocks_init() {
-        $blocks = array(
-            'hero'              => array(
-                'title'       => __( 'Hero Section', 'ft-blocks' ),
-                'description' => __( 'A high-impact hero section with background and CTA.', 'ft-blocks' ),
-            ),
-            'photo-shoot-types' => array(
-                'title'       => __( 'Photo Shoot Types', 'ft-blocks' ),
-                'description' => __( 'Display different photo shoot types with tabbed navigation.', 'ft-blocks' ),
-            ),
-            'features'          => array(
-                'title'       => __( 'Features', 'ft-blocks' ),
-                'description' => __( 'Display features in a grid with icons, titles and descriptions.', 'ft-blocks' ),
-            ),
-        );
+		$blocks = array(
+			'hero'              => array(
+				'title'       => __( 'Hero Section', 'ft-blocks' ),
+				'description' => __( 'A high-impact hero section with background and CTA.', 'ft-blocks' ),
+			),
+			'photo-shoot-types' => array(
+				'title'       => __( 'Photo Shoot Types', 'ft-blocks' ),
+				'description' => __( 'Display different photo shoot types with tabbed navigation.', 'ft-blocks' ),
+			),
+			'features'          => array(
+				'title'       => __( 'Features', 'ft-blocks' ),
+				'description' => __( 'Display features in a grid with icons, titles and descriptions.', 'ft-blocks' ),
+			),
+		);
 
-        foreach ( $blocks as $block => $args ) {
-            register_block_type(
-                FT_BLOCKS_PATH . 'build/blocks/' . $block,
-                $args
-            );
-        }
+		foreach ( $blocks as $block => $args ) {
+			register_block_type(
+				FT_BLOCKS_PATH . 'build/blocks/' . $block,
+				$args
+			);
+		}
 	}
 }
 
