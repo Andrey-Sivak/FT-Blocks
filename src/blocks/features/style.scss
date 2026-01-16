@@ -6,101 +6,104 @@
 @use "../../styles/mixins/responsive-max-width" as *;
 
 .ft-blocks-features {
-  @include ft-clamp(padding-top, 30px, 2.982vw, 60px);
-  padding-bottom: calc(2 * clamp(30px, 2.982vw + 10px, 40px));
 
-  @include responsive(ft-main, $bp-lg) {
-    padding-bottom: calc(2 * clamp(30px, 2.982vw + 20px, 60px));
-  }
+	@include ft-clamp(padding-top, 30px, 2.982vw, 60px);
+	padding-bottom: calc(2 * clamp(30px, 2.982vw + 10px, 40px));
 
-  &__header {
-    margin-bottom: clamp(30px, 2.982vw + 10px, 40px);
+	@include responsive(ft-main, $bp-lg) {
+		padding-bottom: calc(2 * clamp(30px, 2.982vw + 20px, 60px));
+	}
 
-    @include responsive(ft-main, $bp-lg) {
-      margin-bottom: clamp(30px, 2.982vw + 20px, 60px);
-    }
-  }
+	&__header {
+		margin-bottom: clamp(30px, 2.982vw + 10px, 40px);
 
-  &__heading {
-    margin-top: 0;
-    margin-bottom: clamp(10px, 0.994vw + 6px, 20px);
-  }
+		@include responsive(ft-main, $bp-lg) {
+			margin-bottom: clamp(30px, 2.982vw + 20px, 60px);
+		}
+	}
 
-  &__description {
-    @include responsive-max-width(75ch);
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.7;
-    font-family: $Belleza;
-    margin: 0 auto;
-    text-align: center;
+	&__heading {
+		margin-top: 0;
+		margin-bottom: clamp(10px, 0.994vw + 6px, 20px);
+	}
 
-    @include responsive(ft-main, $bp-md) {
-      font-size: 16px;
-    }
+	&__description {
 
-    @include responsive(ft-main, $bp-lg) {
-      font-size: 18px;
-    }
-  }
+		@include responsive-max-width(75ch);
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1.7;
+		font-family: $Belleza;
+		margin: 0 auto;
+		text-align: center;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    grid-gap: 40px;
-    width: 100%;
-    align-items: start;
-  }
+		@include responsive(ft-main, $bp-md) {
+			font-size: 16px;
+		}
 
-  &__item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    row-gap: 10px;
+		@include responsive(ft-main, $bp-lg) {
+			font-size: 18px;
+		}
+	}
 
-    &-title {
-      position: relative;
-      z-index: 10;
-      margin: 0;
-      color: $terakotova;
-      font-family: $MontserratAlternates;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 1.4;
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+		grid-gap: 40px;
+		width: 100%;
+		align-items: start;
+	}
 
-      @include responsive(ft-main, $bp-md) {
-        font-size: 24px;
-      }
-    }
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		row-gap: 10px;
 
-    &-text {
-      position: relative;
-      z-index: 10;
-      margin: 0;
-      @include responsive-max-width(29ch);
-      line-height: 1.6;
-      font-size: 16px;
-    }
-  }
+		&-title {
+			position: relative;
+			z-index: 10;
+			margin: 0;
+			color: $terakotova;
+			font-family: $MontserratAlternates;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 1.4;
 
-  &__icon {
-    position: relative;
-    z-index: 10;
-    margin: 0;
-    opacity: .8;
-    height: 50px;
-    max-height: 50px;
-    max-width: 43px;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+			@include responsive(ft-main, $bp-md) {
+				font-size: 24px;
+			}
+		}
 
-    img {
-      max-height: 100%;
-      max-width: 100%;
-    }
-  }
+		&-text {
+			position: relative;
+			z-index: 10;
+			margin: 0;
+
+			@include responsive-max-width(29ch);
+			line-height: 1.6;
+			font-size: 16px;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		z-index: 10;
+		margin: 0;
+		opacity: 0.8;
+		height: 50px;
+		max-height: 50px;
+		max-width: 43px;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
 }

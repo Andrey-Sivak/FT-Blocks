@@ -10,7 +10,7 @@ $desktop-padding: 10px 18px;
 $mobile-padding: 10px 18px;
 
 @mixin primary-button {
-	color: #fff!important;
+	color: #fff !important;
 	background-color: $terakotova;
 
 	&:hover:not(:disabled) {
@@ -97,6 +97,7 @@ $mobile-padding: 10px 18px;
 		justify-self: center;
 		align-self: center;
 		border: none !important;
+
 		@include primary-button;
 
 		.admin_link-wrapper {

@@ -1,15 +1,15 @@
 .ft-remove-button-cross {
-  position: absolute;
-  z-index: 100;
-  left: auto;
-  right: 5px;
-  top: 5px;
-  width: 14px;
-  height: 14px;
-  cursor: pointer;
+	position: absolute;
+	z-index: 100;
+	left: auto;
+	right: 5px;
+	top: 5px;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
 
-  svg {
-    display: block;
-    max-width: 100%;
-  }
+	svg {
+		display: block;
+		max-width: 100%;
+	}
 }

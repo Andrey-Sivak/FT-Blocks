@@ -19,6 +19,7 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	min-height: 600px;
+
 	@include full-height;
 
 	@include responsive(ft-main, $bp-md) {
@@ -97,7 +98,7 @@
 			font-size: 18px;
 		}
 
-		@media(min-height: 600px) {
+		@media (min-height: 600px) {
 			font-size: 18px;
 		}
 	}

@@ -5,35 +5,37 @@
 
 .ft-heading {
 
-  &__h2 {
-    @include ft-cqw(font-size, 6);
-    font-family: $MontserratAlternates;
-    line-height: 1;
-    font-weight: 500;
+	&__h2 {
 
-    @include responsive(ft-main, $bp-md) {
-      font-size: 32px;
-    }
+		@include ft-cqw(font-size, 6);
+		font-family: $MontserratAlternates;
+		line-height: 1;
+		font-weight: 500;
 
-    @include responsive(ft-main, $bp-lg) {
-      font-size: 44px;
-    }
+		@include responsive(ft-main, $bp-md) {
+			font-size: 32px;
+		}
 
-    &.ft-centered {
-      text-align: center;
-    }
+		@include responsive(ft-main, $bp-lg) {
+			font-size: 44px;
+		}
 
-    & mark[style="color:#d08a67"] {
-      font-family: $Allura;
-      @include ft-cqw(font-size, 8.5);
+		&.ft-centered {
+			text-align: center;
+		}
 
-      @include responsive(ft-main, $bp-md) {
-        font-size: 44px;
-      }
+		mark[style="color:#d08a67"] {
+			font-family: $Allura;
 
-      @include responsive(ft-main, $bp-lg) {
-        font-size: 60px;
-      }
-    }
-  }
+			@include ft-cqw(font-size, 8.5);
+
+			@include responsive(ft-main, $bp-md) {
+				font-size: 44px;
+			}
+
+			@include responsive(ft-main, $bp-lg) {
+				font-size: 60px;
+			}
+		}
+	}
 }

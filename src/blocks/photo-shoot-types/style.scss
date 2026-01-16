@@ -7,193 +7,199 @@
 @use "../../styles/mixins/responsive-max-width" as *;
 
 .ft-blocks-photo-shoot-types {
-  padding-top: calc(2 * clamp(30px, 2.982vw + 10px, 40px));
-  @include ft-clamp(padding-bottom, 30px, 2.982vw, 60px);
-  $border: 1px solid $terakotova;
+	padding-top: calc(2 * clamp(30px, 2.982vw + 10px, 40px));
 
-  @include responsive(ft-main, $bp-lg) {
-    padding-top: calc(2 * clamp(30px, 2.982vw + 20px, 60px));
-  }
+	@include ft-clamp(padding-bottom, 30px, 2.982vw, 60px);
+	$border: 1px solid $terakotova;
 
-  &__container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+	@include responsive(ft-main, $bp-lg) {
+		padding-top: calc(2 * clamp(30px, 2.982vw + 20px, 60px));
+	}
 
-  &__header {
-    margin-bottom: clamp(30px, 2.982vw + 10px, 40px);
+	&__container {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
 
-    @include responsive(ft-main, $bp-lg) {
-      margin-bottom: clamp(30px, 2.982vw + 20px, 60px);
-    }
-  }
+	&__header {
+		margin-bottom: clamp(30px, 2.982vw + 10px, 40px);
 
-  &__heading {
-    margin-top: 0;
-    margin-bottom: clamp(10px, 0.994vw + 6px, 20px);
-  }
+		@include responsive(ft-main, $bp-lg) {
+			margin-bottom: clamp(30px, 2.982vw + 20px, 60px);
+		}
+	}
 
-  &__description {
-    @include responsive-max-width(75ch);
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.7;
-    font-family: $Belleza;
-    margin: 0 auto;
-    text-align: center;
+	&__heading {
+		margin-top: 0;
+		margin-bottom: clamp(10px, 0.994vw + 6px, 20px);
+	}
 
-    @include responsive(ft-main, $bp-md) {
-      font-size: 16px;
-    }
+	&__description {
 
-    @include responsive(ft-main, $bp-lg) {
-      font-size: 18px;
-    }
-  }
+		@include responsive-max-width(75ch);
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1.7;
+		font-family: $Belleza;
+		margin: 0 auto;
+		text-align: center;
 
-  &__tabs-nav {
-    width: 100%;
-    display: grid;
-    gap: 0;
-    text-align: center;
-    border-top: $border;
-    border-left: $border;
-    border-right: $border;
+		@include responsive(ft-main, $bp-md) {
+			font-size: 16px;
+		}
 
-    @include responsive(ft-main, $bp-md) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+		@include responsive(ft-main, $bp-lg) {
+			font-size: 18px;
+		}
+	}
 
-  &__tab-button {
-    margin: 0;
-    transition: all 0.2s ease-in-out;
-    background-color: $bezova;
-    color: $terakotova;
-    border-radius: 0;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-family: $Belleza;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 0.6em 1.1em;
+	&__tabs-nav {
+		width: 100%;
+		display: grid;
+		gap: 0;
+		text-align: center;
+		border-top: $border;
+		border-left: $border;
+		border-right: $border;
 
-    @include responsive(ft-main, $bp-md) {
-      font-size: 16px;
-    }
+		@include responsive(ft-main, $bp-md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
 
-    &:not(:last-child) {
-      border-bottom: $border;
+	&__tab-button {
+		margin: 0;
+		transition: all 0.2s ease-in-out;
+		background-color: $bezova;
+		color: $terakotova;
+		border-radius: 0;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		font-family: $Belleza;
+		font-size: 14px;
+		text-transform: uppercase;
+		padding: 0.6em 1.1em;
 
-      @include responsive(ft-main, $bp-md) {
-        border-bottom: 0;
-        border-right: $border;
-      }
-    }
+		@include responsive(ft-main, $bp-md) {
+			font-size: 16px;
+		}
 
-    &:hover, &:focus {
-      background-color: $bezova-svetla;
-    }
+		&:not(:last-child) {
+			border-bottom: $border;
 
-    &.is-active {
-      background-color: $terakotova;
-      color: $bezova;
-    }
-  }
+			@include responsive(ft-main, $bp-md) {
+				border-bottom: 0;
+				border-right: $border;
+			}
+		}
 
-  &__tabs-content {
-    width: 100%;
-    //overflow: hidden;
-    color: #fff;
-  }
+		&:hover,
+		&:focus {
+			background-color: $bezova-svetla;
+		}
 
-  &__tab-panel {
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.3);
-    position: relative;
-    @include ft-clamp(min-height, 250px, 50vh, 400px);
+		&.is-active {
+			background-color: $terakotova;
+			color: $bezova;
+		}
+	}
 
-    @include responsive(ft-main, $bp-md) {
-      min-height: 520px;
-    }
-  }
+	&__tabs-content {
+		width: 100%;
+		//overflow: hidden;
+		color: #fff;
+	}
 
-  &__tab-image {
-    margin: 0;
-    position: relative;
-    width: 100%;
-    min-height: inherit;
-    z-index: 10;
+	&__tab-panel {
+		box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.3);
+		position: relative;
 
-    &:before {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
-      position: absolute;
-      content: "";
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 20;
-    }
+		@include ft-clamp(min-height, 250px, 50vh, 400px);
 
-    img {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      min-height: inherit;
-    }
-  }
+		@include responsive(ft-main, $bp-md) {
+			min-height: 520px;
+		}
+	}
 
-  &__tab-info {
-    position: absolute;
-    padding: 12px;
-    z-index: 20;
-    top: auto;
-    left: 0;
-    bottom: 0;
+	&__tab-image {
+		margin: 0;
+		position: relative;
+		width: 100%;
+		min-height: inherit;
+		z-index: 10;
 
-    @include responsive(ft-main, $bp-md) {
-      padding: clamp(20px, 0.994vw + 16px, 30px);
-    }
-  }
+		&::before {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			pointer-events: none;
+			z-index: 20;
+		}
 
-  &__tab-title {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: #fff;
-    font-family: $MontserratAlternates;
-    font-weight: 500;
-    line-height: 1;
-    @include ft-cqw(font-size, 6);
+		img {
+			position: relative;
+			z-index: 10;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			min-height: inherit;
+		}
+	}
 
-    @include responsive(ft-main, $bp-md) {
-      margin-bottom: 16px;
-      font-size: 32px;
-    }
+	&__tab-info {
+		position: absolute;
+		padding: 12px;
+		z-index: 20;
+		top: auto;
+		left: 0;
+		bottom: 0;
 
-    @include responsive(ft-main, $bp-md) {
-      font-size: 34px;
-    }
+		@include responsive(ft-main, $bp-md) {
+			padding: clamp(20px, 0.994vw + 16px, 30px);
+		}
+	}
 
-    @include responsive(ft-main, $bp-lg) {
-      font-size: 50px;
-    }
-  }
+	&__tab-title {
+		margin-top: 0;
+		margin-bottom: 12px;
+		color: #fff;
+		font-family: $MontserratAlternates;
+		font-weight: 500;
+		line-height: 1;
 
-  &__tab-text {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: #fff;
-    font-size: 14px;
-    @include responsive-max-width(45ch);
+		@include ft-cqw(font-size, 6);
 
-    @include responsive(ft-main, $bp-md) {
-      font-size: 16px;
-      margin-bottom: 16px;
-    }
-  }
+		@include responsive(ft-main, $bp-md) {
+			margin-bottom: 16px;
+			font-size: 32px;
+		}
+
+		@include responsive(ft-main, $bp-md) {
+			font-size: 34px;
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			font-size: 50px;
+		}
+	}
+
+	&__tab-text {
+		margin-top: 0;
+		margin-bottom: 12px;
+		color: #fff;
+		font-size: 14px;
+
+		@include responsive-max-width(45ch);
+
+		@include responsive(ft-main, $bp-md) {
+			font-size: 16px;
+			margin-bottom: 16px;
+		}
+	}
 }
