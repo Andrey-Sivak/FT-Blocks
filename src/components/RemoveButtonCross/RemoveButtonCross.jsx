@@ -18,7 +18,15 @@ const RemoveButtonCross = ( {
 	z`;
 
 	return (
-		<div onClick={ handleClick } title={ text } className={ baseClass }>
+		<div
+			onClick={ handleClick }
+			title={ text }
+			className={ baseClass }
+			role="button"
+			tabIndex="0"
+			aria-label={ text }
+			aria-hidden="true"
+		>
 			<svg fill={ color } viewBox="0 0 95.939 95.939">
 				<g>
 					<path d={ path } />
