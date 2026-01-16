@@ -5,9 +5,8 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components';
 import config from '../../../config.json';
-import { ImageUploader } from '../../components';
+import { ImageUploader, RemoveButtonCross } from '../../components';
 import './editor.scss';
-import RemoveButtonCross from '../../components/RemoveButtonCross/RemoveButtonCross';
 
 /**
  * The edit function describes the structure of your block in the context of the

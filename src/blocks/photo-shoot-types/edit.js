@@ -3,9 +3,8 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import FTButton from '../../components/FTButton/FTButton';
 import config from '../../../config.json';
-import { ImageUploader } from '../../components';
+import { ImageUploader, FTButton } from '../../components';
 import './editor.scss';
 
 /**

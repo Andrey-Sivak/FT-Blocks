@@ -5,7 +5,7 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { useState } from '@wordpress/element';
 import ImagesSlider from './ImagesSlider';
-import FTButton from '../../components/FTButton/FTButton';
+import { FTButton } from '../../components';
 import config from '../../../config.json';
 import './editor.scss';
 
