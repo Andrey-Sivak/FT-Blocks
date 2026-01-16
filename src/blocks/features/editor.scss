@@ -1,0 +1,25 @@
+.ft-blocks-features {
+
+  .ft-image-uploader {
+
+    .ft-image-uploader__actions {
+      width: fit-content;
+      display: grid;
+      row-gap: 4px;
+      top: 0;
+      right: -30px;
+
+      .ft-image-uploader__actions_btn {
+        padding: 4px;
+        min-width: unset;
+        height: auto;
+
+        svg {
+          display: block;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

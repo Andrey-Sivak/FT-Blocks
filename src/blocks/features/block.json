@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ft-blocks/features",
+	"version": "0.1.0",
+	"category": "design",
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"align": [ "full", "wide" ]
+	},
+	"attributes": {
+		"anchor": {
+			"type": "string",
+			"default": ""
+		},
+		"heading": {
+			"type": "string",
+			"default": ""
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"features": {
+			"type": "array",
+			"default": [
+				{
+					"icon": {
+						"id": null,
+						"url": ""
+					},
+					"title": "",
+					"text": ""
+				},
+				{
+					"icon": {
+						"id": null,
+						"url": ""
+					},
+					"title": "",
+					"text": ""
+				},
+				{
+					"icon": {
+						"id": null,
+						"url": ""
+					},
+					"title": "",
+					"text": ""
+				},
+				{
+					"icon": {
+						"id": null,
+						"url": ""
+					},
+					"title": "",
+					"text": ""
+				},
+				{
+					"icon": {
+						"id": null,
+						"url": ""
+					},
+					"title": "",
+					"text": ""
+				},
+				{
+					"icon": {
+						"id": null,
+						"url": ""
+					},
+					"title": "",
+					"text": ""
+				}
+			]
+		}
+	},
+	"textdomain": "ft-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
