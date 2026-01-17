@@ -49,6 +49,7 @@ msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Add Image"
 msgstr "Přidat obrázek"
@@ -56,6 +57,7 @@ msgstr "Přidat obrázek"
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Image"
 msgstr "Obrázek"
@@ -63,6 +65,7 @@ msgstr "Obrázek"
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Change image"
 msgstr "Změnit obrázek"
@@ -70,6 +73,7 @@ msgstr "Změnit obrázek"
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Remove image"
 msgstr "Odebrat obrázek"
@@ -88,6 +92,7 @@ msgstr "Přidat první obrázek"
 
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
 #: build/blocks/service-info/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Button text"
@@ -100,6 +105,7 @@ msgstr "Zadejte dekorativní text"
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Enter Heading…"
 msgstr "Zadejte nadpis…"
@@ -150,6 +156,7 @@ msgid "Enter text…"
 msgstr "Zadejte text…"
 
 #: build/blocks/features/index.js:1
+#: build/blocks/price-list/index.js:1
 #: build/blocks/service-info/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Remove"
@@ -208,4 +215,32 @@ msgstr ""
 
 #: build/blocks/vip-list/index.js:1
 msgid "Enter right text…"
+msgstr ""
+
+#: ft-blocks.php:85
+msgid "Price List"
+msgstr ""
+
+#: ft-blocks.php:86
+msgid "Display pricing options with images, titles and prices."
+msgstr ""
+
+#: build/blocks/price-list/index.js:1
+msgid "Remove Item"
+msgstr ""
+
+#: build/blocks/price-list/index.js:1
+msgid "Service title…"
+msgstr ""
+
+#: build/blocks/price-list/index.js:1
+msgid "Enter price…"
+msgstr ""
+
+#: build/blocks/price-list/index.js:1
+msgid "Add Item"
+msgstr ""
+
+#: build/blocks/price-list/index.js:1
+msgid "Add First Item"
 msgstr ""

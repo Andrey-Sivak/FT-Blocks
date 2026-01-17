@@ -1,0 +1,19 @@
+.ft-blocks-price-list {
+
+	.ft-image-uploader__actions {
+		left: 2%;
+		right: auto;
+	}
+
+	.ft-blocks-price-list__item-image {
+
+		&:has(.ft-image-uploader__image-button) {
+
+			.ft-image-uploader,
+			.ft-image-uploader__frame,
+			.ft-image-uploader__image-button {
+				height: 100%;
+			}
+		}
+	}
+}
