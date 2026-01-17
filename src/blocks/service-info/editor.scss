@@ -11,4 +11,23 @@
 			}
 		}
 	}
+
+	&__buttons {
+
+		.ft-button.ft-admin-button {
+			justify-self: start;
+		}
+	}
+
+	&__button-admin-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 6px;
+
+		.ft-remove-button-cross {
+			position: static;
+		}
+	}
 }

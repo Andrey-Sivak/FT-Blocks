@@ -3,7 +3,8 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import { FTButton, ImageUploader } from '../../components';
+import { Button } from '@wordpress/components';
+import { FTButton, ImageUploader, RemoveButtonCross } from '../../components';
 import config from '../../../config.json';
 import './editor.scss';
 
@@ -34,6 +35,12 @@ export default function Edit( { attributes, setAttributes } ) {
 		setAttributes( { buttons: newButtons } );
 	};
 
+	const addButton = () => {
+		setAttributes( {
+			buttons: [ ...buttons, { text: '' } ],
+		} );
+	};
+
 	return (
 		<div { ...blockProps }>
 			<div className={ `${ baseClass }__container` }>
@@ -60,16 +67,42 @@ export default function Edit( { attributes, setAttributes } ) {
 
 					<div className={ `${ baseClass }__buttons` }>
 						{ buttons.map( ( button, index ) => (
-							<FTButton
+							<div
+								className={ `${ baseClass }__button-admin-wrap` }
 								key={ index }
-								baseClass={ baseClass }
-								value={ button.text }
-								onChange={ ( value ) =>
-									updateButton( index, value )
-								}
-								variant="primary"
-							/>
+							>
+								<FTButton
+									baseClass={ baseClass }
+									value={ button.text }
+									onChange={ ( value ) =>
+										updateButton( index, value )
+									}
+									variant="primary"
+								/>
+								<RemoveButtonCross
+									color="red"
+									text={ __( 'Remove Button', 'ft-blocks' ) }
+									handleClick={ () =>
+										setAttributes( {
+											buttons: buttons.filter(
+												( btn, i ) => i !== index
+											),
+										} )
+									}
+								/>
+							</div>
 						) ) }
+
+						<Button
+							isPrimary
+							onClick={ addButton }
+							className="ft-button ft-admin-button"
+							title={ __( 'Add Button', 'ft-blocks' ) }
+						>
+							{ buttons.length
+								? '+'
+								: __( 'Add Button', 'ft-blocks' ) }
+						</Button>
 					</div>
 				</div>
 
