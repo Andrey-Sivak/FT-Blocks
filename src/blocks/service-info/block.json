@@ -31,7 +31,16 @@
 		},
 		"buttons": {
 			"type": "array",
-			"default": [ { "text": "" }, { "text": "" }, { "text": "" } ]
+			"default": [],
+			"items": {
+				"type": "object",
+				"properties": {
+					"text": {
+						"type": "string",
+						"default": ""
+					}
+				}
+			}
 		}
 	},
 	"textdomain": "ft-blocks",

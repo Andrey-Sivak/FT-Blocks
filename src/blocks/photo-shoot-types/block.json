@@ -28,38 +28,35 @@
 		},
 		"tabs": {
 			"type": "array",
-			"default": [
-				{
-					"tabLabel": "Tab 1",
-					"title": "",
-					"text": "",
-					"button": "",
+			"default": [],
+			"items": {
+				"type": "object",
+				"properties": {
+					"tabLabel": {
+						"type": "string",
+						"default": ""
+					},
+					"title": {
+						"type": "string",
+						"default": ""
+					},
+					"text": {
+						"type": "string",
+						"default": ""
+					},
+					"button": {
+						"type": "string",
+						"default": ""
+					},
 					"image": {
-						"id": null,
-						"url": ""
-					}
-				},
-				{
-					"tabLabel": "Tab 2",
-					"title": "",
-					"text": "",
-					"button": "",
-					"image": {
-						"id": null,
-						"url": ""
-					}
-				},
-				{
-					"tabLabel": "Tab 3",
-					"title": "",
-					"text": "",
-					"button": "",
-					"image": {
-						"id": null,
-						"url": ""
+						"type": "object",
+						"default": {
+							"id": null,
+							"url": ""
+						}
 					}
 				}
-			]
+			}
 		}
 	},
 	"textdomain": "ft-blocks",

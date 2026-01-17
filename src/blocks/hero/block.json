@@ -34,7 +34,7 @@
 				"properties": {
 					"type": "object",
 					"default": {
-						"id": 0,
+						"id": null,
 						"url": ""
 					}
 				}

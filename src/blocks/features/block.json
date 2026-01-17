@@ -24,56 +24,27 @@
 		},
 		"features": {
 			"type": "array",
-			"default": [
-				{
+			"default": [],
+			"items": {
+				"type": "object",
+				"properties": {
 					"icon": {
-						"id": null,
-						"url": ""
+						"type": "object",
+						"default": {
+							"id": null,
+							"url": ""
+						}
 					},
-					"title": "",
-					"text": ""
-				},
-				{
-					"icon": {
-						"id": null,
-						"url": ""
+					"title": {
+						"type": "string",
+						"default": ""
 					},
-					"title": "",
-					"text": ""
-				},
-				{
-					"icon": {
-						"id": null,
-						"url": ""
-					},
-					"title": "",
-					"text": ""
-				},
-				{
-					"icon": {
-						"id": null,
-						"url": ""
-					},
-					"title": "",
-					"text": ""
-				},
-				{
-					"icon": {
-						"id": null,
-						"url": ""
-					},
-					"title": "",
-					"text": ""
-				},
-				{
-					"icon": {
-						"id": null,
-						"url": ""
-					},
-					"title": "",
-					"text": ""
+					"text": {
+						"type": "string",
+						"default": ""
+					}
 				}
-			]
+			}
 		}
 	},
 	"textdomain": "ft-blocks",
