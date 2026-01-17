@@ -49,24 +49,28 @@ msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Add Image"
 msgstr "Přidat obrázek"
 
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Image"
 msgstr "Obrázek"
 
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Change image"
 msgstr "Změnit obrázek"
 
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Remove image"
 msgstr "Odebrat obrázek"
 
@@ -84,6 +88,7 @@ msgstr "Přidat první obrázek"
 
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Button text"
 msgstr "Text tlačítka"
 
@@ -94,6 +99,7 @@ msgstr "Zadejte dekorativní text"
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Enter Heading…"
 msgstr "Zadejte nadpis…"
 
@@ -136,6 +142,7 @@ msgstr "Zadejte název…"
 
 #: build/blocks/features/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Enter text…"
 msgstr "Zadejte text…"
 
@@ -154,3 +161,11 @@ msgstr "Přidat vlastnost"
 #: build/blocks/features/index.js:1
 msgid "Add First Feature"
 msgstr "Přidat první vlastnost"
+
+#: ft-blocks.php:76
+msgid "Service Info"
+msgstr "Informace o službě"
+
+#: ft-blocks.php:77
+msgid "Two-column layout with text, highlighted info, buttons and image."
+msgstr "Dvousloupcové rozložení s textem, zvýrazněnými informacemi, tlačítky a obrázkem."

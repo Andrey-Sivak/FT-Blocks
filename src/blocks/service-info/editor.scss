@@ -1,0 +1,14 @@
+.ft-blocks-service-info {
+
+	.ft-blocks-service-info__image {
+
+		&:has(.ft-image-uploader__image-button) {
+
+			.ft-image-uploader,
+			.ft-image-uploader__frame,
+			.ft-image-uploader__image-button {
+				height: 100%;
+			}
+		}
+	}
+}

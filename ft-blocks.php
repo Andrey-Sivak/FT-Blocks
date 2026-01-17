@@ -72,6 +72,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Features', 'ft-blocks' ),
 				'description' => __( 'Display features in a grid with icons, titles and descriptions.', 'ft-blocks' ),
 			),
+			'service-info'      => array(
+				'title'       => __( 'Service Info', 'ft-blocks' ),
+				'description' => __( 'Two-column layout with text, highlighted info, buttons and image.', 'ft-blocks' ),
+			),
 		);
 
 		foreach ( $blocks as $block => $args ) {
