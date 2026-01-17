@@ -40,3 +40,8 @@ body:not(.wp-admin),
 mark {
 	background-color: transparent;
 }
+
+html :where(.wp-block) {
+	margin-top: 0;
+	margin-bottom: 0;
+}
