@@ -12,7 +12,8 @@ if ( ! function_exists( 'ft_blocks_render_features_block' ) ) {
 			'wrapper'    => $wrapper_class,
 			'container'  => $container_class,
 			'centered'   => $centered_class,
-			'h2'         => $h2_class
+			'h2'         => $h2_class,
+			'h3'         => $h3_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-features';
@@ -77,7 +78,7 @@ if ( ! function_exists( 'ft_blocks_render_features_block' ) ) {
 							<?php endif; ?>
 
 							<?php if ( ! empty( $feature['title'] ) ) : ?>
-								<h3 class="<?php echo esc_attr( $block_class . '__item-title' ); ?>">
+								<h3 class="<?php echo esc_attr( $block_class . '__item-title ' . $h3_class ); ?>">
 									<?php echo wp_kses_post( $feature['title'] ); ?>
 								</h3>
 							<?php endif; ?>

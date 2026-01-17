@@ -67,14 +67,6 @@
 			z-index: 10;
 			margin: 0;
 			color: $terakotova;
-			font-family: $MontserratAlternates;
-			font-weight: 600;
-			font-size: 20px;
-			line-height: 1.4;
-
-			@include responsive(ft-main, $bp-md) {
-				font-size: 24px;
-			}
 		}
 
 		&-text {

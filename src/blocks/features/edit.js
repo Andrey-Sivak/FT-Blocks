@@ -20,7 +20,7 @@ import './editor.scss';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	const { heading, description, features } = attributes;
-	const { baseBlock, container, wrapper, centered, h2 } = config.classes;
+	const { baseBlock, container, wrapper, centered, h2, h3 } = config.classes;
 
 	const baseClass = `${ baseBlock }-features`;
 
@@ -110,7 +110,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							</div>
 							<RichText
 								tagName="p"
-								className={ `${ baseClass }__item-title` }
+								className={ `${ baseClass }__item-title ${ h3 }` }
 								value={ feature.title }
 								onChange={ ( value ) =>
 									updateFeature( index, 'title', value )
