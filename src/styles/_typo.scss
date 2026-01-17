@@ -49,6 +49,7 @@
 		}
 
 		em {
+
 			@include ft-cqw(font-size, 7);
 
 			@include responsive(ft-main, $bp-md) {
