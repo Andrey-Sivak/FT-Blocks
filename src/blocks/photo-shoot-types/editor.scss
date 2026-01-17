@@ -6,6 +6,16 @@
 
 	.ft-blocks-photo-shoot-types__tab-panel {
 
+		&:has(.ft-image-uploader__image-button) {
+
+			.ft-blocks-photo-shoot-types__tab-image,
+			.ft-image-uploader,
+			.ft-image-uploader__frame,
+			.ft-image-uploader__image-button {
+				min-height: inherit;
+			}
+		}
+
 		&:has(.ft-admin-button) {
 
 			.ft-blocks-photo-shoot-types__tab-title,
