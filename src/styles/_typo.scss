@@ -24,8 +24,7 @@
 			text-align: center;
 		}
 
-		mark[style="color:#d08a67"] {
-			font-family: $Allura;
+		em {
 
 			@include ft-cqw(font-size, 8.5);
 
@@ -35,6 +34,41 @@
 
 			@include responsive(ft-main, $bp-lg) {
 				font-size: 60px;
+			}
+		}
+	}
+
+	&__h3 {
+		font-weight: 600;
+		font-family: $MontserratAlternates;
+		font-size: 20px;
+		line-height: 1.4;
+
+		@include responsive(ft-main, $bp-md) {
+			font-size: 24px;
+		}
+
+		em {
+
+			@include responsive(ft-main, $bp-lg) {
+				font-size: 40px;
+			}
+		}
+	}
+
+	&__h2,
+	&__h3 {
+
+		em {
+			font-weight: 500;
+			font-style: normal;
+			font-family: $Allura;
+			line-height: 0.9;
+
+			@include ft-cqw(font-size, 7);
+
+			@include responsive(ft-main, $bp-md) {
+				font-size: 44px;
 			}
 		}
 	}
