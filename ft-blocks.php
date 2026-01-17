@@ -35,6 +35,7 @@ require_once FT_BLOCKS_PATH . 'includes/config.php';
  * Load components
  */
 require_once FT_BLOCKS_PATH . 'includes/components/button.php';
+require_once FT_BLOCKS_PATH . 'includes/components/icons.php';
 
 /**
  * Load plugin text domain for translations
