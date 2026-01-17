@@ -38,11 +38,11 @@ msgstr "Andrii Sivak"
 msgid "https://github.com/Andrey-Sivak"
 msgstr "https://github.com/Andrey-Sivak"
 
-#: ft-blocks.php:64
+#: ft-blocks.php:65
 msgid "Hero Section"
 msgstr "Hero sekce"
 
-#: ft-blocks.php:65
+#: ft-blocks.php:66
 msgid "A high-impact hero section with background and CTA."
 msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
 
@@ -89,6 +89,7 @@ msgstr "Přidat první obrázek"
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/service-info/index.js:1
+#: build/blocks/vip-list/index.js:1
 msgid "Button text"
 msgstr "Text tlačítka"
 
@@ -108,27 +109,29 @@ msgstr "Zadejte nadpis…"
 msgid "Enter Subheading…"
 msgstr "Zadejte podnadpis…"
 
-#: ft-blocks.php:68
+#: ft-blocks.php:69
 msgid "Photo Shoot Types"
 msgstr "Typy fotografování"
 
-#: ft-blocks.php:69
+#: ft-blocks.php:70
 msgid "Display different photo shoot types with tabbed navigation."
 msgstr "Zobrazení různých typů fotografování s navigací pomocí záložek."
 
-#: ft-blocks.php:72
+#: ft-blocks.php:73
 msgid "Features"
 msgstr "Vlastnosti"
 
-#: ft-blocks.php:73
+#: ft-blocks.php:74
 msgid "Display features in a grid with icons, titles and descriptions."
 msgstr "Zobrazení vlastností v mřížce s ikonami, nadpisy a popisy."
 
 #: build/blocks/features/index.js:1
+#: build/blocks/vip-list/index.js:1
 msgid "Feature title…"
 msgstr "Název vlastnosti…"
 
 #: build/blocks/features/index.js:1
+#: build/blocks/vip-list/index.js:1
 msgid "Feature description…"
 msgstr "Popis vlastnosti…"
 
@@ -147,25 +150,62 @@ msgid "Enter text…"
 msgstr "Zadejte text…"
 
 #: build/blocks/features/index.js:1
+#: build/blocks/service-info/index.js:1
+#: build/blocks/vip-list/index.js:1
 msgid "Remove"
 msgstr "Odebrat"
 
 #: build/blocks/features/index.js:1
+#: build/blocks/vip-list/index.js:1
 msgid "Remove Feature"
 msgstr "Odebrat vlastnost"
 
 #: build/blocks/features/index.js:1
+#: build/blocks/vip-list/index.js:1
 msgid "Add Feature"
 msgstr "Přidat vlastnost"
 
 #: build/blocks/features/index.js:1
+#: build/blocks/vip-list/index.js:1
 msgid "Add First Feature"
 msgstr "Přidat první vlastnost"
 
-#: ft-blocks.php:76
+#: ft-blocks.php:77
 msgid "Service Info"
 msgstr "Informace o službě"
 
-#: ft-blocks.php:77
+#: ft-blocks.php:78
 msgid "Two-column layout with text, highlighted info, buttons and image."
 msgstr "Dvousloupcové rozložení s textem, zvýrazněnými informacemi, tlačítky a obrázkem."
+
+#: ft-blocks.php:81
+msgid "VIP List"
+msgstr ""
+
+#: ft-blocks.php:82
+msgid "Display VIP benefits with two-column header and feature cards."
+msgstr ""
+
+#: build/blocks/service-info/index.js:1
+msgid "Remove Button"
+msgstr ""
+
+#: build/blocks/service-info/index.js:1
+msgid "Add Button"
+msgstr ""
+
+#: build/blocks/vip-list/index.js:1
+msgid "Enter left heading…"
+msgstr ""
+
+#: build/blocks/vip-list/index.js:1
+msgid "Enter left text…"
+msgstr ""
+
+#: build/blocks/vip-list/index.js:1
+msgid "Enter right heading…"
+msgstr ""
+
+#: build/blocks/vip-list/index.js:1
+msgid "Enter right text…"
+msgstr ""

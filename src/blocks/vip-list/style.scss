@@ -1,0 +1,136 @@
+@use "../../styles/colors" as colors;
+@use "../../styles/fonts" as fonts;
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/responsive-max-width" as *;
+@use "../../styles/mixins/container-query" as *;
+@use "../../styles/mixins/ft-cqw" as *;
+
+.ft-blocks-vip-list {
+	$space-xl: clamp(30px, 2.982vw + 20px, 60px);
+	$space-m: clamp(20px, 0.994vw + 16px, 30px);
+	position: relative;
+	overflow: hidden;
+	background-color: colors.$olivova;
+	padding-top: calc(2 * $space-xl);
+	padding-bottom: $space-xl;
+
+	&__decorative-vector {
+		margin: 0;
+		position: absolute;
+		z-index: 10;
+		width: 150%;
+		height: 120px;
+		left: 50%;
+		transform: translateX(-50%);
+		top: auto;
+		bottom: 0;
+
+		@include responsive(ft-main, $bp-lg) {
+			width: 100%;
+		}
+
+		svg {
+			display: block;
+			height: 100%;
+			width: 100%;
+			color: colors.$bezova-svetla;
+		}
+	}
+
+	&__container {
+		position: relative;
+		z-index: 20;
+	}
+
+	&__top {
+		color: #fff;
+		display: grid;
+		gap: $space-xl;
+
+		@include responsive(ft-main, $bp-lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__top-right {
+		display: grid;
+		gap: clamp(10px, 0.994vw + 6px, 20px);
+
+		&_heading {
+			margin: 0;
+		}
+	}
+
+	&__heading {
+		color: #fff;
+		margin-top: 0;
+		margin-bottom: clamp(10px, 0.994vw + 6px, 20px);
+	}
+
+	&__text {
+		margin: 0;
+
+		@include responsive-max-width(75ch);
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1.7;
+		font-family: fonts.$Belleza;
+
+		@include responsive(ft-main, $bp-md) {
+			font-size: 16px;
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			font-size: 18px;
+		}
+	}
+
+	&__features {
+		margin-top: $space-xl;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+		gap: $space-m;
+	}
+
+	&__feature {
+		position: relative;
+		background-color: colors.$bezova-svetla;
+		border: 1px solid colors.$rryuji;
+		padding: $space-m;
+		display: grid;
+		gap: 5px;
+
+		&-title {
+			margin: 0;
+			color: colors.$terakotova;
+		}
+
+		&-text {
+			margin: 0;
+		}
+
+		&-icon {
+			margin: 0;
+			width: 28px;
+			color: colors.$zlata;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(-50%, -50%);
+
+			@include responsive(ft-main, $bp-lg) {
+				width: 36px;
+			}
+
+			svg {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	&__button {
+		margin: 0;
+	}
+}

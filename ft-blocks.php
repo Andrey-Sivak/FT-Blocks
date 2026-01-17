@@ -77,6 +77,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Service Info', 'ft-blocks' ),
 				'description' => __( 'Two-column layout with text, highlighted info, buttons and image.', 'ft-blocks' ),
 			),
+			'vip-list'          => array(
+				'title'       => __( 'VIP List', 'ft-blocks' ),
+				'description' => __( 'Display VIP benefits with two-column header and feature cards.', 'ft-blocks' ),
+			),
 		);
 
 		foreach ( $blocks as $block => $args ) {
