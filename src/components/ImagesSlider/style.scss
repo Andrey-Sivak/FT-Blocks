@@ -2,56 +2,56 @@
 @use "../../styles/mixins/container-query" as *;
 
 .ft-preview-slider {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  display: grid;
-  gap: 10px;
-  align-items: start;
-  grid-template-columns: repeat(2, 1fr);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	display: grid;
+	gap: 10px;
+	align-items: start;
+	grid-template-columns: repeat(2, 1fr);
 
-  @include responsive(ft-main, $bp-md) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+	@include responsive(ft-main, $bp-md) {
+		grid-template-columns: repeat(3, 1fr);
+	}
 
-  @include responsive(ft-main, $bp-lg) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+	@include responsive(ft-main, $bp-lg) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 
-  &__add-button {
-    padding: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	&__add-button {
+		padding: 5px;
+		border-radius: 6px;
+		border: 1px solid #ccc;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-  &__slide {
-    position: relative;
+	&__slide {
+		position: relative;
 
-    &_show-preview {
-      position: absolute;
-      z-index: 20;
-      top: 2%;
-      left: 2%;
-      background-color: #fff;
-      border-radius: 2px;
-      border: 1px solid #ccc;
-    }
+		&_show-preview {
+			position: absolute;
+			z-index: 20;
+			top: 2%;
+			left: 2%;
+			background-color: #fff;
+			border-radius: 2px;
+			border: 1px solid #ccc;
+		}
 
-    .ft-image-uploader {
-      position: relative;
-      z-index: 10;
-    }
+		.ft-image-uploader {
+			position: relative;
+			z-index: 10;
+		}
 
-    &.ft-empty {
-      padding: 5px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+		&.ft-empty {
+			padding: 5px;
+			border-radius: 6px;
+			border: 1px solid #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }
