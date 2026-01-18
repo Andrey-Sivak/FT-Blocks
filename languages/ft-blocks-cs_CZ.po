@@ -79,14 +79,17 @@ msgid "Remove image"
 msgstr "Odebrat obrázek"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Hide preview"
 msgstr "Skrýt náhled"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Show preview"
 msgstr "Zobrazit náhled"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/service-info/index.js:1
 msgid "Add First Image"
 msgstr "Přidat první obrázek"
 
