@@ -33,6 +33,16 @@
 				"type": "object",
 				"properties": {
 					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer",
+							"default": null
+						},
+						"url": {
+							"type": "string",
+							"default": ""
+						}
+					},
 					"default": {
 						"id": null,
 						"url": ""

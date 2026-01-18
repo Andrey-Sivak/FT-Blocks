@@ -4,8 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { useState } from '@wordpress/element';
-import ImagesSlider from './ImagesSlider';
-import { FTButton } from '../../components';
+import { FTButton, ImagesSlider } from '../../components';
 import config from '../../../config.json';
 import './editor.scss';
 
@@ -97,7 +96,6 @@ export default function Edit( { attributes, setAttributes } ) {
 						images={ images }
 						imagesAttrName="images"
 						setAttributes={ setAttributes }
-						baseClass={ baseClass }
 						previewImageIndex={ previewImageIndex }
 						setPreviewImageIndex={ setPreviewImageIndex }
 					/>
