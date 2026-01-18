@@ -45,7 +45,7 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 		$block_class = $base_class . '-service-info';
 		$heading     = $attributes['heading'] ?? '';
 		$text        = $attributes['text'] ?? '';
-		$image       = $attributes['image'] ?? array();
+		$images      = $attributes['images'] ?? array();
 		$buttons     = $attributes['buttons'] ?? array();
 		$anchor_id   = $attributes['anchor'] ?? '';
 
@@ -61,9 +61,15 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 
 		<section <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 
-			<?php
-			echo ft_blocks_service_info_render_image( $image, $block_class . '__bg', 'large' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			?>
+			<div class="<?php echo esc_attr( $block_class . '__bg-wrapper' ); ?>">
+				<?php foreach ( $images as $index => $image ) : ?>
+					<div class="<?php echo esc_attr( $block_class . '__bg-item' . ( 0 === $index ? ' is-active' : '' ) ); ?>" data-index="<?php echo esc_attr( $index ); ?>">
+						<?php
+						echo ft_blocks_service_info_render_image( $image, $block_class . '__bg-img', 'full' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						?>
+					</div>
+				<?php endforeach; ?>
+			</div>
 
 			<div class="<?php echo esc_attr( $block_class . '__container' ); ?>">
 
@@ -97,10 +103,20 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 					<?php endif; ?>
 				</div>
 
-				<?php
-				echo ft_blocks_service_info_render_image( $image, $block_class . '__image', 'full' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				?>
-
+				<?php if ( count( $images ) > 1 ) : ?>
+					<div class="<?php echo esc_attr( $block_class . '__slider' ); ?>">
+						<div class="swiper-wrapper" role="list">
+							<?php
+							foreach ( $images as $image ) {
+								echo ft_blocks_service_info_render_image( $image, $block_class . '__image swiper-slide', 'full' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							}
+							?>
+						</div>
+						<div class="<?php echo esc_attr( $block_class . '__arrow swiper-button-next' ); ?>"></div>
+						<div class="<?php echo esc_attr( $block_class . '__arrow swiper-button-prev' ); ?>"></div>
+						<div class="<?php echo esc_attr( $block_class . '__pagination swiper-pagination' ); ?>"></div>
+					</div>
+				<?php endif; ?>
 			</div>
 		</section>
 
