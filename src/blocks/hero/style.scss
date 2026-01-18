@@ -1,4 +1,5 @@
 @use "../../styles/fonts" as *;
+@use "../../styles/colors" as *;
 @use "../../styles/breakpoints" as *;
 @use "../../styles/mixins/full-height" as *;
 @use "../../styles/mixins/ft-cqw" as *;
@@ -146,13 +147,15 @@
 		transform: translateX(-50%);
 
 		.swiper-pagination-bullet {
+			border: 1px solid $terakotova;
 			width: 12px;
 			height: 12px;
 			margin: 0 6px;
-			background-color: rgba(255, 255, 255, 0.33);
+			background-color: #fff;
 
 			&.swiper-pagination-bullet-active {
-				background-color: #fff;
+				background-color: $terakotova;
+				border: 1px solid #fff;
 			}
 		}
 	}
