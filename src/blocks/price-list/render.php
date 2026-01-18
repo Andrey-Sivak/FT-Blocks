@@ -49,25 +49,48 @@ if ( ! function_exists( 'ft_blocks_render_price_list_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__grid' ); ?>">
 					<?php foreach ( $items as $item ) : ?>
-						<div class="<?php echo esc_attr( $block_class . '__item' ); ?>">
-							<?php if ( ! empty( $item['image']['id'] ) ) : ?>
-								<figure class="<?php echo esc_attr( $block_class . '__item-image' ); ?>">
-									<?php
-									echo wp_get_attachment_image(
-										$item['image']['id'],
-										'medium',
-										false,
-										array( 'loading' => 'lazy' )
-									);
-									?>
-								</figure>
-							<?php endif; ?>
+						<article class="<?php echo esc_attr( $block_class . '__item' ); ?>">
+							<header class="<?php echo esc_attr( $block_class . '__item-header' ); ?>">
+								<div class="<?php echo esc_attr( $block_class . '__item-header-inner' ); ?>">
+									<?php if ( ! empty( $item['title'] ) ) : ?>
+										<h3 class="<?php echo esc_attr( $block_class . '__item-title ' . $h3_class ); ?>">
+											<?php echo wp_kses_post( $item['title'] ); ?>
+										</h3>
+									<?php endif; ?>
+									<?php if ( ! empty( $item['annotation'] ) ) : ?>
+										<p class="<?php echo esc_attr( $block_class . '__item-annotation' ); ?>">
+											<?php echo wp_kses_post( $item['annotation'] ); ?>
+										</p>
+									<?php endif; ?>
+								</div>
+								<div
+										class="<?php echo esc_attr( $block_class . '__item-header-helper' ); ?>"
+										aria-hidden="true"
+								>
+									<p class="<?php echo esc_attr( $block_class . '__item-title ' . $h3_class ); ?>">
+										A
+										<br>
+										A
+									</p>
+									<p class="<?php echo esc_attr( $block_class . '__item-annotation' ); ?>">
+										A
+									</p>
+								</div>
+							</header>
 
 							<div class="<?php echo esc_attr( $block_class . '__item-content' ); ?>">
-								<?php if ( ! empty( $item['title'] ) ) : ?>
-									<h3 class="<?php echo esc_attr( $block_class . '__item-title ' . $h3_class ); ?>">
-										<?php echo wp_kses_post( $item['title'] ); ?>
-									</h3>
+
+								<?php if ( ! empty( $item['image']['id'] ) ) : ?>
+									<figure class="<?php echo esc_attr( $block_class . '__item-image' ); ?>">
+										<?php
+										echo wp_get_attachment_image(
+											$item['image']['id'],
+											'medium',
+											false,
+											array( 'loading' => 'lazy' )
+										);
+										?>
+									</figure>
 								<?php endif; ?>
 
 								<?php if ( ! empty( $item['price'] ) ) : ?>
@@ -76,11 +99,16 @@ if ( ! function_exists( 'ft_blocks_render_price_list_block' ) ) {
 									</p>
 								<?php endif; ?>
 							</div>
-						</div>
+
+							<?php if ( ! empty( $item['shortText'] ) ) : ?>
+								<footer class="<?php echo esc_attr( $block_class . '__item-short-text' ); ?>">
+									<?php echo wp_kses_post( $item['shortText'] ); ?>
+								</footer>
+							<?php endif; ?>
+						</article>
 					<?php endforeach; ?>
 				</div>
 
-				<?php // Button ?>
 				<?php if ( ! empty( $button ) ) : ?>
 					<div class="<?php echo esc_attr( $block_class . '__footer ' . $centered_class ); ?>">
 						<?php

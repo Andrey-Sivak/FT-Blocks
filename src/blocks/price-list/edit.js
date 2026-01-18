@@ -47,6 +47,8 @@ export default function Edit( { attributes, setAttributes } ) {
 				},
 				title: '',
 				price: '',
+				annotation: '',
+				shortText: '',
 			},
 		];
 
@@ -62,18 +64,15 @@ export default function Edit( { attributes, setAttributes } ) {
 		<div { ...blockProps }>
 			<div className={ `${ baseClass }__container ${ container }` }>
 				<div className={ `${ baseClass }__header` }>
-					<h2
+					<RichText
+						tagName="p"
 						className={ `${ baseClass }__heading ${ h2 } ${ centered }` }
-					>
-						<RichText
-							tagName="span"
-							value={ heading }
-							onChange={ ( value ) =>
-								setAttributes( { heading: value } )
-							}
-							placeholder={ __( 'Enter Heading…', 'ft-blocks' ) }
-						/>
-					</h2>
+						value={ heading }
+						onChange={ ( value ) =>
+							setAttributes( { heading: value } )
+						}
+						placeholder={ __( 'Enter Heading…', 'ft-blocks' ) }
+					/>
 				</div>
 
 				<div className={ `${ baseClass }__grid` }>
@@ -84,38 +83,71 @@ export default function Edit( { attributes, setAttributes } ) {
 								text={ __( 'Remove Item', 'ft-blocks' ) }
 								handleClick={ () => removeItem( index ) }
 							/>
-
-							<div className={ `${ baseClass }__item-image` }>
-								<ImageUploader
-									image={ item.image?.url }
-									onSelect={ ( media ) =>
-										updateItem( index, 'image', {
-											id: media.id,
-											url: media.url,
-										} )
-									}
-									onRemove={ () =>
-										updateItem( index, 'image', {
-											id: null,
-											url: '',
-										} )
-									}
-								/>
+							<div className={ `${ baseClass }__item-header` }>
+								<div
+									className={ `${ baseClass }__item-header-inner` }
+								>
+									<RichText
+										tagName="h3"
+										className={ `${ baseClass }__item-title ${ h3 }` }
+										value={ item.title }
+										onChange={ ( value ) =>
+											updateItem( index, 'title', value )
+										}
+										placeholder={ __(
+											'Service title…',
+											'ft-blocks'
+										) }
+									/>
+									<RichText
+										tagName="p"
+										className={ `${ baseClass }__item-annotation` }
+										value={ item.annotation }
+										onChange={ ( value ) =>
+											updateItem(
+												index,
+												'annotation',
+												value
+											)
+										}
+										placeholder={ __( 'Annotation…' ) }
+										allowedFormats={ [ 'bold', 'italic' ] }
+									/>
+								</div>
+								<div
+									className={ `${ baseClass }__item-header-helper` }
+								>
+									<p
+										className={ `${ baseClass }__item-title ${ h3 }` }
+									>
+										A <br /> A
+									</p>
+									<p
+										className={ `${ baseClass }__item-annotation` }
+									>
+										A
+									</p>
+								</div>
 							</div>
-
 							<div className={ `${ baseClass }__item-content` }>
-								<RichText
-									tagName="h3"
-									className={ `${ baseClass }__item-title ${ h3 }` }
-									value={ item.title }
-									onChange={ ( value ) =>
-										updateItem( index, 'title', value )
-									}
-									placeholder={ __(
-										'Service title…',
-										'ft-blocks'
-									) }
-								/>
+								<div className={ `${ baseClass }__item-image` }>
+									<ImageUploader
+										image={ item.image?.url }
+										onSelect={ ( media ) =>
+											updateItem( index, 'image', {
+												id: media.id,
+												url: media.url,
+											} )
+										}
+										onRemove={ () =>
+											updateItem( index, 'image', {
+												id: null,
+												url: '',
+											} )
+										}
+									/>
+								</div>
+
 								<RichText
 									tagName="p"
 									className={ `${ baseClass }__item-price` }
@@ -129,6 +161,19 @@ export default function Edit( { attributes, setAttributes } ) {
 									) }
 								/>
 							</div>
+
+							<RichText
+								tagName="p"
+								className={ `${ baseClass }__item-short-text` }
+								value={ item.shortText }
+								onChange={ ( value ) =>
+									updateItem( index, 'shortText', value )
+								}
+								placeholder={ __(
+									'Short description…',
+									'ft-blocks'
+								) }
+							/>
 						</div>
 					) ) }
 

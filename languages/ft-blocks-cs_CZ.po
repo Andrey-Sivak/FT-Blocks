@@ -244,3 +244,7 @@ msgstr ""
 #: build/blocks/price-list/index.js:1
 msgid "Add First Item"
 msgstr ""
+
+#: build/blocks/price-list/index.js:1
+msgid "Short description…"
+msgstr ""
