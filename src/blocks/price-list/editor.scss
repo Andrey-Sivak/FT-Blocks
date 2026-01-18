@@ -1,5 +1,17 @@
 .ft-blocks-price-list {
 
+	&__item {
+
+		&:hover {
+			box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.175) !important;
+			transform: unset !important;
+
+			img {
+				transform: unset !important;
+			}
+		}
+	}
+
 	.ft-image-uploader__actions {
 		left: 2%;
 		right: auto;
@@ -13,6 +25,7 @@
 			.ft-image-uploader__frame,
 			.ft-image-uploader__image-button {
 				height: 100%;
+				width: 100%;
 			}
 		}
 	}
