@@ -77,7 +77,9 @@ if ( ! function_exists( 'ft_blocks_render_hero_block' ) ) {
 									$image['id'],
 									'full',
 									false,
-									array()
+									array(
+										'loading' => 'lazy',
+									)
 								);
 								?>
 							</figure>
