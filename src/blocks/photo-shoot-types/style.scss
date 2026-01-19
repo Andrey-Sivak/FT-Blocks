@@ -107,7 +107,6 @@
 
 	&__tabs-content {
 		width: 100%;
-		//overflow: hidden;
 		color: #fff;
 	}
 
@@ -115,10 +114,10 @@
 		box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.3);
 		position: relative;
 
-		@include ft-clamp(min-height, 250px, 50vh, 400px);
+		@include ft-clamp(height, 250px, 125vw, 400px);
 
 		@include responsive(ft-main, $bp-md) {
-			min-height: 520px;
+			height: 600px;
 		}
 	}
 
@@ -126,7 +125,7 @@
 		margin: 0;
 		position: relative;
 		width: 100%;
-		min-height: inherit;
+		height: inherit;
 		z-index: 10;
 
 		&::before {

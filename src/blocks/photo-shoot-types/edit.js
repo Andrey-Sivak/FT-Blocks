@@ -19,7 +19,7 @@ import './editor.scss';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	const { heading, description, tabs, activeTab } = attributes;
-	const { baseBlock, container, wrapper, centered, h2 } = config.classes;
+	const { baseBlock, wrapper, centered, h2 } = config.classes;
 
 	const baseClass = `${ baseBlock }-photo-shoot-types`;
 
@@ -40,7 +40,7 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<div { ...blockProps }>
-			<div className={ `${ baseClass }__container ${ container }` }>
+			<div className={ `${ baseClass }__container` }>
 				<div className={ `${ baseClass }__header` }>
 					<RichText
 						tagName="h2"
