@@ -94,7 +94,7 @@
 			this.tabPanels.forEach( ( panel, i ) => {
 				const isActive = i === index;
 				panel.classList.toggle( 'is-active', isActive );
-				panel.hidden = ! isActive;
+				// panel.hidden = ! isActive;
 			} );
 		}
 	}

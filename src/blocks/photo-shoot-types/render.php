@@ -19,7 +19,7 @@ if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 		$heading     = $attributes['heading'] ?? '';
 		$description = $attributes['description'] ?? '';
 		$tabs        = $attributes['tabs'] ?? array();
-		$active_tab  = $attributes['activeTab'] ?? 0;
+		$active_tab  = 0;
 		$anchor_id   = $attributes['anchor'] ?? '';
 
 		if ( empty( $tabs ) ) {
@@ -74,7 +74,6 @@ if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 							class="<?php echo esc_attr( $block_class . '__tab-panel' ); ?><?php echo $index === $active_tab ? ' is-active' : ''; ?>"
 							id="<?php echo esc_attr( $block_class . '__panel-' . $index ); ?>"
 							role="tabpanel"
-							<?php echo $index !== $active_tab ? 'hidden' : ''; ?>
 						>
 							<?php if ( ! empty( $tab['image']['id'] ) ) : ?>
 								<figure class="<?php echo esc_attr( $block_class . '__tab-image' ); ?>">
