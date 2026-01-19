@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-18T23:43:15+00:00\n"
+"POT-Creation-Date: 2026-01-19T11:31:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -37,6 +37,16 @@ msgstr ""
 #. Author URI of the plugin
 #: ft-blocks.php
 msgid "https://github.com/Andrey-Sivak"
+msgstr ""
+
+#: build/blocks/process-steps/render.php:64
+#: build/blocks/process-steps/index.js:1
+msgid "step"
+msgstr ""
+
+#: build/blocks/process-steps/render.php:82
+#: build/blocks/process-steps/index.js:1
+msgid "More information"
 msgstr ""
 
 #: ft-blocks.php:65
@@ -87,10 +97,19 @@ msgstr ""
 msgid "Display pricing options with images, titles and prices."
 msgstr ""
 
+#: ft-blocks.php:89
+msgid "Process Steps"
+msgstr ""
+
+#: ft-blocks.php:90
+msgid "Display step-by-step process with accordion and image gallery."
+msgstr ""
+
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Add Image"
 msgstr ""
@@ -99,6 +118,7 @@ msgstr ""
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Image"
 msgstr ""
@@ -107,6 +127,7 @@ msgstr ""
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Change image"
 msgstr ""
@@ -115,12 +136,14 @@ msgstr ""
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Remove image"
 msgstr ""
 
 #: build/blocks/features/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Remove"
@@ -130,6 +153,7 @@ msgstr ""
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Enter Heading…"
 msgstr ""
@@ -168,22 +192,26 @@ msgstr ""
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Button text"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Hide preview"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Show preview"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Add First Image"
 msgstr ""
@@ -227,6 +255,26 @@ msgstr ""
 
 #: build/blocks/price-list/index.js:1
 msgid "Add First Item"
+msgstr ""
+
+#: build/blocks/process-steps/index.js:1
+msgid "Remove Step"
+msgstr ""
+
+#: build/blocks/process-steps/index.js:1
+msgid "Step title…"
+msgstr ""
+
+#: build/blocks/process-steps/index.js:1
+msgid "Step description…"
+msgstr ""
+
+#: build/blocks/process-steps/index.js:1
+msgid "Add Step"
+msgstr ""
+
+#: build/blocks/process-steps/index.js:1
+msgid "Add First Step"
 msgstr ""
 
 #: build/blocks/service-info/index.js:1

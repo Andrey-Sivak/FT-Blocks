@@ -50,6 +50,7 @@ msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Add Image"
 msgstr "Přidat obrázek"
@@ -58,6 +59,7 @@ msgstr "Přidat obrázek"
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Image"
 msgstr "Obrázek"
@@ -66,6 +68,7 @@ msgstr "Obrázek"
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Change image"
 msgstr "Změnit obrázek"
@@ -74,21 +77,25 @@ msgstr "Změnit obrázek"
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Remove image"
 msgstr "Odebrat obrázek"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Hide preview"
 msgstr "Skrýt náhled"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Show preview"
 msgstr "Zobrazit náhled"
 
 #: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Add First Image"
 msgstr "Přidat první obrázek"
@@ -96,6 +103,7 @@ msgstr "Přidat první obrázek"
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Button text"
@@ -109,6 +117,7 @@ msgstr "Zadejte dekorativní text"
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Enter Heading…"
 msgstr "Zadejte nadpis…"
@@ -160,6 +169,7 @@ msgstr "Zadejte text…"
 
 #: build/blocks/features/index.js:1
 #: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Remove"
@@ -190,64 +200,102 @@ msgstr "Dvousloupcové rozložení s textem, zvýrazněnými informacemi, tlač�
 
 #: ft-blocks.php:81
 msgid "VIP List"
-msgstr ""
+msgstr "VIP seznam"
 
 #: ft-blocks.php:82
 msgid "Display VIP benefits with two-column header and feature cards."
-msgstr ""
+msgstr "Zobrazení VIP výhod s dvousloupcovou hlavičkou a kartami vlastností."
 
 #: build/blocks/service-info/index.js:1
 msgid "Remove Button"
-msgstr ""
+msgstr "Odebrat tlačítko"
 
 #: build/blocks/service-info/index.js:1
 msgid "Add Button"
-msgstr ""
+msgstr "Přidat tlačítko"
 
 #: build/blocks/vip-list/index.js:1
 msgid "Enter left heading…"
-msgstr ""
+msgstr "Zadejte levý nadpis…"
 
 #: build/blocks/vip-list/index.js:1
 msgid "Enter left text…"
-msgstr ""
+msgstr "Zadejte levý text…"
 
 #: build/blocks/vip-list/index.js:1
 msgid "Enter right heading…"
-msgstr ""
+msgstr "Zadejte pravý nadpis…"
 
 #: build/blocks/vip-list/index.js:1
 msgid "Enter right text…"
-msgstr ""
+msgstr "Zadejte pravý text…"
 
 #: ft-blocks.php:85
 msgid "Price List"
-msgstr ""
+msgstr "Ceník"
 
 #: ft-blocks.php:86
 msgid "Display pricing options with images, titles and prices."
-msgstr ""
+msgstr "Zobrazení cenových možností s obrázky, názvy a cenami."
 
 #: build/blocks/price-list/index.js:1
 msgid "Remove Item"
-msgstr ""
+msgstr "Odebrat položku"
 
 #: build/blocks/price-list/index.js:1
 msgid "Service title…"
-msgstr ""
+msgstr "Název služby…"
 
 #: build/blocks/price-list/index.js:1
 msgid "Enter price…"
-msgstr ""
+msgstr "Zadejte cenu…"
 
 #: build/blocks/price-list/index.js:1
 msgid "Add Item"
-msgstr ""
+msgstr "Přidat položku"
 
 #: build/blocks/price-list/index.js:1
 msgid "Add First Item"
-msgstr ""
+msgstr "Přidat první položku"
 
 #: build/blocks/price-list/index.js:1
 msgid "Short description…"
-msgstr ""
+msgstr "Krátký popis…"
+
+#: build/blocks/process-steps/render.php:64
+#: build/blocks/process-steps/index.js:1
+msgid "step"
+msgstr "krok"
+
+#: build/blocks/process-steps/render.php:82
+#: build/blocks/process-steps/index.js:1
+msgid "More information"
+msgstr "Více informací"
+
+#: ft-blocks.php:89
+msgid "Process Steps"
+msgstr "Kroky procesu"
+
+#: ft-blocks.php:90
+msgid "Display step-by-step process with accordion and image gallery."
+msgstr "Zobrazení postupného procesu s akordeonem a galerií obrázků."
+
+#: build/blocks/process-steps/index.js:1
+msgid "Remove Step"
+msgstr "Odebrat krok"
+
+#: build/blocks/process-steps/index.js:1
+msgid "Step title…"
+msgstr "Název kroku…"
+
+#: build/blocks/process-steps/index.js:1
+msgid "Step description…"
+msgstr "Popis kroku…"
+
+#: build/blocks/process-steps/index.js:1
+msgid "Add Step"
+msgstr "Přidat krok"
+
+#: build/blocks/process-steps/index.js:1
+msgid "Add First Step"
+msgstr "Přidat první krok"
