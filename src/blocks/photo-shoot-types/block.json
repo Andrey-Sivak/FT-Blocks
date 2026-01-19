@@ -28,7 +28,38 @@
 		},
 		"tabs": {
 			"type": "array",
-			"default": [],
+			"default": [
+				{
+					"tabLabel": "Tab 1",
+					"title": "",
+					"text": "",
+					"button": "",
+					"image": {
+						"id": null,
+						"url": ""
+					}
+				},
+				{
+					"tabLabel": "Tab 2",
+					"title": "",
+					"text": "",
+					"button": "",
+					"image": {
+						"id": null,
+						"url": ""
+					}
+				},
+				{
+					"tabLabel": "Tab 3",
+					"title": "",
+					"text": "",
+					"button": "",
+					"image": {
+						"id": null,
+						"url": ""
+					}
+				}
+			],
 			"items": {
 				"type": "object",
 				"properties": {

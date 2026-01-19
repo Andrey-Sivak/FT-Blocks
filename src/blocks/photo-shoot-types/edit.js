@@ -90,7 +90,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					<div className={ `${ baseClass }__tab-panel` }>
 						<div className={ `${ baseClass }__tab-image` }>
 							<ImageUploader
-								image={ currentTab.image?.url }
+								image={ currentTab?.image?.url }
 								onSelect={ ( media ) =>
 									updateTab( activeTab, 'image', {
 										id: media.id,
@@ -110,7 +110,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							<RichText
 								tagName="h3"
 								className={ `${ baseClass }__tab-title` }
-								value={ currentTab.title }
+								value={ currentTab?.title }
 								onChange={ ( value ) =>
 									updateTab( activeTab, 'title', value )
 								}
@@ -122,7 +122,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							<RichText
 								tagName="p"
 								className={ `${ baseClass }__tab-text` }
-								value={ currentTab.text }
+								value={ currentTab?.text }
 								onChange={ ( value ) =>
 									updateTab( activeTab, 'text', value )
 								}
@@ -130,7 +130,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							/>
 							<FTButton
 								baseClass={ baseClass }
-								value={ currentTab.button }
+								value={ currentTab?.button }
 								onChange={ ( value ) =>
 									updateTab( activeTab, 'button', value )
 								}
