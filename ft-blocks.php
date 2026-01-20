@@ -89,6 +89,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Process Steps', 'ft-blocks' ),
 				'description' => __( 'Display step-by-step process with accordion and image gallery.', 'ft-blocks' ),
 			),
+			'about-me'          => array(
+				'title'       => __( 'About Me', 'ft-blocks' ),
+				'description' => __( 'Two-column layout with image and rich text content.', 'ft-blocks' ),
+			),
 		);
 
 		foreach ( $blocks as $block => $args ) {

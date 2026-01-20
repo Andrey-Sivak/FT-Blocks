@@ -1,0 +1,120 @@
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/container-query" as *;
+
+.ft-blocks-about-me {
+	$space-xl: clamp(30px, 2.982cqw + 20px, 60px);
+	$space-m: clamp(20px, 0.994cqw + 16px, 30px);
+	padding-top: 0;
+
+	@include responsive(ft-main, $bp-md) {
+		background-size: cover;
+		background-position: top center;
+		background-attachment: fixed;
+		padding-top: 50cqw;
+	}
+
+	@include responsive(ft-main, $bp-lg) {
+		padding-top: 30cqw;
+	}
+
+	@include responsive(ft-main, $bp-container) {
+		padding-top: 400px;
+	}
+
+	&__inner {
+		background-color: colors.$terakotova;
+		padding-bottom: $space-xl;
+
+		@include responsive(ft-main, $bp-lg) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__container {
+		display: grid;
+		align-items: start;
+
+		@include responsive(ft-main, $bp-lg) {
+			gap: $space-xl;
+			grid-template-columns: 1fr 1.5fr;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		order: 2;
+		margin: 0 auto;
+		max-width: 100%;
+		max-height: 120cqw;
+
+		@include responsive(ft-main, $bp-sm) {
+			max-height: 650px;
+			max-width: 400px;
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			max-width: none;
+			order: 1;
+			margin: -7.57cqw 0 calc($space-xl * 2 + 7.57cqw);
+		}
+
+		@include responsive(ft-main, $bp-container) {
+			margin-top: -100px;
+			margin-bottom: calc($space-xl * 2 + 100px);
+		}
+	}
+
+	&__slide {
+		margin: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__pagination {
+		top: auto;
+		bottom: 24px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		.swiper-pagination-bullet {
+			border: 1px solid colors.$terakotova;
+			width: 12px;
+			height: 12px;
+			margin: 0 6px;
+			background-color: #fff;
+
+			&.swiper-pagination-bullet-active {
+				background-color: colors.$terakotova;
+				border: 1px solid #fff;
+			}
+		}
+	}
+
+	&__content {
+		padding-top: calc($space-xl * 2);
+		padding-bottom: 30px;
+		display: grid;
+		gap: $space-m;
+		order: 1;
+
+		@include responsive(ft-main, $bp-lg) {
+			order: 2;
+			padding-bottom: calc($space-xl * 2);
+		}
+	}
+
+	&__text,
+	&__heading {
+		margin: 0;
+		color: #fff;
+	}
+}

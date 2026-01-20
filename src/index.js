@@ -8,3 +8,4 @@ import './blocks/price-list';
 import './blocks/service-info';
 import './blocks/vip-list';
 import './blocks/process-steps';
+import './blocks/about-me';
