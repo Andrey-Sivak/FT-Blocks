@@ -1,7 +1,7 @@
 'use strict';
 
 import Masonry from 'masonry-layout';
-import FsLightbox from 'fslightbox';
+import 'fslightbox';
 
 ( function () {
 	const INITIALIZED_KEY = 'ftProcessStepsInitialized';
