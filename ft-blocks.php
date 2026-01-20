@@ -85,6 +85,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Price List', 'ft-blocks' ),
 				'description' => __( 'Display pricing options with images, titles and prices.', 'ft-blocks' ),
 			),
+			'process-steps'     => array(
+				'title'       => __( 'Process Steps', 'ft-blocks' ),
+				'description' => __( 'Display step-by-step process with accordion and image gallery.', 'ft-blocks' ),
+			),
 		);
 
 		foreach ( $blocks as $block => $args ) {

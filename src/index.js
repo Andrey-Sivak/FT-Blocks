@@ -7,3 +7,4 @@ import './blocks/photo-shoot-types';
 import './blocks/price-list';
 import './blocks/service-info';
 import './blocks/vip-list';
+import './blocks/process-steps';

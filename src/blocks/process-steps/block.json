@@ -1,0 +1,70 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ft-blocks/process-steps",
+	"version": "0.1.0",
+	"category": "design",
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"align": [ "full", "wide" ]
+	},
+	"attributes": {
+		"anchor": {
+			"type": "string",
+			"default": ""
+		},
+		"heading": {
+			"type": "string",
+			"default": ""
+		},
+		"steps": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"title": {
+						"type": "string",
+						"default": ""
+					},
+					"text": {
+						"type": "string",
+						"default": ""
+					}
+				}
+			},
+			"default": []
+		},
+		"images": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"default": null
+					},
+					"url": {
+						"type": "string",
+						"default": ""
+					}
+				}
+			}
+		},
+		"leftButton": {
+			"type": "string",
+			"default": ""
+		},
+		"rightButton": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "ft-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view-script.js",
+	"render": "file:./render.php"
+}

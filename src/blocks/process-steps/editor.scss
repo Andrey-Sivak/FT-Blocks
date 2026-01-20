@@ -1,0 +1,13 @@
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/container-query" as *;
+
+.ft-blocks-process-steps {
+
+	.ft-preview-slider {
+		grid-template-columns: repeat(2, 1fr);
+
+		@include responsive(ft-main, $bp-lg) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
