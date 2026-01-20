@@ -15,6 +15,8 @@ const ImagesSlider = ( {
 	previewImageIndex,
 	setPreviewImageIndex,
 } ) => {
+	const hasPreviewImage = previewImageIndex !== undefined;
+
 	const togglePreviewImage = ( index ) => {
 		setPreviewImageIndex( previewImageIndex === index ? null : index );
 	};
@@ -24,7 +26,9 @@ const ImagesSlider = ( {
 		newImages[ index ] = newImage;
 		setAttributes( { [ imagesAttrName ]: newImages } );
 
-		setPreviewImageIndex( index );
+		if ( ! hasPreviewImage ) {
+			setPreviewImageIndex( index );
+		}
 	};
 
 	const addImage = () => {
@@ -39,8 +43,10 @@ const ImagesSlider = ( {
 	};
 
 	const removeImage = ( index ) => {
-		if ( previewImageIndex === index ) {
-			setPreviewImageIndex( null );
+		if ( hasPreviewImage ) {
+			if ( previewImageIndex === index ) {
+				setPreviewImageIndex( null );
+			}
 		}
 
 		const newImages = [ ...images ];
@@ -51,7 +57,8 @@ const ImagesSlider = ( {
 	return (
 		<div className={ `${ baseClass }` }>
 			{ images.map( ( image, index ) => {
-				const isPreviewActive = previewImageIndex === index;
+				const isPreviewActive =
+					hasPreviewImage && previewImageIndex === index;
 
 				return (
 					<div
@@ -60,7 +67,7 @@ const ImagesSlider = ( {
 							image.id ? '' : 'ft-empty'
 						}` }
 					>
-						{ image.id && (
+						{ image.id && hasPreviewImage && (
 							<Button
 								className={ `${ baseClass }__slide_show-preview` }
 								icon={
