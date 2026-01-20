@@ -132,7 +132,7 @@ if ( ! function_exists( 'ft_blocks_render_process_steps_block' ) ) {
 										<a
 												href="<?php echo esc_url( wp_get_attachment_image_url( $image['id'], 'full' ) ); ?>"
 												class="masonry-item"
-												data-fslightbox
+												data-fslightbox="steps-gallery"
 										>
 											<?php
 											echo wp_get_attachment_image(
