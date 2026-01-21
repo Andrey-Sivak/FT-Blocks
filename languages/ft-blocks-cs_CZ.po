@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FT Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/app\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Czech <LL@li.org>\n"
+"Last-Translator: Andrii Sivak <noreply@example.com>\n"
+"Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-01-10T20:14:48+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-01-21 00:00+0000\n"
 "Language: cs_CZ\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -44,8 +44,10 @@ msgstr "Hero sekce"
 
 #: ft-blocks.php:66
 msgid "A high-impact hero section with background and CTA."
-msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
+msgstr "Výrazná hero sekce s pozadím a výzvou k akci (CTA)."
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -55,6 +57,8 @@ msgstr "Hero sekce na domovské stránce se sliderem a výzvou k akci (CTA)."
 msgid "Add Image"
 msgstr "Přidat obrázek"
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -64,6 +68,8 @@ msgstr "Přidat obrázek"
 msgid "Image"
 msgstr "Obrázek"
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -73,6 +79,8 @@ msgstr "Obrázek"
 msgid "Change image"
 msgstr "Změnit obrázek"
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -82,24 +90,31 @@ msgstr "Změnit obrázek"
 msgid "Remove image"
 msgstr "Odebrat obrázek"
 
+#: build/blocks/about-me/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Hide preview"
 msgstr "Skrýt náhled"
 
+#: build/blocks/about-me/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Show preview"
 msgstr "Zobrazit náhled"
 
+#: build/blocks/about-me/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Add First Image"
 msgstr "Přidat první obrázek"
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/blog-posts/index.js:1
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
@@ -113,12 +128,17 @@ msgstr "Text tlačítka"
 msgid "Enter decor text"
 msgstr "Zadejte dekorativní text"
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/blog-posts/index.js:1
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
+#: tmp/testimonials/edit.js:69
 msgid "Enter Heading…"
 msgstr "Zadejte nadpis…"
 
@@ -133,7 +153,7 @@ msgstr "Typy fotografování"
 
 #: ft-blocks.php:70
 msgid "Display different photo shoot types with tabbed navigation."
-msgstr "Zobrazení různých typů fotografování s navigací pomocí záložek."
+msgstr "Zobrazení různých typů fotografování pomocí záložek."
 
 #: ft-blocks.php:73
 msgid "Features"
@@ -167,6 +187,8 @@ msgstr "Zadejte název…"
 msgid "Enter text…"
 msgstr "Zadejte text…"
 
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
@@ -210,6 +232,7 @@ msgstr "Zobrazení VIP výhod s dvousloupcovou hlavičkou a kartami vlastností.
 msgid "Remove Button"
 msgstr "Odebrat tlačítko"
 
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/service-info/index.js:1
 msgid "Add Button"
 msgstr "Přidat tlačítko"
@@ -262,12 +285,12 @@ msgstr "Přidat první položku"
 msgid "Short description…"
 msgstr "Krátký popis…"
 
-#: build/blocks/process-steps/render.php:64
+#: build/blocks/process-steps/render.php:73
 #: build/blocks/process-steps/index.js:1
 msgid "step"
 msgstr "krok"
 
-#: build/blocks/process-steps/render.php:82
+#: build/blocks/process-steps/render.php:91
 #: build/blocks/process-steps/index.js:1
 msgid "More information"
 msgstr "Více informací"
@@ -299,3 +322,168 @@ msgstr "Přidat krok"
 #: build/blocks/process-steps/index.js:1
 msgid "Add First Step"
 msgstr "Přidat první krok"
+
+#: build/blocks/blog-posts/render.php:148
+msgid "Previous slide"
+msgstr "Předchozí snímek"
+
+#: build/blocks/blog-posts/render.php:152
+msgid "Next slide"
+msgstr "Další snímek"
+
+#: build/blocks/blog-posts/render.php:159
+#: build/blocks/blog-posts/index.js:1
+msgid "No posts found."
+msgstr "Nebyly nalezeny žádné příspěvky."
+
+#: ft-blocks.php:93
+msgid "About Me"
+msgstr "O mně"
+
+#: ft-blocks.php:94
+msgid "Two-column layout with image and rich text content."
+msgstr "Dvousloupcové rozložení s obrázkem a bohatým textovým obsahem."
+
+#: ft-blocks.php:97
+msgid "Blog Posts"
+msgstr "Příspěvky na blogu"
+
+#: ft-blocks.php:98
+msgid "Display blog posts dynamically with customizable query options."
+msgstr "Dynamické zobrazení blogových příspěvků s možností úprav dotazu."
+
+#: ft-blocks.php:101
+msgid "FAQ"
+msgstr "Časté dotazy"
+
+#: ft-blocks.php:102
+msgid "Display frequently asked questions with accordions."
+msgstr "Zobrazení často kladených dotazů pomocí akordeonu."
+
+#: ft-blocks.php:105
+msgid "CTA Banner"
+msgstr "CTA banner"
+
+#: ft-blocks.php:106
+msgid "Full-width call-to-action banner with background image and buttons."
+msgstr "Celoplošný banner s výzvou k akci, obrázkem na pozadí a tlačítky."
+
+#: tmp/testimonials/render.php:85
+msgid "Previous testimonial"
+msgstr "Předchozí reference"
+
+#: tmp/testimonials/render.php:92
+msgid "Next testimonial"
+msgstr "Další reference"
+
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
+msgid "Background Image"
+msgstr "Obrázek na pozadí"
+
+#: build/blocks/about-me/index.js:1
+msgid "Enter your text here. You can use multiple paragraphs…"
+msgstr "Zadejte zde svůj text. Můžete použít více odstavců…"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Query Settings"
+msgstr "Nastavení dotazu"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Number of posts"
+msgstr "Počet příspěvků"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Order by"
+msgstr "Řadit podle"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Date"
+msgstr "Datum"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Title"
+msgstr "Název"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Modified"
+msgstr "Změněno"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Random"
+msgstr "Náhodně"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Menu Order"
+msgstr "Pořadí v menu"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Order"
+msgstr "Pořadí"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Descending"
+msgstr "Sestupně"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Ascending"
+msgstr "Vzestupně"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Include specific posts"
+msgstr "Zahrnout konkrétní příspěvky"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Exclude posts"
+msgstr "Vyloučit příspěvky"
+
+#: build/blocks/blog-posts/index.js:1
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
+#: tmp/testimonials/edit.js:78
+msgid "Enter description…"
+msgstr "Zadejte popis…"
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Section label (e.g. \"Tips\")…"
+msgstr "Popisek sekce (např. „Tipy“)…"
+
+#: build/blocks/cta-banner/index.js:1
+msgid "Remove button"
+msgstr "Odebrat tlačítko"
+
+#: build/blocks/faq/index.js:1
+msgid "Question…"
+msgstr "Otázka…"
+
+#: build/blocks/faq/index.js:1
+msgid "Remove item"
+msgstr "Odebrat položku"
+
+#: build/blocks/faq/index.js:1
+msgid "Answer…"
+msgstr "Odpověď…"
+
+#: build/blocks/faq/index.js:1
+msgid "Add Question"
+msgstr "Přidat otázku"
+
+#: build/blocks/faq/index.js:1
+msgid "Add First Question"
+msgstr "Přidat první otázku"
+
+#: tmp/testimonials/edit.js:91
+msgid "\"Enter testimonial quote…\""
+msgstr "„Zadejte citaci reference…“"
+
+#: tmp/testimonials/edit.js:107
+msgid "Author name"
+msgstr "Jméno autora"
+
+#: tmp/testimonials/edit.js:126
+msgid "Go to slide"
+msgstr "Přejít na snímek"
+
+#: tmp/testimonials/edit.js:134
+msgid "Remove testimonial"
+msgstr "Odebrat referenci"

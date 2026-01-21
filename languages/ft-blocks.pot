@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-19T11:31:51+00:00\n"
+"POT-Creation-Date: 2026-01-21T22:11:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -39,12 +39,25 @@ msgstr ""
 msgid "https://github.com/Andrey-Sivak"
 msgstr ""
 
-#: build/blocks/process-steps/render.php:64
+#: build/blocks/blog-posts/render.php:148
+msgid "Previous slide"
+msgstr ""
+
+#: build/blocks/blog-posts/render.php:152
+msgid "Next slide"
+msgstr ""
+
+#: build/blocks/blog-posts/render.php:159
+#: build/blocks/blog-posts/index.js:1
+msgid "No posts found."
+msgstr ""
+
+#: build/blocks/process-steps/render.php:73
 #: build/blocks/process-steps/index.js:1
 msgid "step"
 msgstr ""
 
-#: build/blocks/process-steps/render.php:82
+#: build/blocks/process-steps/render.php:91
 #: build/blocks/process-steps/index.js:1
 msgid "More information"
 msgstr ""
@@ -105,6 +118,48 @@ msgstr ""
 msgid "Display step-by-step process with accordion and image gallery."
 msgstr ""
 
+#: ft-blocks.php:93
+msgid "About Me"
+msgstr ""
+
+#: ft-blocks.php:94
+msgid "Two-column layout with image and rich text content."
+msgstr ""
+
+#: ft-blocks.php:97
+msgid "Blog Posts"
+msgstr ""
+
+#: ft-blocks.php:98
+msgid "Display blog posts dynamically with customizable query options."
+msgstr ""
+
+#: ft-blocks.php:101
+msgid "FAQ"
+msgstr ""
+
+#: ft-blocks.php:102
+msgid "Display frequently asked questions with accordions."
+msgstr ""
+
+#: ft-blocks.php:105
+msgid "CTA Banner"
+msgstr ""
+
+#: ft-blocks.php:106
+msgid "Full-width call-to-action banner with background image and buttons."
+msgstr ""
+
+#: tmp/testimonials/render.php:85
+msgid "Previous testimonial"
+msgstr ""
+
+#: tmp/testimonials/render.php:92
+msgid "Next testimonial"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -114,6 +169,8 @@ msgstr ""
 msgid "Add Image"
 msgstr ""
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -123,6 +180,8 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -132,6 +191,8 @@ msgstr ""
 msgid "Change image"
 msgstr ""
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
@@ -141,6 +202,128 @@ msgstr ""
 msgid "Remove image"
 msgstr ""
 
+#: build/blocks/about-me/index.js:1
+#: build/blocks/blog-posts/index.js:1
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
+#: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
+#: build/blocks/service-info/index.js:1
+#: build/blocks/vip-list/index.js:1
+msgid "Button text"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+#: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
+#: build/blocks/service-info/index.js:1
+msgid "Hide preview"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+#: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
+#: build/blocks/service-info/index.js:1
+msgid "Show preview"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+#: build/blocks/hero/index.js:1
+#: build/blocks/process-steps/index.js:1
+#: build/blocks/service-info/index.js:1
+msgid "Add First Image"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+#: build/blocks/cta-banner/index.js:1
+msgid "Background Image"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+#: build/blocks/blog-posts/index.js:1
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
+#: build/blocks/features/index.js:1
+#: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
+#: build/blocks/service-info/index.js:1
+#: tmp/testimonials/edit.js:69
+msgid "Enter Heading…"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+msgid "Enter your text here. You can use multiple paragraphs…"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Query Settings"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Number of posts"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Order by"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Date"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Title"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Modified"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Random"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Menu Order"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Order"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Descending"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Ascending"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Include specific posts"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Exclude posts"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
+#: tmp/testimonials/edit.js:78
+msgid "Enter description…"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+msgid "Section label (e.g. \"Tips\")…"
+msgstr ""
+
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
 #: build/blocks/features/index.js:1
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
@@ -149,13 +332,33 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: build/blocks/features/index.js:1
-#: build/blocks/hero/index.js:1
-#: build/blocks/photo-shoot-types/index.js:1
-#: build/blocks/price-list/index.js:1
-#: build/blocks/process-steps/index.js:1
+#: build/blocks/cta-banner/index.js:1
+msgid "Remove button"
+msgstr ""
+
+#: build/blocks/cta-banner/index.js:1
 #: build/blocks/service-info/index.js:1
-msgid "Enter Heading…"
+msgid "Add Button"
+msgstr ""
+
+#: build/blocks/faq/index.js:1
+msgid "Question…"
+msgstr ""
+
+#: build/blocks/faq/index.js:1
+msgid "Remove item"
+msgstr ""
+
+#: build/blocks/faq/index.js:1
+msgid "Answer…"
+msgstr ""
+
+#: build/blocks/faq/index.js:1
+msgid "Add Question"
+msgstr ""
+
+#: build/blocks/faq/index.js:1
+msgid "Add First Question"
 msgstr ""
 
 #: build/blocks/features/index.js:1
@@ -187,33 +390,6 @@ msgstr ""
 #: build/blocks/features/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Add First Feature"
-msgstr ""
-
-#: build/blocks/hero/index.js:1
-#: build/blocks/photo-shoot-types/index.js:1
-#: build/blocks/price-list/index.js:1
-#: build/blocks/process-steps/index.js:1
-#: build/blocks/service-info/index.js:1
-#: build/blocks/vip-list/index.js:1
-msgid "Button text"
-msgstr ""
-
-#: build/blocks/hero/index.js:1
-#: build/blocks/process-steps/index.js:1
-#: build/blocks/service-info/index.js:1
-msgid "Hide preview"
-msgstr ""
-
-#: build/blocks/hero/index.js:1
-#: build/blocks/process-steps/index.js:1
-#: build/blocks/service-info/index.js:1
-msgid "Show preview"
-msgstr ""
-
-#: build/blocks/hero/index.js:1
-#: build/blocks/process-steps/index.js:1
-#: build/blocks/service-info/index.js:1
-msgid "Add First Image"
 msgstr ""
 
 #: build/blocks/hero/index.js:1
@@ -281,10 +457,6 @@ msgstr ""
 msgid "Remove Button"
 msgstr ""
 
-#: build/blocks/service-info/index.js:1
-msgid "Add Button"
-msgstr ""
-
 #: build/blocks/vip-list/index.js:1
 msgid "Enter left heading…"
 msgstr ""
@@ -299,4 +471,20 @@ msgstr ""
 
 #: build/blocks/vip-list/index.js:1
 msgid "Enter right text…"
+msgstr ""
+
+#: tmp/testimonials/edit.js:91
+msgid "\"Enter testimonial quote…\""
+msgstr ""
+
+#: tmp/testimonials/edit.js:107
+msgid "Author name"
+msgstr ""
+
+#: tmp/testimonials/edit.js:126
+msgid "Go to slide"
+msgstr ""
+
+#: tmp/testimonials/edit.js:134
+msgid "Remove testimonial"
 msgstr ""
