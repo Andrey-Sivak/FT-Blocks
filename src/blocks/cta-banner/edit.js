@@ -30,9 +30,6 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	const blockProps = useBlockProps( {
 		className: baseClass,
-		style: backgroundImage?.url
-			? { backgroundImage: `url(${ backgroundImage.url })` }
-			: {},
 	} );
 
 	const updateButton = ( index, value ) => {
@@ -85,6 +82,11 @@ export default function Edit( { attributes, setAttributes } ) {
 			<div { ...blockProps }>
 				<div
 					className={ `${ baseClass }__container ${ container } ${ centered }` }
+					style={ {
+						backgroundImage: backgroundImage?.url
+							? `url(${ backgroundImage.url })`
+							: '',
+					} }
 				>
 					<RichText
 						tagName="p"
