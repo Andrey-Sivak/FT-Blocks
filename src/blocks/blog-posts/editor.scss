@@ -1,0 +1,39 @@
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/container-query" as *;
+
+.ft-blocks-blog-posts {
+
+	&__grid {
+		display: grid;
+		gap: 30px;
+		align-items: start;
+
+		@include responsive(ft-main, $bp-md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&::before {
+			content: none !important;
+		}
+	}
+
+	&__item {
+
+		&:hover {
+			transform: unset !important;
+		}
+
+		&-image {
+
+			img {
+				aspect-ratio: auto 1024 / 576;
+				max-width: 100%;
+				display: block;
+			}
+		}
+	}
+}

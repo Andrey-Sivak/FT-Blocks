@@ -93,6 +93,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'About Me', 'ft-blocks' ),
 				'description' => __( 'Two-column layout with image and rich text content.', 'ft-blocks' ),
 			),
+			'blog-posts'        => array(
+				'title'       => __( 'Blog Posts', 'ft-blocks' ),
+				'description' => __( 'Display blog posts dynamically with customizable query options.', 'ft-blocks' ),
+			),
 		);
 
 		foreach ( $blocks as $block => $args ) {
