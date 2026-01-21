@@ -97,6 +97,18 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Blog Posts', 'ft-blocks' ),
 				'description' => __( 'Display blog posts dynamically with customizable query options.', 'ft-blocks' ),
 			),
+			'faq'               => array(
+				'title'       => __( 'FAQ', 'ft-blocks' ),
+				'description' => __( 'Display frequently asked questions with accordions.', 'ft-blocks' ),
+			),
+		//            'testimonials'      => array(
+		//                'title'       => __( 'Testimonials', 'ft-blocks' ),
+		//                'description' => __( 'Display client testimonials in a slider with quotes and authors.', 'ft-blocks' ),
+		//            ),
+		//            'cta-banner'        => array(
+		//                'title'       => __( 'CTA Banner', 'ft-blocks' ),
+		//                'description' => __( 'Full-width call-to-action banner with background image and buttons.', 'ft-blocks' ),
+		//            ),
 		);
 
 		foreach ( $blocks as $block => $args ) {

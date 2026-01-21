@@ -10,3 +10,4 @@ import './blocks/vip-list';
 import './blocks/process-steps';
 import './blocks/about-me';
 import './blocks/blog-posts';
+import './blocks/faq';
