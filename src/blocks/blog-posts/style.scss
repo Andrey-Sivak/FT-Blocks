@@ -42,6 +42,7 @@
 		line-height: 1.7;
 		font-family: $Belleza;
 		margin-bottom: 18px;
+		margin-top: 0;
 
 		@include responsive(ft-main, $bp-md) {
 			font-size: 16px;
