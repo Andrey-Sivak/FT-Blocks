@@ -27,7 +27,7 @@
 		padding-bottom: $space-xl;
 
 		@include responsive(ft-main, $bp-lg) {
-			margin-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
 
