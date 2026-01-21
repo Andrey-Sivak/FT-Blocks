@@ -1,0 +1,95 @@
+@use "../../styles/fonts" as *;
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/container-query" as *;
+@use "../../styles/mixins/responsive-max-width" as *;
+
+.ft-blocks-cta-banner {
+	$space-xl: clamp(30px, 2.982cqw + 20px, 60px);
+	$space-m: clamp(20px, 0.994cqw + 16px, 30px);
+	$space-s: clamp(10px, 0.994cqw + 6px, 20px);
+	padding: 0;
+
+	@include responsive(ft-main, $bp-container) {
+		padding: $space-xl 20px calc($space-xl * 2);
+	}
+
+	&__container {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding: calc(2 * $space-xl) 16px calc(4 * $space-xl);
+		position: relative;
+
+		@include responsive(ft-main, $bp-md) {
+			padding: calc(2 * $space-xl) $space-xl calc(4 * $space-xl);
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			padding: calc(2 * $space-xl) calc(2 * $space-xl) calc(4 * $space-xl);
+		}
+
+		@include responsive(ft-main, $bp-container) {
+			padding: calc(2 * $space-xl);
+		}
+
+		&::before {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			pointer-events: none;
+			z-index: 10;
+		}
+
+		* {
+			position: relative;
+			z-index: 20;
+		}
+	}
+
+	&__heading {
+		margin-top: 0;
+		color: #fff;
+		margin-bottom: $space-s;
+	}
+
+	&__description {
+
+		@include responsive-max-width(75ch);
+		color: #fff;
+		margin-top: 0;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1.7;
+		font-family: $Belleza;
+		margin-bottom: $space-xl;
+
+		@include responsive(ft-main, $bp-md) {
+			font-size: 16px;
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			font-size: 18px;
+		}
+	}
+
+	&__buttons {
+		display: grid;
+		gap: $space-m;
+		align-items: center;
+
+		@include responsive(ft-main, $bp-md) {
+			flex-wrap: wrap;
+			display: flex;
+		}
+	}
+
+	&__button {
+		position: relative;
+		margin: 0;
+	}
+}

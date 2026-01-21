@@ -1,0 +1,13 @@
+.ft-blocks-cta-banner {
+
+	&__button {
+
+		&-wrap {
+			position: relative;
+
+			.ft-remove-button-cross {
+				position: absolute;
+			}
+		}
+	}
+}
