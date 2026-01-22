@@ -20,8 +20,7 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	min-height: 600px;
-
-	@include full-height;
+	height: 100vh;
 
 	@include responsive(ft-main, $bp-md) {
 		padding-top: 101px;
