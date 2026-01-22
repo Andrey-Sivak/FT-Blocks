@@ -172,20 +172,25 @@ if ( ! function_exists( 'ft_blocks_set_script_translations' ) ) {
 }
 add_action( 'init', 'ft_blocks_set_script_translations', 20 );
 
-add_filter( 'block_categories_all', 'ft_blocks_add_custom_category', 10, 2 );
-
-function ft_blocks_add_custom_category( $categories/*, $block_editor_context*/ ) {
-    // if it needs, make it appear only in post/page context
-    // if ( ! empty( $block_editor_context->post ) ) { ... }
-
-    return array_merge(
-        $categories,
-        array(
-            array(
-                'slug'  => 'ft-blocks',
-                'title' => _x('Fotografka Domča Blocks', 'block category name', 'ft-blocks'),
-                 'icon' => 'format-image'
-            ),
-        )
-    );
+/**
+ * Add a custom block category to the block editor.
+ *
+ * @param $categories array - Block categories.
+ * @return array - Updated block categories.
+ */
+if ( ! function_exists( 'ft_blocks_add_custom_category' ) ) {
+	function ft_blocks_add_custom_category( $categories ) {
+		return array_merge(
+			$categories,
+			array(
+				array(
+					'slug'  => 'ft-blocks',
+					'title' => _x( 'Fotografka Domča Blocks', 'block category name', 'ft-blocks' ),
+					'icon'  => 'format-image',
+				),
+			)
+		);
+	}
 }
+
+add_filter( 'block_categories_all', 'ft_blocks_add_custom_category', 10, 2 );
