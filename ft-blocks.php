@@ -25,6 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'FT_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
+const FT_BLOCKS_VERSION = '1.0.0';
 
 /**
  * Load plugin configuration.
@@ -194,3 +195,130 @@ if ( ! function_exists( 'ft_blocks_add_custom_category' ) ) {
 }
 
 add_filter( 'block_categories_all', 'ft_blocks_add_custom_category', 10, 2 );
+
+/**
+ * Inject custom color palette into the default origin.
+ * Ensures colors are available in the block editor palette.
+ *
+ * @param WP_Theme_JSON $theme_json
+ * @return WP_Theme_JSON
+ */
+if ( ! function_exists( 'ft_blocks_inject_colors_default' ) ) {
+	function ft_blocks_inject_colors_default( $theme_json ) {
+		$json_path = plugin_dir_path( __FILE__ ) . 'theme.json';
+
+		if ( ! file_exists( $json_path ) ) {
+			return $theme_json;
+		}
+
+		$plugin_data = wp_json_file_decode( $json_path, array( 'associative' => true ) );
+
+		if ( empty( $plugin_data ) || empty( $plugin_data['settings']['color']['palette'] ) ) {
+			return $theme_json;
+		}
+
+		$data = $theme_json->get_data();
+
+		// Force-enable default palette processing (helps in some hybrid/classic setups)
+		$data['settings']['color']['defaultPalette'] = true;
+
+		// Merge into the 'theme' palette slot (visible in editor)
+		$current_palette = $data['settings']['color']['palette']['theme'] ?? array();
+		$existing_slugs  = array_column( $current_palette, 'slug' );
+
+		foreach ( $plugin_data['settings']['color']['palette'] as $color ) {
+			if ( ! in_array( $color['slug'], $existing_slugs, true ) ) {
+				$current_palette[] = $color;
+			}
+		}
+
+		$data['settings']['color']['palette']['theme'] = $current_palette;
+
+		$theme_json->update_with( $data );
+
+		return $theme_json;
+	}
+}
+
+add_filter( 'wp_theme_json_data_default', 'ft_blocks_inject_colors_default', 20 );
+
+/**
+ * Inject custom color palette into the theme origin.
+ * Helps force preset variable/class generation in Bricks + classic/hybrid environments.
+ *
+ * @param WP_Theme_JSON $theme_json
+ * @return WP_Theme_JSON
+ */
+if ( ! function_exists( 'ft_blocks_inject_colors_theme' ) ) {
+	function ft_blocks_inject_colors_theme( $theme_json ) {
+		$json_path = plugin_dir_path( __FILE__ ) . 'theme.json';
+
+		if ( ! file_exists( $json_path ) ) {
+			return $theme_json;
+		}
+
+		$plugin_data = wp_json_file_decode( $json_path, array( 'associative' => true ) );
+
+		if ( empty( $plugin_data ) || empty( $plugin_data['settings']['color']['palette'] ) ) {
+			return $theme_json;
+		}
+
+		$data = $theme_json->get_data();
+
+		// Force-enable default palette processing
+		$data['settings']['color']['defaultPalette'] = true;
+
+		$current_palette = $data['settings']['color']['palette']['theme'] ?? array();
+		$existing_slugs  = array_column( $current_palette, 'slug' );
+
+		foreach ( $plugin_data['settings']['color']['palette'] as $color ) {
+			if ( ! in_array( $color['slug'], $existing_slugs, true ) ) {
+				$current_palette[] = $color;
+			}
+		}
+
+		$data['settings']['color']['palette']['theme'] = $current_palette;
+
+		$theme_json->update_with( $data );
+
+		return $theme_json;
+	}
+}
+
+add_filter( 'wp_theme_json_data_theme', 'ft_blocks_inject_colors_theme', 20 );
+
+/**
+ * Enqueue custom color classes for block editor.
+ *
+ * @return void
+ */
+if ( ! function_exists( 'ft_blocks_enqueue_custom_color_classes' ) ) {
+	function ft_blocks_enqueue_custom_color_classes() {
+		$custom_colors = array(
+			'ft-terakotova'        => '#d08a67',
+			'ft-terakotova-tmava'  => '#b36137',
+			'ft-terakotova-svetla' => '#e7c4b2',
+		);
+
+		$css = ":root {\n";
+
+		foreach ( $custom_colors as $slug => $hex ) {
+			$css .= "  --wp--preset--color--{$slug}: {$hex};\n";
+		}
+
+		$css .= "}\n\n";
+
+		foreach ( $custom_colors as $slug => $hex ) {
+			$css .= ".has-{$slug}-color { color: var(--wp--preset--color--{$slug}) !important; }\n";
+			$css .= ".has-{$slug}-background-color { background-color: var(--wp--preset--color--{$slug}) !important; }\n";
+			$css .= ".has-{$slug}-border-color { border-color: var(--wp--preset--color--{$slug}) !important; }\n\n";
+		}
+
+		wp_register_style( 'ft-blocks-custom-colors', false, array(), FT_BLOCKS_VERSION );
+		wp_enqueue_style( 'ft-blocks-custom-colors' );
+		wp_add_inline_style( 'ft-blocks-custom-colors', $css );
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_custom_color_classes' );
+add_action( 'enqueue_block_editor_assets', 'ft_blocks_enqueue_custom_color_classes' );

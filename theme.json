@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "custom": false,
+      "customGradient": false,
+      "link": true,
+      "palette": [
+        {
+          "slug": "ft-terakotova",
+          "color": "#d08a67",
+          "name": "Terakotova"
+        },
+        {
+          "slug": "ft-terakotova-tmava",
+          "color": "#b36137",
+          "name": "Terakotova Tmava"
+        },
+        {
+          "slug": "ft-terakotova-svetla",
+          "color": "#e7c4b2",
+          "name": "Terakotova Svetla"
+        }
+      ]
+    }
+  }
+}
