@@ -1,0 +1,271 @@
+@use "../../styles/fonts" as *;
+@use "../../styles/mixins/responsive-max-width" as *;
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/container-query" as *;
+
+.ft-blocks-testimonials {
+	$space-xl: clamp(30px, 2.982vw + 20px, 60px);
+	$space-m: clamp(20px, 0.994vw + 16px, 30px);
+	$space-s: clamp(10px, 0.994vw + 6px, 20px);
+	background-color: colors.$bezova;
+	padding-top: calc(2 * $space-xl);
+	padding-bottom: $space-xl;
+	position: relative;
+	overflow: hidden;
+
+	&__decorative-vector {
+		margin: 0;
+		position: absolute;
+		z-index: 10;
+		width: 400%;
+		height: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+		top: auto;
+		bottom: 0;
+
+		@include responsive(ft-main, $bp-lg) {
+			height: 120px;
+			width: 100%;
+		}
+
+		svg {
+			display: block;
+			height: 100%;
+			width: 100%;
+			color: colors.$bezova-svetla;
+		}
+	}
+
+	&__container {
+		position: relative;
+		z-index: 20;
+		display: grid;
+		gap: $space-xl;
+	}
+
+	&__header {
+		text-align: center;
+		display: grid;
+		gap: $space-s;
+	}
+
+	&__heading {
+		margin: 0;
+	}
+
+	&__description {
+
+		@include responsive-max-width(75ch);
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1.7;
+		font-family: $Belleza;
+		margin: 0 auto;
+		text-align: center;
+
+		@include responsive(ft-main, $bp-md) {
+			font-size: 16px;
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			font-size: 18px;
+		}
+	}
+
+	&__pagination {
+		margin-top: $space-m;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		gap: 4px;
+
+		.swiper-pagination-bullet {
+			width: 12px;
+			height: 12px;
+			background-color: transparent;
+			border: 1px solid colors.$terakotova;
+			opacity: 1;
+			transition: background-color 0.3s ease;
+
+			&-active {
+				background-color: colors.$terakotova;
+			}
+		}
+
+		&.swiper-pagination-lock {
+			display: none;
+		}
+	}
+
+	&__nav {
+		display: none;
+		justify-content: center;
+		gap: 16px;
+
+		@include responsive(ft-main, $bp-md) {
+			display: flex;
+		}
+
+		&-prev {
+			left: 2px;
+
+			@include responsive(ft-main, 1400px) {
+				left: 0;
+			}
+
+			&::before {
+				transform: translate(-30%, -50%) rotate(45deg);
+			}
+		}
+
+		&-next {
+			left: auto;
+			right: 2px;
+
+			@include responsive(ft-main, 1400px) {
+				right: 0;
+			}
+
+			&::before {
+				transform: translate(-70%, -50%) rotate(-135deg);
+			}
+		}
+
+		&-prev,
+		&-next {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			cursor: pointer;
+			position: absolute;
+			background-color: transparent;
+			top: calc(50% - 40px);
+			z-index: 20;
+			transition: background-color 0.3s ease, opacity 0.3s ease;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 10px;
+				height: 10px;
+				border-left: 2px solid colors.$terakotova;
+				border-bottom: 2px solid colors.$terakotova;
+				transition: border-color 0.3s ease;
+			}
+
+			&.swiper-button-disabled {
+				opacity: 0.3;
+				cursor: not-allowed;
+
+				&:hover {
+					background-color: transparent;
+
+					&::before {
+						border-color: colors.$terakotova;
+					}
+				}
+			}
+
+			&:hover {
+				background-color: colors.$terakotova;
+
+				&::before {
+					border-color: #fff;
+				}
+			}
+		}
+	}
+
+	&__slider {
+		position: relative;
+		overflow: hidden;
+		padding: 10px 10px 0;
+
+		@include responsive(ft-main, $bp-md) {
+			padding: 10px 30px 0;
+		}
+
+		&--no-slider {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 40px;
+			align-items: start;
+
+			.swiper-wrapper {
+				display: contents;
+			}
+
+			.ft-blocks-blog-posts__pagination,
+			.ft-blocks-blog-posts__nav {
+				display: none;
+			}
+		}
+	}
+
+	&__slides {
+		align-items: start;
+		height: auto;
+	}
+
+	&__slide {
+		position: relative;
+		height: auto;
+		margin: 0;
+		padding: $space-m;
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+		@include responsive(ft-main, $bp-md) {
+			padding: $space-s;
+		}
+	}
+
+	&__quote {
+		font-style: italic;
+		font-weight: 500;
+		display: block;
+		width: 100%;
+		margin: 0;
+		border: none;
+		line-height: 1.4;
+		padding: 0;
+		text-align: center;
+		font-size: 18px;
+
+		@include responsive(ft-main, $bp-md) {
+			font-size: 20px;
+		}
+	}
+
+	&__decor {
+		display: block;
+		width: 30%;
+		height: 1px;
+		margin: 20px auto;
+		background-color: colors.$terakotova;
+	}
+
+	&__author {
+		color: colors.$terakotova;
+		margin: 0;
+		text-align: center;
+		font-family: $Allura;
+		font-size: 26px;
+		line-height: 0.9;
+		display: block;
+		width: 100%;
+	}
+
+	&__button {
+		margin: 0 auto;
+
+		&.ft-button.ft-button-secondary {
+			border: none;
+		}
+	}
+}
