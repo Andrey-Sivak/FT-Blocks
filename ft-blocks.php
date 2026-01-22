@@ -21,24 +21,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Define Constants
+ * Define Constants.
  */
 define( 'FT_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
 /**
- * Load plugin configuration
+ * Load plugin configuration.
  */
 require_once FT_BLOCKS_PATH . 'includes/config.php';
 
 /**
- * Load components
+ * Load components.
  */
 require_once FT_BLOCKS_PATH . 'includes/components/button.php';
 require_once FT_BLOCKS_PATH . 'includes/components/icons.php';
 
 /**
- * Load plugin text domain for translations
+ * Load plugin text domain for translations.
+ *
+ * @return void
  */
 if ( ! function_exists( 'ft_blocks_load_textdomain' ) ) {
 	function ft_blocks_load_textdomain() {
@@ -57,6 +59,8 @@ add_action( 'plugins_loaded', 'ft_blocks_load_textdomain' );
  * through the block editor in the corresponding context.
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
+ *
+ * @return void
  */
 if ( ! function_exists( 'ft_blocks_init' ) ) {
 	function ft_blocks_init() {
@@ -123,7 +127,9 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 add_action( 'init', 'ft_blocks_init' );
 
 /**
- * Enqueue global styles for frontend and editor
+ * Enqueue global styles for frontend and editor.
+ *
+ * @return void
  */
 if ( ! function_exists( 'ft_blocks_enqueue_global_styles' ) ) {
 	function ft_blocks_enqueue_global_styles() {
@@ -142,7 +148,9 @@ add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_global_styles' );
 add_action( 'enqueue_block_assets', 'ft_blocks_enqueue_global_styles' );
 
 /**
- * Set script translations for block editor
+ * Set script translations for block editor.
+ *
+ * @return void
  */
 if ( ! function_exists( 'ft_blocks_set_script_translations' ) ) {
 	function ft_blocks_set_script_translations() {
