@@ -38,11 +38,11 @@ msgstr "Andrii Sivak"
 msgid "https://github.com/Andrey-Sivak"
 msgstr "https://github.com/Andrey-Sivak"
 
-#: ft-blocks.php:65
+#: ft-blocks.php:70
 msgid "Hero Section"
 msgstr "Hero sekce"
 
-#: ft-blocks.php:66
+#: ft-blocks.php:71
 msgid "A high-impact hero section with background and CTA."
 msgstr "Výrazná hero sekce s pozadím a výzvou k akci (CTA)."
 
@@ -120,6 +120,7 @@ msgstr "Přidat první obrázek"
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
+#: build/blocks/testimonials/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Button text"
 msgstr "Text tlačítka"
@@ -138,7 +139,7 @@ msgstr "Zadejte dekorativní text"
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
-#: tmp/testimonials/edit.js:69
+#: build/blocks/testimonials/index.js:1
 msgid "Enter Heading…"
 msgstr "Zadejte nadpis…"
 
@@ -147,19 +148,19 @@ msgstr "Zadejte nadpis…"
 msgid "Enter Subheading…"
 msgstr "Zadejte podnadpis…"
 
-#: ft-blocks.php:69
+#: ft-blocks.php:74
 msgid "Photo Shoot Types"
 msgstr "Typy fotografování"
 
-#: ft-blocks.php:70
+#: ft-blocks.php:75
 msgid "Display different photo shoot types with tabbed navigation."
 msgstr "Zobrazení různých typů fotografování pomocí záložek."
 
-#: ft-blocks.php:73
+#: ft-blocks.php:78
 msgid "Features"
 msgstr "Vlastnosti"
 
-#: ft-blocks.php:74
+#: ft-blocks.php:79
 msgid "Display features in a grid with icons, titles and descriptions."
 msgstr "Zobrazení vlastností v mřížce s ikonami, nadpisy a popisy."
 
@@ -193,6 +194,7 @@ msgstr "Zadejte text…"
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
+#: build/blocks/testimonials/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Remove"
 msgstr "Odebrat"
@@ -212,19 +214,19 @@ msgstr "Přidat vlastnost"
 msgid "Add First Feature"
 msgstr "Přidat první vlastnost"
 
-#: ft-blocks.php:77
+#: ft-blocks.php:82
 msgid "Service Info"
 msgstr "Informace o službě"
 
-#: ft-blocks.php:78
+#: ft-blocks.php:83
 msgid "Two-column layout with text, highlighted info, buttons and image."
 msgstr "Dvousloupcové rozložení s textem, zvýrazněnými informacemi, tlačítky a obrázkem."
 
-#: ft-blocks.php:81
+#: ft-blocks.php:86
 msgid "VIP List"
 msgstr "VIP seznam"
 
-#: ft-blocks.php:82
+#: ft-blocks.php:87
 msgid "Display VIP benefits with two-column header and feature cards."
 msgstr "Zobrazení VIP výhod s dvousloupcovou hlavičkou a kartami vlastností."
 
@@ -253,11 +255,11 @@ msgstr "Zadejte pravý nadpis…"
 msgid "Enter right text…"
 msgstr "Zadejte pravý text…"
 
-#: ft-blocks.php:85
+#: ft-blocks.php:90
 msgid "Price List"
 msgstr "Ceník"
 
-#: ft-blocks.php:86
+#: ft-blocks.php:91
 msgid "Display pricing options with images, titles and prices."
 msgstr "Zobrazení cenových možností s obrázky, názvy a cenami."
 
@@ -295,11 +297,11 @@ msgstr "krok"
 msgid "More information"
 msgstr "Více informací"
 
-#: ft-blocks.php:89
+#: ft-blocks.php:94
 msgid "Process Steps"
 msgstr "Kroky procesu"
 
-#: ft-blocks.php:90
+#: ft-blocks.php:95
 msgid "Display step-by-step process with accordion and image gallery."
 msgstr "Zobrazení postupného procesu s akordeonem a galerií obrázků."
 
@@ -324,10 +326,12 @@ msgid "Add First Step"
 msgstr "Přidat první krok"
 
 #: build/blocks/blog-posts/render.php:148
+#: build/blocks/testimonials/render.php:96
 msgid "Previous slide"
 msgstr "Předchozí snímek"
 
 #: build/blocks/blog-posts/render.php:152
+#: build/blocks/testimonials/render.php:100
 msgid "Next slide"
 msgstr "Další snímek"
 
@@ -336,45 +340,37 @@ msgstr "Další snímek"
 msgid "No posts found."
 msgstr "Nebyly nalezeny žádné příspěvky."
 
-#: ft-blocks.php:93
+#: ft-blocks.php:98
 msgid "About Me"
 msgstr "O mně"
 
-#: ft-blocks.php:94
+#: ft-blocks.php:99
 msgid "Two-column layout with image and rich text content."
 msgstr "Dvousloupcové rozložení s obrázkem a bohatým textovým obsahem."
 
-#: ft-blocks.php:97
+#: ft-blocks.php:102
 msgid "Blog Posts"
 msgstr "Příspěvky na blogu"
 
-#: ft-blocks.php:98
+#: ft-blocks.php:103
 msgid "Display blog posts dynamically with customizable query options."
 msgstr "Dynamické zobrazení blogových příspěvků s možností úprav dotazu."
 
-#: ft-blocks.php:101
+#: ft-blocks.php:106
 msgid "FAQ"
 msgstr "Časté dotazy"
 
-#: ft-blocks.php:102
+#: ft-blocks.php:107
 msgid "Display frequently asked questions with accordions."
 msgstr "Zobrazení často kladených dotazů pomocí akordeonu."
 
-#: ft-blocks.php:105
+#: ft-blocks.php:110
 msgid "CTA Banner"
 msgstr "CTA banner"
 
-#: ft-blocks.php:106
+#: ft-blocks.php:111
 msgid "Full-width call-to-action banner with background image and buttons."
 msgstr "Celoplošný banner s výzvou k akci, obrázkem na pozadí a tlačítky."
-
-#: tmp/testimonials/render.php:85
-msgid "Previous testimonial"
-msgstr "Předchozí reference"
-
-#: tmp/testimonials/render.php:92
-msgid "Next testimonial"
-msgstr "Další reference"
 
 #: build/blocks/about-me/index.js:1
 #: build/blocks/cta-banner/index.js:1
@@ -440,7 +436,7 @@ msgstr "Vyloučit příspěvky"
 #: build/blocks/blog-posts/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/faq/index.js:1
-#: tmp/testimonials/edit.js:78
+#: build/blocks/testimonials/index.js:1
 msgid "Enter description…"
 msgstr "Zadejte popis…"
 
@@ -472,18 +468,50 @@ msgstr "Přidat otázku"
 msgid "Add First Question"
 msgstr "Přidat první otázku"
 
-#: tmp/testimonials/edit.js:91
+#: build/blocks/testimonials/index.js:1
 msgid "\"Enter testimonial quote…\""
 msgstr "„Zadejte citaci reference…“"
 
-#: tmp/testimonials/edit.js:107
+#: build/blocks/testimonials/index.js:1
 msgid "Author name"
 msgstr "Jméno autora"
 
-#: tmp/testimonials/edit.js:126
-msgid "Go to slide"
-msgstr "Přejít na snímek"
+#: ft-blocks.php:114
+msgid "Testimonials"
+msgstr ""
 
-#: tmp/testimonials/edit.js:134
-msgid "Remove testimonial"
-msgstr "Odebrat referenci"
+#: ft-blocks.php:115
+msgid "Display client testimonials in a slider with quotes and authors."
+msgstr ""
+
+#: ft-blocks.php:189
+msgctxt "block category name"
+msgid "Fotografka Domča Blocks"
+msgstr ""
+
+#: build/blocks/testimonials/index.js:1
+msgid "Remove Testimonial"
+msgstr ""
+
+#: build/blocks/testimonials/index.js:1
+msgid "Add Testimonial"
+msgstr ""
+
+#: build/blocks/testimonials/index.js:1
+msgid "Add First Testimonial"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Terakotova"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Terakotova Tmava"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Terakotova Svetla"
+msgstr ""

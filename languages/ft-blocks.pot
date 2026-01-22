@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-21T22:11:53+00:00\n"
+"POT-Creation-Date: 2026-01-22T22:08:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -40,10 +40,12 @@ msgid "https://github.com/Andrey-Sivak"
 msgstr ""
 
 #: build/blocks/blog-posts/render.php:148
+#: build/blocks/testimonials/render.php:96
 msgid "Previous slide"
 msgstr ""
 
 #: build/blocks/blog-posts/render.php:152
+#: build/blocks/testimonials/render.php:100
 msgid "Next slide"
 msgstr ""
 
@@ -62,100 +64,105 @@ msgstr ""
 msgid "More information"
 msgstr ""
 
-#: ft-blocks.php:65
+#: ft-blocks.php:70
 msgid "Hero Section"
 msgstr ""
 
-#: ft-blocks.php:66
+#: ft-blocks.php:71
 msgid "A high-impact hero section with background and CTA."
 msgstr ""
 
-#: ft-blocks.php:69
+#: ft-blocks.php:74
 msgid "Photo Shoot Types"
 msgstr ""
 
-#: ft-blocks.php:70
+#: ft-blocks.php:75
 msgid "Display different photo shoot types with tabbed navigation."
 msgstr ""
 
-#: ft-blocks.php:73
+#: ft-blocks.php:78
 msgid "Features"
 msgstr ""
 
-#: ft-blocks.php:74
+#: ft-blocks.php:79
 msgid "Display features in a grid with icons, titles and descriptions."
 msgstr ""
 
-#: ft-blocks.php:77
+#: ft-blocks.php:82
 msgid "Service Info"
 msgstr ""
 
-#: ft-blocks.php:78
+#: ft-blocks.php:83
 msgid "Two-column layout with text, highlighted info, buttons and image."
 msgstr ""
 
-#: ft-blocks.php:81
+#: ft-blocks.php:86
 msgid "VIP List"
 msgstr ""
 
-#: ft-blocks.php:82
+#: ft-blocks.php:87
 msgid "Display VIP benefits with two-column header and feature cards."
 msgstr ""
 
-#: ft-blocks.php:85
+#: ft-blocks.php:90
 msgid "Price List"
 msgstr ""
 
-#: ft-blocks.php:86
+#: ft-blocks.php:91
 msgid "Display pricing options with images, titles and prices."
 msgstr ""
 
-#: ft-blocks.php:89
+#: ft-blocks.php:94
 msgid "Process Steps"
 msgstr ""
 
-#: ft-blocks.php:90
+#: ft-blocks.php:95
 msgid "Display step-by-step process with accordion and image gallery."
 msgstr ""
 
-#: ft-blocks.php:93
+#: ft-blocks.php:98
 msgid "About Me"
 msgstr ""
 
-#: ft-blocks.php:94
+#: ft-blocks.php:99
 msgid "Two-column layout with image and rich text content."
 msgstr ""
 
-#: ft-blocks.php:97
+#: ft-blocks.php:102
 msgid "Blog Posts"
 msgstr ""
 
-#: ft-blocks.php:98
+#: ft-blocks.php:103
 msgid "Display blog posts dynamically with customizable query options."
 msgstr ""
 
-#: ft-blocks.php:101
+#: ft-blocks.php:106
 msgid "FAQ"
 msgstr ""
 
-#: ft-blocks.php:102
+#: ft-blocks.php:107
 msgid "Display frequently asked questions with accordions."
 msgstr ""
 
-#: ft-blocks.php:105
+#: ft-blocks.php:110
 msgid "CTA Banner"
 msgstr ""
 
-#: ft-blocks.php:106
+#: ft-blocks.php:111
 msgid "Full-width call-to-action banner with background image and buttons."
 msgstr ""
 
-#: tmp/testimonials/render.php:85
-msgid "Previous testimonial"
+#: ft-blocks.php:114
+msgid "Testimonials"
 msgstr ""
 
-#: tmp/testimonials/render.php:92
-msgid "Next testimonial"
+#: ft-blocks.php:115
+msgid "Display client testimonials in a slider with quotes and authors."
+msgstr ""
+
+#: ft-blocks.php:189
+msgctxt "block category name"
+msgid "Fotografka Domča Blocks"
 msgstr ""
 
 #: build/blocks/about-me/index.js:1
@@ -211,6 +218,7 @@ msgstr ""
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
+#: build/blocks/testimonials/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Button text"
 msgstr ""
@@ -251,7 +259,7 @@ msgstr ""
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
-#: tmp/testimonials/edit.js:69
+#: build/blocks/testimonials/index.js:1
 msgid "Enter Heading…"
 msgstr ""
 
@@ -314,7 +322,7 @@ msgstr ""
 #: build/blocks/blog-posts/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/faq/index.js:1
-#: tmp/testimonials/edit.js:78
+#: build/blocks/testimonials/index.js:1
 msgid "Enter description…"
 msgstr ""
 
@@ -328,6 +336,7 @@ msgstr ""
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
+#: build/blocks/testimonials/index.js:1
 #: build/blocks/vip-list/index.js:1
 msgid "Remove"
 msgstr ""
@@ -457,6 +466,26 @@ msgstr ""
 msgid "Remove Button"
 msgstr ""
 
+#: build/blocks/testimonials/index.js:1
+msgid "\"Enter testimonial quote…\""
+msgstr ""
+
+#: build/blocks/testimonials/index.js:1
+msgid "Author name"
+msgstr ""
+
+#: build/blocks/testimonials/index.js:1
+msgid "Remove Testimonial"
+msgstr ""
+
+#: build/blocks/testimonials/index.js:1
+msgid "Add Testimonial"
+msgstr ""
+
+#: build/blocks/testimonials/index.js:1
+msgid "Add First Testimonial"
+msgstr ""
+
 #: build/blocks/vip-list/index.js:1
 msgid "Enter left heading…"
 msgstr ""
@@ -473,18 +502,17 @@ msgstr ""
 msgid "Enter right text…"
 msgstr ""
 
-#: tmp/testimonials/edit.js:91
-msgid "\"Enter testimonial quote…\""
+#: theme.json
+msgctxt "Color name"
+msgid "Terakotova"
 msgstr ""
 
-#: tmp/testimonials/edit.js:107
-msgid "Author name"
+#: theme.json
+msgctxt "Color name"
+msgid "Terakotova Tmava"
 msgstr ""
 
-#: tmp/testimonials/edit.js:126
-msgid "Go to slide"
-msgstr ""
-
-#: tmp/testimonials/edit.js:134
-msgid "Remove testimonial"
+#: theme.json
+msgctxt "Color name"
+msgid "Terakotova Svetla"
 msgstr ""
