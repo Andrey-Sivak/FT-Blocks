@@ -6,7 +6,7 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components';
 import config from '../../../config.json';
 import { FTButton, RemoveButtonCross } from '../../components';
-import './editor.scss';
+// import './editor.scss';
 
 /**
  * The edit function describes the structure of your block in the context of the
