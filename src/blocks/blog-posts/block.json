@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "ft-blocks/blog-posts",
 	"version": "0.1.0",
-	"category": "design",
+	"category": "ft-blocks",
 	"supports": {
 		"anchor": true,
 		"html": false,

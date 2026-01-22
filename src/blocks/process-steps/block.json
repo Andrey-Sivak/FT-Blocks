@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "ft-blocks/process-steps",
 	"version": "0.1.0",
-	"category": "design",
+	"category": "ft-blocks",
 	"supports": {
 		"anchor": true,
 		"html": false,
