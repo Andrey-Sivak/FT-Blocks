@@ -57,6 +57,7 @@
 	&__top {
 		color: #fff;
 		display: grid;
+		align-items: start;
 		gap: $space-xl;
 
 		@include responsive(ft-main, $bp-lg) {
