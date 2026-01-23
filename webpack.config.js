@@ -10,6 +10,10 @@ module.exports = {
 			'src/styles/index.js'
 		),
 		animations: path.resolve( __dirname, './src/animations/index.js' ),
+		'scroll-to-element': path.resolve(
+			__dirname,
+			'./src/scroll-to-element/index.js'
+		),
 	},
 	output: {
 		...defaultConfig.output,

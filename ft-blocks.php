@@ -328,28 +328,39 @@ add_action( 'enqueue_block_editor_assets', 'ft_blocks_enqueue_custom_color_class
  *
  * @return void
  */
-if ( ! function_exists( 'ft_blocks_enqueue_animations' ) ) {
-	function ft_blocks_enqueue_animations() {
+if ( ! function_exists( 'ft_blocks_enqueue_scripts' ) ) {
+	function ft_blocks_enqueue_scripts() {
 		if ( is_admin() ) {
 			return;
 		}
 
-		$script_path = plugin_dir_path( __FILE__ ) . 'build/animations.asset.php';
+		$animations_script_path = plugin_dir_path( __FILE__ ) . 'build/animations.asset.php';
+		$scroll_to_element_script_path = plugin_dir_path( __FILE__ ) . 'build/scroll-to-element.asset.php';
 
-		if ( ! file_exists( $script_path ) ) {
-			return;
+		if ( file_exists( $animations_script_path ) ) {
+            $animations_asset = include $animations_script_path;
+
+            wp_enqueue_script(
+                'ft-blocks-animations',
+                plugins_url( 'build/animations.js', __FILE__ ),
+                $animations_asset['dependencies'] ?? array(),
+                $animations_asset['version'] ?? FT_BLOCKS_VERSION,
+                true
+            );
 		}
 
-		$asset = include $script_path;
+        if ( file_exists( $scroll_to_element_script_path ) ) {
+            $scroll_to_element_asset = include $scroll_to_element_script_path;
 
-		wp_enqueue_script(
-			'ft-blocks-animations',
-			plugins_url( 'build/animations.js', __FILE__ ),
-			$asset['dependencies'] ?? array(),
-			$asset['version'] ?? FT_BLOCKS_VERSION,
-			true
-		);
+            wp_enqueue_script(
+                'ft-blocks-scroll-to-element',
+                plugins_url( 'build/scroll-to-element.js', __FILE__ ),
+                $scroll_to_element_asset['dependencies'] ?? array(),
+                $scroll_to_element_asset['version'] ?? FT_BLOCKS_VERSION,
+                true
+            );
+        }
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_animations' );
+add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_scripts' );
