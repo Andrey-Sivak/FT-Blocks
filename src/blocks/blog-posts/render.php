@@ -12,7 +12,8 @@ if ( ! function_exists( 'ft_blocks_render_blog_posts_block' ) ) {
 				'wrapper' => $wrapper_class,
 				'container' => $container_class,
 				'h2' => $h2_class,
-				'h3' => $h3_class
+				'h3' => $h3_class,
+				'animated'         => $animation_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class   = $base_class . '-blog-posts';
@@ -67,20 +68,20 @@ if ( ! function_exists( 'ft_blocks_render_blog_posts_block' ) ) {
 				<div class="<?php echo esc_attr( $block_class . '__header' ); ?>">
 					<div class="<?php echo esc_attr( $block_class . '__header-content' ); ?>">
 						<?php if ( ! empty( $heading ) ) : ?>
-							<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class ); ?>">
+							<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $animation_class ); ?>">
 								<?php echo wp_kses_post( $heading ); ?>
 							</h2>
 						<?php endif; ?>
 
 						<?php if ( ! empty( $description ) ) : ?>
-							<p class="<?php echo esc_attr( $block_class . '__description' ); ?>">
+							<p class="<?php echo esc_attr( $block_class . '__description ' . $animation_class ); ?>">
 								<?php echo wp_kses_post( $description ); ?>
 							</p>
 						<?php endif; ?>
 					</div>
 
 					<?php if ( ! empty( $button ) ) : ?>
-						<div class="<?php echo esc_attr( $block_class . '__header-button' ); ?>">
+						<div class="<?php echo esc_attr( $block_class . '__header-button ' . $animation_class ); ?>">
 							<?php
 							echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 								array(
@@ -95,7 +96,7 @@ if ( ! function_exists( 'ft_blocks_render_blog_posts_block' ) ) {
 				</div>
 
 				<?php if ( $posts_query->have_posts() ) : ?>
-					<div class="<?php echo esc_attr( $block_class . '__grid-wrap' ); ?>">
+					<div class="<?php echo esc_attr( $block_class . '__grid-wrap ' . $animation_class ); ?>">
 						<?php if ( ! empty( $section_label ) ) : ?>
 							<p
 									class="<?php echo esc_attr( $block_class . '__section-label' ); ?>"

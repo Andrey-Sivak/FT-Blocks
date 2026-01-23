@@ -12,7 +12,8 @@ if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 			'wrapper'    => $wrapper_class,
 			'container'  => $container_class,
 			'centered'   => $centered_class,
-			'h2'         => $h2_class
+			'h2'         => $h2_class,
+			'animated'         => $animation_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-photo-shoot-types';
@@ -41,18 +42,19 @@ if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__header' ); ?>">
 					<?php if ( ! empty( $heading ) ) : ?>
-						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $centered_class ); ?>">
+						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $centered_class . ' ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $heading ); ?>
 						</h2>
 					<?php endif; ?>
 
 					<?php if ( ! empty( $description ) ) : ?>
-						<p class="<?php echo esc_attr( $block_class . '__description' ); ?>">
+						<p class="<?php echo esc_attr( $block_class . '__description ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $description ); ?>
 						</p>
 					<?php endif; ?>
 				</div>
 
+				<div class="<?php echo esc_attr( $animation_class ); ?>">
 				<div class="<?php echo esc_attr( $block_class . '__tabs-nav' ); ?>" role="tablist">
 					<?php foreach ( $tabs as $index => $tab ) : ?>
 						<button
@@ -116,7 +118,7 @@ if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 						</div>
 					<?php endforeach; ?>
 				</div>
-
+				</div>
 			</div>
 		</section>
 

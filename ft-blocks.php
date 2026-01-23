@@ -322,3 +322,34 @@ if ( ! function_exists( 'ft_blocks_enqueue_custom_color_classes' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_custom_color_classes' );
 add_action( 'enqueue_block_editor_assets', 'ft_blocks_enqueue_custom_color_classes' );
+
+/**
+ * Enqueue frontend-only animation script
+ *
+ * @return void
+ */
+if ( ! function_exists( 'ft_blocks_enqueue_animations' ) ) {
+	function ft_blocks_enqueue_animations() {
+		if ( is_admin() ) {
+			return;
+		}
+
+		$script_path = plugin_dir_path( __FILE__ ) . 'build/animations.asset.php';
+
+		if ( ! file_exists( $script_path ) ) {
+			return;
+		}
+
+		$asset = include $script_path;
+
+		wp_enqueue_script(
+			'ft-blocks-animations',
+			plugins_url( 'build/animations.js', __FILE__ ),
+			$asset['dependencies'] ?? array(),
+			$asset['version'] ?? FT_BLOCKS_VERSION,
+			true
+		);
+	}
+
+}
+add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_animations' );

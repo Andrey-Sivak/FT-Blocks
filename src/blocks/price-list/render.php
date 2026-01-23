@@ -14,6 +14,7 @@ if ( ! function_exists( 'ft_blocks_render_price_list_block' ) ) {
 			'centered'   => $centered_class,
 			'h2'         => $h2_class,
 			'h3'         => $h3_class,
+				'animated'         => $animation_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-price-list';
@@ -41,7 +42,7 @@ if ( ! function_exists( 'ft_blocks_render_price_list_block' ) ) {
 
 				<?php if ( ! empty( $heading ) || ! empty( $decor_text ) ) : ?>
 					<div class="<?php echo esc_attr( $block_class . '__header' ); ?>">
-						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $centered_class ); ?>">
+						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $centered_class . ' ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $heading ); ?>
 						</h2>
 					</div>
@@ -49,7 +50,7 @@ if ( ! function_exists( 'ft_blocks_render_price_list_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__grid' ); ?>">
 					<?php foreach ( $items as $item ) : ?>
-						<article class="<?php echo esc_attr( $block_class . '__item' ); ?>">
+						<article class="<?php echo esc_attr( $block_class . '__item ' . $animation_class ); ?>">
 							<header class="<?php echo esc_attr( $block_class . '__item-header' ); ?>">
 								<div class="<?php echo esc_attr( $block_class . '__item-header-inner' ); ?>">
 									<?php if ( ! empty( $item['title'] ) ) : ?>
@@ -110,7 +111,7 @@ if ( ! function_exists( 'ft_blocks_render_price_list_block' ) ) {
 				</div>
 
 				<?php if ( ! empty( $button ) ) : ?>
-					<div class="<?php echo esc_attr( $block_class . '__footer ' . $centered_class ); ?>">
+					<div class="<?php echo esc_attr( $block_class . '__footer ' . $centered_class . ' ' . $animation_class ); ?>">
 						<?php
 						echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							array(

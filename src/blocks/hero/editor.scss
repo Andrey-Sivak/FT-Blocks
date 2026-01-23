@@ -8,4 +8,13 @@
 	overflow: hidden;
 	background-size: cover;
 	background-position: center;
+
+	.ft-blocks-hero__heading,
+	.ft-blocks-hero__decor-text,
+	.ft-blocks-hero__text,
+	.ft-blocks-hero__button {
+		opacity: unset;
+		transform: unset;
+		animation: unset;
+	}
 }

@@ -12,7 +12,8 @@ if ( ! function_exists( 'ft_blocks_render_faq_block' ) ) {
 			'wrapper'    => $wrapper_class,
 			'container'  => $container_class,
 			'h2'         => $h2_class,
-			'h3'         => $h3_class
+			'h3'         => $h3_class,
+				'animated'         => $animation_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-faq';
@@ -42,13 +43,13 @@ if ( ! function_exists( 'ft_blocks_render_faq_block' ) ) {
 				<?php // Left Column - Intro ?>
 				<div class="<?php echo esc_attr( $block_class . '__intro' ); ?>">
 					<?php if ( ! empty( $heading ) ) : ?>
-						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class ); ?>">
+						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . $animation_class ); ?>">
 							<?php echo wp_kses_post( $heading ); ?>
 						</h2>
 					<?php endif; ?>
 
 					<?php if ( ! empty( $description ) ) : ?>
-						<p class="<?php echo esc_attr( $block_class . '__description' ); ?>">
+						<p class="<?php echo esc_attr( $block_class . '__description ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $description ); ?>
 						</p>
 					<?php endif; ?>
@@ -57,9 +58,10 @@ if ( ! function_exists( 'ft_blocks_render_faq_block' ) ) {
 						<?php
 						echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							array(
-								'content'    => $button,
-								'base_class' => $block_class,
-								'variant'    => 'secondary',
+								'content'       => $button,
+								'base_class'    => $block_class,
+								'variant'       => 'secondary',
+								'extra_classes' => $animation_class,
 							)
 						);
 						?>
@@ -74,7 +76,7 @@ if ( ! function_exists( 'ft_blocks_render_faq_block' ) ) {
 				>
 					<?php foreach ( $items as $index => $item ) : ?>
 						<div
-							class="<?php echo esc_attr( $block_class . '__item' ); ?>"
+							class="<?php echo esc_attr( $block_class . '__item ' . $animation_class ); ?>"
 							data-faq-index="<?php echo esc_attr( $index ); ?>"
 							itemscope
 							itemprop="mainEntity"

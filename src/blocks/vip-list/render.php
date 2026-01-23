@@ -12,7 +12,8 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 				'wrapper'    => $wrapper_class,
 				'container'  => $container_class,
 			'h2'        => $h2_class,
-			'h3'        => $h3_class
+			'h3'        => $h3_class,
+			'animated'         => $animation_class
 		]     = ft_blocks_get_config_classes();
 		$wave = ft_blocks_get_config( 'decorativeVectors.wave' );
 
@@ -46,7 +47,7 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 			<div class="<?php echo esc_attr( $block_class . '__container ' . $container_class ); ?>">
 
 				<div class="<?php echo esc_attr( $block_class . '__top' ); ?>">
-					<div class="<?php echo esc_attr( $block_class . '__top-left' ); ?>">
+					<div class="<?php echo esc_attr( $block_class . '__top-left ' . $animation_class ); ?>">
 						<?php if ( ! empty( $heading ) ) : ?>
 							<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class ); ?>">
 								<?php echo wp_kses_post( $heading ); ?>
@@ -60,7 +61,7 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 						<?php endif; ?>
 					</div>
 
-					<div class="<?php echo esc_attr( $block_class . '__top-right' ); ?>">
+					<div class="<?php echo esc_attr( $block_class . '__top-right ' . $animation_class ); ?>">
 						<?php if ( ! empty( $right_heading ) ) : ?>
 							<h3 class="<?php echo esc_attr( $block_class . '__top-right_heading ' . $h3_class ); ?>">
 								<?php echo wp_kses_post( $right_heading ); ?>
@@ -88,7 +89,7 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 				<?php if ( ! empty( $features ) ) : ?>
 					<div class="<?php echo esc_attr( $block_class . '__features' ); ?>">
 						<?php foreach ( $features as $feature ) : ?>
-							<div class="<?php echo esc_attr( $block_class . '__feature' ); ?>">
+							<div class="<?php echo esc_attr( $block_class . '__feature ' . $animation_class ); ?>">
 
 									<figure
 										class="<?php echo esc_attr( $block_class . '__feature-icon' ); ?>"

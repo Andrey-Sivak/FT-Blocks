@@ -48,10 +48,19 @@
 
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-		grid-gap: 40px;
 		width: 100%;
 		align-items: start;
+		grid-gap: 20px;
+
+		@include responsive(ft-main, $bp-md) {
+			grid-gap: 30px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			grid-gap: 40px;
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 
 	&__item {
@@ -61,6 +70,24 @@
 		align-items: center;
 		text-align: center;
 		row-gap: 10px;
+
+		@include responsive(ft-main, $bp-md) {
+
+			&:nth-child(even) {
+				transition-delay: 0.3s;
+			}
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+
+			&:nth-child(3n+2) {
+				transition-delay: 0.3s;
+			}
+
+			&:nth-child(3n) {
+				transition-delay: 0.6s;
+			}
+		}
 
 		&-title {
 			position: relative;

@@ -1,8 +1,9 @@
-@use "../styles/breakpoints" as *;
-@use "../styles/mixins/container-query" as *;
-@use "../styles/fonts" as *;
-@use "../styles/buttons" as *;
-@use "../styles/typo" as *;
+@use "./breakpoints" as *;
+@use "./mixins/container-query" as *;
+@use "./fonts" as *;
+@use "./buttons" as *;
+@use "./typo" as *;
+@use "./animations" as *;
 
 .is-root-container,
 .is-root-container * {

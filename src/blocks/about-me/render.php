@@ -11,7 +11,8 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 				'baseBlock' => $base_class,
 				'wrapper' => $wrapper_class,
 				'container' => $container_class,
-				'h2' => $h2_class
+				'h2' => $h2_class,
+			'animated'         => $animation_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class      = $base_class . '-about-me';
@@ -42,7 +43,7 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__container ' . $container_class ); ?>">
 
-					<div class="<?php echo esc_attr( $block_class . '__slider' ); ?>">
+					<div class="<?php echo esc_attr( $block_class . '__slider ' . $animation_class ); ?>">
 						<?php if ( ! empty( $images ) ) : ?>
 							<div class="swiper-wrapper" role="list">
 								<?php foreach ( $images as $image ) : ?>
@@ -72,19 +73,20 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 
 					<div class="<?php echo esc_attr( $block_class . '__content' ); ?>">
 						<?php if ( ! empty( $heading ) ) : ?>
-							<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class ); ?>">
+							<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $animation_class ); ?>">
 								<?php echo wp_kses_post( $heading ); ?>
 							</h2>
 						<?php endif; ?>
 
 						<?php if ( ! empty( $content ) ) : ?>
-							<div class="<?php echo esc_attr( $block_class . '__text' ); ?>">
+							<div class="<?php echo esc_attr( $block_class . '__text ' . $animation_class ); ?>">
 								<?php echo wp_kses_post( $content ); ?>
 							</div>
 						<?php endif; ?>
 
-						<?php
-						if ( ! empty( $button ) ) :
+						<?php if ( ! empty( $button ) ) : ?>
+						<div class="<?php echo esc_attr( $animation_class ); ?>">
+							<?php
 							echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 								array(
 									'content'    => $button,
@@ -92,8 +94,9 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 									'variant'    => 'secondary',
 								)
 							);
-						endif;
-						?>
+							?>
+						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

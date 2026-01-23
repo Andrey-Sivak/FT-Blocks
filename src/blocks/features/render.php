@@ -13,7 +13,8 @@ if ( ! function_exists( 'ft_blocks_render_features_block' ) ) {
 			'container'  => $container_class,
 			'centered'   => $centered_class,
 			'h2'         => $h2_class,
-			'h3'         => $h3_class
+			'h3'         => $h3_class,
+				'animated'         => $animation_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-features';
@@ -41,13 +42,13 @@ if ( ! function_exists( 'ft_blocks_render_features_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__header' ); ?>">
 					<?php if ( ! empty( $heading ) ) : ?>
-						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $centered_class ); ?>">
+						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $centered_class . ' ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $heading ); ?>
 						</h2>
 					<?php endif; ?>
 
 					<?php if ( ! empty( $description ) ) : ?>
-						<p class="<?php echo esc_attr( $block_class . '__description' ); ?>">
+						<p class="<?php echo esc_attr( $block_class . '__description ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $description ); ?>
 						</p>
 					<?php endif; ?>
@@ -55,7 +56,7 @@ if ( ! function_exists( 'ft_blocks_render_features_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__grid' ); ?>">
 					<?php foreach ( $features as $feature ) : ?>
-						<div class="<?php echo esc_attr( $block_class . '__item' ); ?>">
+						<div class="<?php echo esc_attr( $block_class . '__item ' . $animation_class ); ?>">
 							<?php
 							$icon_id = $feature['icon']['id'];
 							if ( ! empty( $icon_id ) ) :

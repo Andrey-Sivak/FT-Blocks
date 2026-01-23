@@ -39,7 +39,8 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 	function ft_blocks_render_service_info_block( array $attributes ): string {
 		[
 			'baseBlock'  => $base_class,
-			'h2' => $h2_class
+			'h2' => $h2_class,
+			'animated'         => $animation_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-service-info';
@@ -71,7 +72,7 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 				<?php endforeach; ?>
 			</div>
 
-			<div class="<?php echo esc_attr( $block_class . '__container' ); ?>">
+			<div class="<?php echo esc_attr( $block_class . '__container ' . $animation_class ); ?>">
 
 				<div class="<?php echo esc_attr( $block_class . '__content' ); ?>">
 					<?php if ( ! empty( $heading ) ) : ?>

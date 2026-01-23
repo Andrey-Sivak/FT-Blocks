@@ -13,6 +13,7 @@ if ( ! function_exists( 'ft_blocks_render_process_steps_block' ) ) {
 			'container'  => $container_class,
 			'h2'         => $h2_class,
 			'h3'         => $h3_class,
+				'animated'         => $animation_class
 		]     = ft_blocks_get_config_classes();
 		$wave = ft_blocks_get_config( 'decorativeVectors.wave' );
 
@@ -51,7 +52,7 @@ if ( ! function_exists( 'ft_blocks_render_process_steps_block' ) ) {
 
 				<?php if ( ! empty( $heading ) ) : ?>
 					<div class="<?php echo esc_attr( $block_class . '__header' ); ?>">
-						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class ); ?>">
+						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $heading ); ?>
 						</h2>
 					</div>
@@ -62,7 +63,7 @@ if ( ! function_exists( 'ft_blocks_render_process_steps_block' ) ) {
 					<div class="<?php echo esc_attr( $block_class . '__steps' ); ?>">
 						<?php foreach ( $steps as $index => $step ) : ?>
 							<div
-								class="<?php echo esc_attr( $block_class . '__step' ); ?><?php echo $index === $active_step ? ' is-active' : ''; ?>"
+								class="<?php echo esc_attr( $block_class . '__step ' . $animation_class ); ?><?php echo $index === $active_step ? ' is-active' : ''; ?>"
 								data-step-index="<?php echo esc_attr( $index ); ?>"
 							>
 								<div class="<?php echo esc_attr( $block_class . '__step-header' ); ?>">
@@ -108,7 +109,7 @@ if ( ! function_exists( 'ft_blocks_render_process_steps_block' ) ) {
 						<?php endforeach; ?>
 
 						<?php if ( ! empty( $left_button ) ) : ?>
-							<div class="<?php echo esc_attr( $block_class . '__button-left' ); ?>">
+							<div class="<?php echo esc_attr( $block_class . '__button-left ' . $animation_class ); ?>">
 								<?php
 								echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 									array(
@@ -128,7 +129,7 @@ if ( ! function_exists( 'ft_blocks_render_process_steps_block' ) ) {
 									class="<?php echo esc_attr( $block_class . '__images grid js-masonry' ); ?>"
 							>
 								<?php foreach ( $images as $image ) : ?>
-									<figure class="<?php echo esc_attr( $block_class . '__image grid-item' ); ?>">
+									<figure class="<?php echo esc_attr( $block_class . '__image grid-item ' . $animation_class ); ?>">
 										<a
 												href="<?php echo esc_url( wp_get_attachment_image_url( $image['id'], 'full' ) ); ?>"
 												class="masonry-item"
@@ -149,7 +150,7 @@ if ( ! function_exists( 'ft_blocks_render_process_steps_block' ) ) {
 						<?php endif; ?>
 
 						<?php if ( ! empty( $right_button ) ) : ?>
-							<div class="<?php echo esc_attr( $block_class . '__button-right' ); ?>">
+							<div class="<?php echo esc_attr( $block_class . '__button-right ' . $animation_class ); ?>">
 								<?php
 								echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 									array(

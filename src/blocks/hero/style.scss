@@ -41,11 +41,15 @@
 
 	&__heading {
 		font-family: $MontserratAlternates, sans-serif;
+		transform: translateY(200px);
+		opacity: 0;
+		animation: floatUp 1s forwards 0.2s;
 
 		@include responsive-max-width(25ch);
 		@include ft-cqw(font-size, 6.5);
 
 		@include responsive(ft-main, $bp-sm) {
+			animation: floatUp 1.2s forwards 0.2s;
 
 			@include ft-cqw(font-size, 4);
 		}
@@ -64,6 +68,8 @@
 	}
 
 	&__decor-text {
+		opacity: 0;
+		animation: heroFadeIn 1.2s forwards 0.3s;
 		margin-top: 0;
 		margin-bottom: 0;
 		display: inline-block;
@@ -87,6 +93,9 @@
 	}
 
 	&__text {
+		transform: translateY(150px);
+		opacity: 0;
+		animation: floatUp 1s forwards 0.4s;
 		font-weight: 500;
 		margin: 0;
 		font-size: 14px;
@@ -95,6 +104,7 @@
 		@include responsive-max-width(70ch);
 
 		@include responsive(ft-main, $bp-sm) {
+			animation: floatUp 1.2s forwards 0.4s;
 			font-size: 18px;
 		}
 
@@ -160,7 +170,46 @@
 	}
 
 	&__button {
+		transform: translateY(100px);
+		opacity: 0;
+		animation: floatUp 1s forwards 0.3s;
 		margin: 0;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			animation: floatUp 1.2s forwards 0.4s;
+		}
+	}
+}
+
+@keyframes floatUp {
+
+	0% {
+		transform: translateY(200px);
+		opacity: 0;
+	}
+
+	70% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes heroFadeIn {
+
+	0% {
+		opacity: 0;
+	}
+
+	70% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
 
