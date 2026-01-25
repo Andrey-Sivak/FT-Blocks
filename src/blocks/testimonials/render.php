@@ -13,7 +13,7 @@ if ( ! function_exists( 'ft_blocks_render_testimonials_block' ) ) {
 			'container'  => $container_class,
 			'centered'   => $centered_class,
 			'h2'         => $h2_class,
-				'animated'         => $animation_class
+            'animated'         => $animation_class
 		]     = ft_blocks_get_config_classes();
 		$wave = ft_blocks_get_config( 'decorativeVectors.wave' );
 
@@ -50,7 +50,7 @@ if ( ! function_exists( 'ft_blocks_render_testimonials_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__header ' . $centered_class ); ?>">
 					<?php if ( ! empty( $heading ) ) : ?>
-						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . $animation_class ); ?>">
+						<h2 class="<?php echo esc_attr( $block_class . '__heading ' . $h2_class . ' ' . $animation_class ); ?>">
 							<?php echo wp_kses_post( $heading ); ?>
 						</h2>
 					<?php endif; ?>
