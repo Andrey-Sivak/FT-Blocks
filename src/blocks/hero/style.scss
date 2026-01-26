@@ -212,11 +212,3 @@
 		opacity: 1;
 	}
 }
-
-#brx-footer {
-	display: none !important;
-
-	@include responsive(ft-main, $bp-md) {
-		display: block !important;
-	}
-}
