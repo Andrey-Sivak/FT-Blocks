@@ -42,7 +42,7 @@ mark {
 	background-color: transparent;
 }
 
-html :where(.wp-block) {
+html :where(.wp-block:has([class*="ft-blocks"])) {
 	margin-top: 0;
 	margin-bottom: 0;
 }
