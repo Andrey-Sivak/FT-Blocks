@@ -13,7 +13,7 @@ if ( ! function_exists( 'ft_blocks_render_testimonials_block' ) ) {
 			'container'  => $container_class,
 			'centered'   => $centered_class,
 			'h2'         => $h2_class,
-            'animated'         => $animation_class
+			'animated'   => $animation_class
 		]     = ft_blocks_get_config_classes();
 		$wave = ft_blocks_get_config( 'decorativeVectors.wave' );
 
