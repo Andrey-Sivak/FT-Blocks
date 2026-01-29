@@ -27,7 +27,9 @@
 			.getAttribute( 'href' )
 			.split( '#' )[ 1 ];
 
-		if ( ! targetId ) return;
+		if ( ! targetId ) {
+			return;
+		}
 
 		const targetElement = document.getElementById( targetId );
 
@@ -40,7 +42,10 @@
 			let startTime = null;
 
 			function animationStep( currentTime ) {
-				if ( startTime === null ) startTime = currentTime;
+				if ( startTime === null ) {
+					startTime = currentTime;
+				}
+
 				const timeElapsed = currentTime - startTime;
 				const progress = Math.min( timeElapsed / 500, 1 );
 
