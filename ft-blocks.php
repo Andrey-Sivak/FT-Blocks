@@ -114,6 +114,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Testimonials', 'ft-blocks' ),
 				'description' => __( 'Display client testimonials in a slider with quotes and authors.', 'ft-blocks' ),
 			),
+			'gallery'           => array(
+				'title'       => __( 'Gallery', 'ft-blocks' ),
+				'description' => __( 'Display masonry grid images layout', 'ft-blocks' ),
+			),
 		);
 
 		foreach ( $blocks as $block => $args ) {
@@ -334,32 +338,32 @@ if ( ! function_exists( 'ft_blocks_enqueue_scripts' ) ) {
 			return;
 		}
 
-		$animations_script_path = plugin_dir_path( __FILE__ ) . 'build/animations.asset.php';
+		$animations_script_path        = plugin_dir_path( __FILE__ ) . 'build/animations.asset.php';
 		$scroll_to_element_script_path = plugin_dir_path( __FILE__ ) . 'build/scroll-to-element.asset.php';
 
 		if ( file_exists( $animations_script_path ) ) {
-            $animations_asset = include $animations_script_path;
+			$animations_asset = include $animations_script_path;
 
-            wp_enqueue_script(
-                'ft-blocks-animations',
-                plugins_url( 'build/animations.js', __FILE__ ),
-                $animations_asset['dependencies'] ?? array(),
-                $animations_asset['version'] ?? FT_BLOCKS_VERSION,
-                true
-            );
+			wp_enqueue_script(
+				'ft-blocks-animations',
+				plugins_url( 'build/animations.js', __FILE__ ),
+				$animations_asset['dependencies'] ?? array(),
+				$animations_asset['version'] ?? FT_BLOCKS_VERSION,
+				true
+			);
 		}
 
-        if ( file_exists( $scroll_to_element_script_path ) ) {
-            $scroll_to_element_asset = include $scroll_to_element_script_path;
+		if ( file_exists( $scroll_to_element_script_path ) ) {
+			$scroll_to_element_asset = include $scroll_to_element_script_path;
 
-            wp_enqueue_script(
-                'ft-blocks-scroll-to-element',
-                plugins_url( 'build/scroll-to-element.js', __FILE__ ),
-                $scroll_to_element_asset['dependencies'] ?? array(),
-                $scroll_to_element_asset['version'] ?? FT_BLOCKS_VERSION,
-                true
-            );
-        }
+			wp_enqueue_script(
+				'ft-blocks-scroll-to-element',
+				plugins_url( 'build/scroll-to-element.js', __FILE__ ),
+				$scroll_to_element_asset['dependencies'] ?? array(),
+				$scroll_to_element_asset['version'] ?? FT_BLOCKS_VERSION,
+				true
+			);
+		}
 	}
 
 }

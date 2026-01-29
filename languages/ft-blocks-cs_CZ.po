@@ -49,6 +49,7 @@ msgstr "Výrazná hero sekce s pozadím a výzvou k akci (CTA)."
 #: build/blocks/about-me/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
+#: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
@@ -60,6 +61,7 @@ msgstr "Přidat obrázek"
 #: build/blocks/about-me/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
+#: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
@@ -71,6 +73,7 @@ msgstr "Obrázek"
 #: build/blocks/about-me/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
+#: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
@@ -82,6 +85,7 @@ msgstr "Změnit obrázek"
 #: build/blocks/about-me/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/features/index.js:1
+#: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
 #: build/blocks/price-list/index.js:1
@@ -91,6 +95,7 @@ msgid "Remove image"
 msgstr "Odebrat obrázek"
 
 #: build/blocks/about-me/index.js:1
+#: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
@@ -98,6 +103,7 @@ msgid "Hide preview"
 msgstr "Skrýt náhled"
 
 #: build/blocks/about-me/index.js:1
+#: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
@@ -105,6 +111,7 @@ msgid "Show preview"
 msgstr "Zobrazit náhled"
 
 #: build/blocks/about-me/index.js:1
+#: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
@@ -287,12 +294,12 @@ msgstr "Přidat první položku"
 msgid "Short description…"
 msgstr "Krátký popis…"
 
-#: build/blocks/process-steps/render.php:73
+#: build/blocks/process-steps/render.php:74
 #: build/blocks/process-steps/index.js:1
 msgid "step"
 msgstr "krok"
 
-#: build/blocks/process-steps/render.php:91
+#: build/blocks/process-steps/render.php:92
 #: build/blocks/process-steps/index.js:1
 msgid "More information"
 msgstr "Více informací"
@@ -325,17 +332,17 @@ msgstr "Přidat krok"
 msgid "Add First Step"
 msgstr "Přidat první krok"
 
-#: build/blocks/blog-posts/render.php:148
-#: build/blocks/testimonials/render.php:96
+#: build/blocks/blog-posts/render.php:149
+#: build/blocks/testimonials/render.php:97
 msgid "Previous slide"
 msgstr "Předchozí snímek"
 
-#: build/blocks/blog-posts/render.php:152
-#: build/blocks/testimonials/render.php:100
+#: build/blocks/blog-posts/render.php:153
+#: build/blocks/testimonials/render.php:101
 msgid "Next slide"
 msgstr "Další snímek"
 
-#: build/blocks/blog-posts/render.php:159
+#: build/blocks/blog-posts/render.php:160
 #: build/blocks/blog-posts/index.js:1
 msgid "No posts found."
 msgstr "Nebyly nalezeny žádné příspěvky."
@@ -484,7 +491,7 @@ msgstr ""
 msgid "Display client testimonials in a slider with quotes and authors."
 msgstr ""
 
-#: ft-blocks.php:189
+#: ft-blocks.php:193
 msgctxt "block category name"
 msgid "Fotografka Domča Blocks"
 msgstr ""
@@ -515,3 +522,11 @@ msgstr ""
 msgctxt "Color name"
 msgid "Terakotova Svetla"
 msgstr ""
+
+#: ft-blocks.php:118
+msgid "Gallery"
+msgstr "Galerie"
+
+#: ft-blocks.php:119
+msgid "Display masonry grid images layout"
+msgstr "Zobrazit obrázky v mozaikovém rozvržení"

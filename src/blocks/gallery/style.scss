@@ -1,0 +1,45 @@
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/container-query" as *;
+
+.ft-blocks-gallery {
+
+	&__images {
+		margin-left: -4px;
+		margin-right: -4px;
+
+		@include responsive(ft-main, $bp-sm) {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+
+	&__image {
+		margin: 0;
+		width: 50%;
+		padding: 4px;
+
+		@include responsive(ft-main, $bp-sm) {
+			padding: 10px;
+			width: 33.33%;
+		}
+
+		@include responsive(ft-main, $bp-lg) {
+			width: 33.33%;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+
+			img {
+				transition: transform 0.2s ease-in-out;
+			}
+
+			&:hover img {
+				transform: scale(1.05);
+			}
+		}
+	}
+}

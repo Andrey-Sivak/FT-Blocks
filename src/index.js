@@ -13,3 +13,4 @@ import './blocks/blog-posts';
 import './blocks/faq';
 import './blocks/cta-banner';
 import './blocks/testimonials';
+import './blocks/gallery';
