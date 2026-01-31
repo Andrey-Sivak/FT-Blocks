@@ -38,9 +38,9 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 
 	function ft_blocks_render_service_info_block( array $attributes ): string {
 		[
-			'baseBlock'  => $base_class,
-			'h2' => $h2_class,
-			'animated'         => $animation_class
+			'baseBlock'      => $base_class,
+			'h2'             => $h2_class,
+			'animated-scale' => $animation_scale_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-service-info';
@@ -64,7 +64,10 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 
 			<div class="<?php echo esc_attr( $block_class . '__bg-wrapper' ); ?>">
 				<?php foreach ( $images as $index => $image ) : ?>
-					<div class="<?php echo esc_attr( $block_class . '__bg-item' . ( 0 === $index ? ' is-active' : '' ) ); ?>" data-index="<?php echo esc_attr( $index ); ?>">
+					<div
+							class="<?php echo esc_attr( $block_class . '__bg-item' . ( 0 === $index ? ' is-active' : '' ) ); ?>"
+							data-index="<?php echo esc_attr( $index ); ?>"
+					>
 						<?php
 						echo ft_blocks_service_info_render_image( $image, $block_class . '__bg-img', 'full' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						?>
@@ -72,7 +75,7 @@ if ( ! function_exists( 'ft_blocks_render_service_info_block' ) ) {
 				<?php endforeach; ?>
 			</div>
 
-			<div class="<?php echo esc_attr( $block_class . '__container ' . $animation_class ); ?>">
+			<div class="<?php echo esc_attr( $block_class . '__container ' . $animation_scale_class ); ?>">
 
 				<div class="<?php echo esc_attr( $block_class . '__content' ); ?>">
 					<?php if ( ! empty( $heading ) ) : ?>

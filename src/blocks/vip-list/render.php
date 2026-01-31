@@ -8,12 +8,13 @@
 if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 	function ft_blocks_render_vip_list_block( array $attributes ): string {
 		[
-			'baseBlock' => $base_class,
-				'wrapper'    => $wrapper_class,
-				'container'  => $container_class,
-			'h2'        => $h2_class,
-			'h3'        => $h3_class,
-			'animated'         => $animation_class
+			'baseBlock'      => $base_class,
+			'wrapper'        => $wrapper_class,
+			'container'      => $container_class,
+			'h2'             => $h2_class,
+			'h3'             => $h3_class,
+			'animated'       => $animation_class,
+			'animated-scale' => $animation_scale_class
 		]     = ft_blocks_get_config_classes();
 		$wave = ft_blocks_get_config( 'decorativeVectors.wave' );
 
@@ -92,7 +93,7 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 							<div class="<?php echo esc_attr( $block_class . '__feature ' . $animation_class ); ?>">
 
 									<figure
-										class="<?php echo esc_attr( $block_class . '__feature-icon' ); ?>"
+										class="<?php echo esc_attr( $block_class . '__feature-icon ' . $animation_scale_class ); ?>"
 										aria-hidden="true"
 									>
 										<?php echo ft_blocks_get_icon( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>

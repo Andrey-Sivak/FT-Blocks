@@ -8,11 +8,12 @@
 if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 	function ft_blocks_render_about_me_block( array $attributes ): string {
 		[
-				'baseBlock' => $base_class,
-				'wrapper' => $wrapper_class,
-				'container' => $container_class,
-				'h2' => $h2_class,
-			'animated'         => $animation_class
+			'baseBlock'      => $base_class,
+			'wrapper'        => $wrapper_class,
+			'container'      => $container_class,
+			'h2'             => $h2_class,
+			'animated'       => $animation_class,
+			'animated-scale' => $animation_scale_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class      = $base_class . '-about-me';
@@ -43,7 +44,7 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 
 				<div class="<?php echo esc_attr( $block_class . '__container ' . $container_class ); ?>">
 
-					<div class="<?php echo esc_attr( $block_class . '__slider ' . $animation_class ); ?>">
+					<div class="<?php echo esc_attr( $block_class . '__slider ' . $animation_scale_class ); ?>">
 						<?php if ( ! empty( $images ) ) : ?>
 							<div class="swiper-wrapper" role="list">
 								<?php foreach ( $images as $image ) : ?>

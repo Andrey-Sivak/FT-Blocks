@@ -8,12 +8,13 @@
 if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 	function ft_blocks_render_photo_shoot_types_block( array $attributes ): string {
 		[
-			'baseBlock'  => $base_class,
-			'wrapper'    => $wrapper_class,
-			'container'  => $container_class,
-			'centered'   => $centered_class,
-			'h2'         => $h2_class,
-			'animated'         => $animation_class
+			'baseBlock'      => $base_class,
+			'wrapper'        => $wrapper_class,
+			'container'      => $container_class,
+			'centered'       => $centered_class,
+			'h2'             => $h2_class,
+			'animated'       => $animation_class,
+			'animated-scale' => $animation_scale_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class = $base_class . '-photo-shoot-types';
@@ -54,7 +55,7 @@ if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 					<?php endif; ?>
 				</div>
 
-				<div class="<?php echo esc_attr( $animation_class ); ?>">
+				<div class="<?php echo esc_attr( $animation_scale_class ); ?>">
 				<div class="<?php echo esc_attr( $block_class . '__tabs-nav' ); ?>" role="tablist">
 					<?php foreach ( $tabs as $index => $tab ) : ?>
 						<button

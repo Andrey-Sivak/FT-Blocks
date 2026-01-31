@@ -6,7 +6,9 @@
 
 		constructor() {
 			this.itemsToAnimate = [
-				...document.querySelectorAll( '.ft-blocks-animate' ),
+				...document.querySelectorAll(
+					'.ft-blocks-animate, .ft-blocks-animate-scale'
+				),
 			];
 
 			this.initCommonAnimations();

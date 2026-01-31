@@ -12,7 +12,7 @@ if ( ! function_exists( 'ft_blocks_render_cta_banner_block' ) ) {
 			'container'  => $container_class,
 			'centered'   => $centered_class,
 			'h2'         => $h2_class,
-				'animated'         => $animation_class
+			'animated-scale' => $animation_scale_class
 		] = ft_blocks_get_config_classes();
 
 		$block_class      = $base_class . '-cta-banner';
@@ -39,7 +39,7 @@ if ( ! function_exists( 'ft_blocks_render_cta_banner_block' ) ) {
 
 		<section <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div
-					class="<?php echo esc_attr( $block_class . '__container ' . $container_class . ' ' . $centered_class . ' ' . $animation_class ); ?>"
+					class="<?php echo esc_attr( $block_class . '__container ' . $container_class . ' ' . $centered_class . ' ' . $animation_scale_class ); ?>"
 					style="<?php echo esc_attr( $style ); ?>"
 			>
 

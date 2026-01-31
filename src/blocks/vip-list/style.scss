@@ -158,10 +158,15 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			transform: translate(-50%, -50%);
+			transform: scale3d(0.8, 0.8, 0.8) translate(-50%, -50%);
+			transition-delay: 0.5s;
 
 			@include responsive(ft-main, $bp-lg) {
 				width: 36px;
+			}
+
+			&.ft-blocks-visible {
+				transform: scale3d(1, 1, 1) translate(-50%, -50%);
 			}
 
 			svg {
