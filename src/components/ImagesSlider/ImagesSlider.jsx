@@ -1,5 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import { ImageUploader } from '../../components';
+import { ImageUploader, RemoveButtonCross } from '../../components';
 import { Button, Icon } from '@wordpress/components';
 import { seen, closeSmall } from '@wordpress/icons';
 import config from '../../../config.json';
@@ -84,6 +84,13 @@ const ImagesSlider = ( {
 								}
 								onClick={ () => togglePreviewImage( index ) }
 								size="medium"
+							/>
+						) }
+
+						{ ! image.id && (
+							<RemoveButtonCross
+								color="red"
+								handleClick={ () => removeImage( index ) }
 							/>
 						) }
 
