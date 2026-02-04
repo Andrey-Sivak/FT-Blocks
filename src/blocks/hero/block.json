@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ft-blocks/hero",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"category": "ft-blocks",
 	"supports": {
 		"anchor": true,
