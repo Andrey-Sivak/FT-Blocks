@@ -39,7 +39,7 @@ if ( ! function_exists( 'ft_blocks_render_photo_shoot_types_block' ) ) {
 		?>
 
 		<section <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-			<div class="<?php echo esc_attr( $block_class . '__container ' . $container_class ); ?>">
+			<div class="<?php echo esc_attr( $block_class . '__container' ); ?>">
 
 				<div class="<?php echo esc_attr( $block_class . '__header' ); ?>">
 					<?php if ( ! empty( $heading ) ) : ?>
