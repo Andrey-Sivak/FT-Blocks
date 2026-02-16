@@ -102,52 +102,15 @@ if ( ! function_exists( 'ft_blocks_get_asset_version' ) ) {
  * }
  */
 if ( ! function_exists( 'ft_blocks_get_asset' ) ) {
-    function ft_blocks_get_asset( $asset ) {
-        static $manifest = null;
+	function ft_blocks_get_asset( $asset ) {
+		$asset_path = FT_BLOCKS_PATH . 'build/' . $asset;
 
-        // load manifest once
-        if ( null === $manifest ) {
-            $manifest_file = FT_BLOCKS_PATH . 'build/manifest.json';
-
-            if ( file_exists( $manifest_file ) ) {
-                $manifest_content = file_get_contents( $manifest_file );
-                $manifest         = json_decode( $manifest_content, true );
-
-                // validate JSON decode
-                if ( json_last_error() !== JSON_ERROR_NONE ) {
-                    $manifest = array();
-
-                    if ( FT_BLOCKS_DEV_MODE ) {
-                        error_log( 'FT Blocks: invalid manifest.json - ' . json_last_error_msg() );
-                    }
-                }
-            } else {
-                $manifest = array();
-            }
-        }
-
-        // check if asset exists in manifest
-        if ( isset( $manifest[ $asset ] ) ) {
-            $manifest_entry = $manifest[ $asset ];
-            $asset_file     = $manifest_entry['file'] ?? $asset;
-            $asset_hash     = $manifest_entry['hash'] ?? null;
-
-            return array(
-                'url'     => FT_BLOCKS_URL . 'build/' . $asset_file,
-                'version' => $asset_hash ?? FT_BLOCKS_VERSION,
-                'path'    => FT_BLOCKS_PATH . 'build/' . $asset_file,
-            );
-        }
-
-        // fallback: asset not in manifest
-        $asset_path = FT_BLOCKS_PATH . 'build/' . $asset;
-
-        return array(
-            'url'     => FT_BLOCKS_URL . 'build/' . $asset,
-            'version' => ft_blocks_get_asset_version( $asset_path ),
-            'path'    => $asset_path,
-        );
-    }
+		return array(
+			'url'     => FT_BLOCKS_URL . 'build/' . $asset,
+			'version' => ft_blocks_get_asset_version( $asset_path ),
+			'path'    => $asset_path,
+		);
+	}
 }
 
 /**
