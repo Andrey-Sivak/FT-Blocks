@@ -2,7 +2,7 @@
 /**
  * Plugin Name: FT Blocks
  * Description: Custom Gutenberg blocks for fotografkadomca website.
- * Version: 1.0.0
+ * Version: 1.0.3
  * Author: Andrii Sivak
  * Author URI: https://github.com/Andrey-Sivak
  * Plugin URI: https://github.com/Andrey-Sivak/ft-blocks
@@ -25,7 +25,130 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'FT_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
-const FT_BLOCKS_VERSION = '1.0.2';
+define( 'FT_BLOCKS_VERSION', '1.0.3' );
+
+/**
+ * Determine development mode based on multiple signals.
+ *
+ * Checks (in order):
+ * 1. Explicit FT_BLOCKS_DEV_MODE constant
+ * 2. WP_ENVIRONMENT_TYPE (local/development)
+ * 3. Server hostname patterns
+ * 4. WP_DEBUG as fallback
+ */
+if ( ! defined( 'FT_BLOCKS_DEV_MODE' ) ) {
+    function ft_blocks_is_dev_environment() {
+        // 1. check wp environment type
+        if ( function_exists( 'wp_get_environment_type' ) ) {
+            $env_type = wp_get_environment_type();
+            if ( in_array( $env_type, array( 'local', 'development' ), true ) ) {
+                return true;
+            }
+        }
+
+        // 2. check server hostname patterns
+        $hostname = $_SERVER['HTTP_HOST'] ?? '';
+        $dev_patterns = array(
+            '.local',
+            '.test',
+            '.dev',
+            'localhost',
+            '127.0.0.1',
+            '::1',
+            '.ngrok.io',
+        );
+
+        foreach ( $dev_patterns as $pattern ) {
+            if (str_contains($hostname, $pattern)) {
+                return true;
+            }
+        }
+
+        // 3. fallback to WP_DEBUG
+        return defined( 'WP_DEBUG' ) && WP_DEBUG;
+    }
+
+    define( 'FT_BLOCKS_DEV_MODE', ft_blocks_is_dev_environment() );
+}
+
+/**
+ * get asset version for cache busting
+ *
+ * @param string $file_path absolute file path
+ * @return string version string
+ */
+if ( ! function_exists( 'ft_blocks_get_asset_version' ) ) {
+    function ft_blocks_get_asset_version( $file_path = '' ) {
+        // dev: use file modification time for instant cache busting
+        if ( FT_BLOCKS_DEV_MODE && ! empty( $file_path ) && file_exists( $file_path ) ) {
+            return (string) filemtime( $file_path );
+        }
+
+        // prod: use plugin version for stability
+        return FT_BLOCKS_VERSION;
+    }
+}
+
+/**
+ * get versioned asset from manifest with fallback.
+ *
+ * @param string $asset asset filename (e.g., 'animations.js', 'style.css').
+ * @return array {
+ *     asset information.
+ *
+ *     @type string $url     full url to the asset.
+ *     @type string $version version/hash for cache busting.
+ *     @type string $path    absolute file path.
+ * }
+ */
+if ( ! function_exists( 'ft_blocks_get_asset' ) ) {
+    function ft_blocks_get_asset( $asset ) {
+        static $manifest = null;
+
+        // load manifest once
+        if ( null === $manifest ) {
+            $manifest_file = FT_BLOCKS_PATH . 'build/manifest.json';
+
+            if ( file_exists( $manifest_file ) ) {
+                $manifest_content = file_get_contents( $manifest_file );
+                $manifest         = json_decode( $manifest_content, true );
+
+                // validate JSON decode
+                if ( json_last_error() !== JSON_ERROR_NONE ) {
+                    $manifest = array();
+
+                    if ( FT_BLOCKS_DEV_MODE ) {
+                        error_log( 'FT Blocks: invalid manifest.json - ' . json_last_error_msg() );
+                    }
+                }
+            } else {
+                $manifest = array();
+            }
+        }
+
+        // check if asset exists in manifest
+        if ( isset( $manifest[ $asset ] ) ) {
+            $manifest_entry = $manifest[ $asset ];
+            $asset_file     = $manifest_entry['file'] ?? $asset;
+            $asset_hash     = $manifest_entry['hash'] ?? null;
+
+            return array(
+                'url'     => FT_BLOCKS_URL . 'build/' . $asset_file,
+                'version' => $asset_hash ?? FT_BLOCKS_VERSION,
+                'path'    => FT_BLOCKS_PATH . 'build/' . $asset_file,
+            );
+        }
+
+        // fallback: asset not in manifest
+        $asset_path = FT_BLOCKS_PATH . 'build/' . $asset;
+
+        return array(
+            'url'     => FT_BLOCKS_URL . 'build/' . $asset,
+            'version' => ft_blocks_get_asset_version( $asset_path ),
+            'path'    => $asset_path,
+        );
+    }
+}
 
 /**
  * Load plugin configuration.
@@ -137,16 +260,21 @@ add_action( 'init', 'ft_blocks_init' );
  * @return void
  */
 if ( ! function_exists( 'ft_blocks_enqueue_global_styles' ) ) {
-	function ft_blocks_enqueue_global_styles() {
-		$version = filemtime( FT_BLOCKS_PATH . 'build/style-ft-blocks-global-styles.css' );
+    function ft_blocks_enqueue_global_styles() {
+        $asset = ft_blocks_get_asset( 'style-ft-blocks-global-styles.css' );
 
-		wp_enqueue_style(
-			'ft-blocks-global-styles',
-			FT_BLOCKS_URL . 'build/style-ft-blocks-global-styles.css',
-			array(),
-			$version
-		);
-	}
+        // only enqueue if file exists
+        if ( file_exists( $asset['path'] ) ) {
+            wp_enqueue_style(
+                'ft-blocks-global-styles',
+                $asset['url'],
+                array(),
+                $asset['version']
+            );
+        } elseif ( FT_BLOCKS_DEV_MODE ) {
+            error_log( 'FT Blocks: global styles file not found at ' . $asset['path'] );
+        }
+    }
 }
 
 add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_global_styles' );
@@ -223,10 +351,10 @@ if ( ! function_exists( 'ft_blocks_inject_colors_default' ) ) {
 
 		$data = $theme_json->get_data();
 
-		// Force-enable default palette processing (helps in some hybrid/classic setups)
+		// force-enable default palette processing (helps in some hybrid/classic setups)
 		$data['settings']['color']['defaultPalette'] = true;
 
-		// Merge into the 'theme' palette slot (visible in editor)
+		// merge into the 'theme' palette slot (visible in editor)
 		$current_palette = $data['settings']['color']['palette']['theme'] ?? array();
 		$existing_slugs  = array_column( $current_palette, 'slug' );
 
@@ -318,7 +446,12 @@ if ( ! function_exists( 'ft_blocks_enqueue_custom_color_classes' ) ) {
 			$css .= ".has-{$slug}-border-color { border-color: var(--wp--preset--color--{$slug}) !important; }\n\n";
 		}
 
-		wp_register_style( 'ft-blocks-custom-colors', false, array(), FT_BLOCKS_VERSION );
+        wp_register_style(
+            'ft-blocks-custom-colors',
+            false,
+            array(),
+            ft_blocks_get_asset_version()
+        );
 		wp_enqueue_style( 'ft-blocks-custom-colors' );
 		wp_add_inline_style( 'ft-blocks-custom-colors', $css );
 	}
@@ -333,38 +466,32 @@ add_action( 'enqueue_block_editor_assets', 'ft_blocks_enqueue_custom_color_class
  * @return void
  */
 if ( ! function_exists( 'ft_blocks_enqueue_scripts' ) ) {
-	function ft_blocks_enqueue_scripts() {
-		if ( is_admin() ) {
-			return;
-		}
+    function ft_blocks_enqueue_scripts() {
+        if ( is_admin() ) {
+            return;
+        }
 
-		$animations_script_path        = plugin_dir_path( __FILE__ ) . 'build/animations.asset.php';
-		$scroll_to_element_script_path = plugin_dir_path( __FILE__ ) . 'build/scroll-to-element.asset.php';
+        $build_dir = 'build';
+        $scripts = array(
+            'animations', 'scroll-to-element'
+        );
 
-		if ( file_exists( $animations_script_path ) ) {
-			$animations_asset = include $animations_script_path;
+        foreach ( $scripts as $script ) {
+            $script_asset_file = FT_BLOCKS_PATH . $build_dir . "/{$script}.asset.php";
+            $script_js_file    = $build_dir . "/{$script}.js";
 
-			wp_enqueue_script(
-				'ft-blocks-animations',
-				plugins_url( 'build/animations.js', __FILE__ ),
-				$animations_asset['dependencies'] ?? array(),
-				$animations_asset['version'] ?? FT_BLOCKS_VERSION,
-				true
-			);
-		}
+            if ( file_exists( $script_asset_file ) ) {
+                $script_asset = include $script_asset_file;
 
-		if ( file_exists( $scroll_to_element_script_path ) ) {
-			$scroll_to_element_asset = include $scroll_to_element_script_path;
-
-			wp_enqueue_script(
-				'ft-blocks-scroll-to-element',
-				plugins_url( 'build/scroll-to-element.js', __FILE__ ),
-				$scroll_to_element_asset['dependencies'] ?? array(),
-				$scroll_to_element_asset['version'] ?? FT_BLOCKS_VERSION,
-				true
-			);
-		}
-	}
-
+                wp_enqueue_script(
+                    "ft-blocks-{$script}",
+                    FT_BLOCKS_URL . "/${build_dir}/${script}.js",
+                    $script_asset['dependencies'] ?? array(),
+                    ft_blocks_get_asset_version( $script_js_file ),
+                    true
+                );
+            }
+        }
+    }
 }
 add_action( 'wp_enqueue_scripts', 'ft_blocks_enqueue_scripts' );
