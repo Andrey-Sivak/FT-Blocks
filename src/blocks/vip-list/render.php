@@ -24,6 +24,7 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 		$right_heading = $attributes['rightHeading'] ?? '';
 		$right_text    = $attributes['rightText'] ?? '';
 		$button        = $attributes['button'] ?? '';
+		$button2       = $attributes['button2'] ?? '';
 		$features      = $attributes['features'] ?? array();
 		$anchor_id     = $attributes['anchor'] ?? '';
 
@@ -75,15 +76,24 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 							</p>
 						<?php endif; ?>
 
-						<?php
-						echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							array(
-								'content'    => $button,
-								'base_class' => $block_class,
-								'variant'    => 'primary',
-							)
-						);
-						?>
+                        <div class="<?php echo esc_attr( $block_class . '__buttons'); ?>">
+                            <?php
+                            echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                                    array(
+                                            'content'    => $button,
+                                            'base_class' => $block_class,
+                                            'variant'    => 'primary',
+                                    )
+                            );
+                            echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                                    array(
+                                            'content'    => $button2,
+                                            'base_class' => $block_class,
+                                            'variant'    => 'primary',
+                                    )
+                            );
+                            ?>
+                        </div>
 					</div>
 				</div>
 

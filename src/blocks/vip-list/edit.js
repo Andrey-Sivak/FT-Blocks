@@ -22,7 +22,7 @@ const wave = config.decorativeVectors.wave;
  * @return {JSX.Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const { heading, leftText, rightHeading, rightText, button, features } =
+	const { heading, leftText, rightHeading, rightText, button, button2, features } =
 		attributes;
 	const { baseBlock, wrapper, container, h2, h3 } = config.classes;
 
@@ -119,14 +119,24 @@ export default function Edit( { attributes, setAttributes } ) {
 								'ft-blocks'
 							) }
 						/>
-						<FTButton
-							baseClass={ baseClass }
-							value={ button }
-							onChange={ ( value ) =>
-								setAttributes( { button: value } )
-							}
-							variant="primary"
-						/>
+						<div className={ `${ baseClass }__buttons` }>
+							<FTButton
+								baseClass={ baseClass }
+								value={ button }
+								onChange={ ( value ) =>
+									setAttributes( { button: value } )
+								}
+								variant="primary"
+							/>
+							<FTButton
+								baseClass={ baseClass }
+								value={ button2 }
+								onChange={ ( value ) =>
+									setAttributes( { button2: value } )
+								}
+								variant="primary"
+							/>
+						</div>
 					</div>
 				</div>
 
