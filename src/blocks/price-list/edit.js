@@ -162,18 +162,41 @@ export default function Edit( { attributes, setAttributes } ) {
 								/>
 							</div>
 
-							<RichText
-								tagName="p"
-								className={ `${ baseClass }__item-short-text` }
-								value={ item.shortText }
-								onChange={ ( value ) =>
-									updateItem( index, 'shortText', value )
-								}
-								placeholder={ __(
-									'Short description…',
-									'ft-blocks'
-								) }
-							/>
+							<div className={ `${ baseClass }__item-footer` }>
+								<RichText
+									tagName="p"
+									className={ `${ baseClass }__item-short-text` }
+									value={ item.shortText }
+									onChange={ ( value ) =>
+										updateItem( index, 'shortText', value )
+									}
+									placeholder={ __(
+										'Short description…',
+										'ft-blocks'
+									) }
+								/>
+
+								<div
+									className={ `${ baseClass }__item-details-wrap` }
+								>
+									<RichText
+										tagName="p"
+										className={ `${ baseClass }__item-details` }
+										value={ item.details }
+										onChange={ ( value ) =>
+											updateItem(
+												index,
+												'details',
+												value
+											)
+										}
+										placeholder={ __(
+											'Details…',
+											'ft-blocks'
+										) }
+									/>
+								</div>
+							</div>
 						</div>
 					) ) }
 
