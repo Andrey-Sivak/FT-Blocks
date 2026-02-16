@@ -103,20 +103,20 @@ if ( ! function_exists( 'ft_blocks_render_price_list_block' ) ) {
 
 							<?php if ( ! empty( $item['shortText'] ) ) : ?>
 								<footer class="<?php echo esc_attr( $block_class . '__item-footer' ); ?>">
-                                    <p class="<?php echo esc_attr( $block_class . '__item-short-text' ); ?>">
-                                        <?php echo wp_kses_post( $item['shortText'] ); ?>
-                                    </p>
+									<p class="<?php echo esc_attr( $block_class . '__item-short-text' ); ?>">
+										<?php echo wp_kses_post( $item['shortText'] ); ?>
+									</p>
 
-                                    <?php if ( ! empty( $item['details'] ) ) : ?>
-                                    <div class="<?php echo esc_attr( $block_class . '__item-details-wrap' ); ?>">
-                                        <p class="<?php echo esc_attr( $block_class . '__item-details' ); ?>">
-                                            <?php echo wp_kses_post( $item['details'] ); ?>
-                                        </p>
-                                        <p class="<?php echo esc_attr( $block_class . '__item-details-label' ); ?>">
-                                            <?php echo esc_html__( 'More details', 'ft-blocks' ); ?>
-                                        </p>
-                                    </div>
-                                    <?php endif; ?>
+									<?php if ( ! empty( $item['details'] ) ) : ?>
+									<div class="<?php echo esc_attr( $block_class . '__item-details-wrap' ); ?>">
+										<p class="<?php echo esc_attr( $block_class . '__item-details' ); ?>">
+											<?php echo wp_kses_post( $item['details'] ); ?>
+										</p>
+										<p class="<?php echo esc_attr( $block_class . '__item-details-label' ); ?>">
+											<?php echo esc_html__( 'More details', 'ft-blocks' ); ?>
+										</p>
+									</div>
+									<?php endif; ?>
 								</footer>
 							<?php endif; ?>
 						</article>

@@ -76,24 +76,24 @@ if ( ! function_exists( 'ft_blocks_render_vip_list_block' ) ) {
 							</p>
 						<?php endif; ?>
 
-                        <div class="<?php echo esc_attr( $block_class . '__buttons'); ?>">
-                            <?php
-                            echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                                    array(
-                                            'content'    => $button,
-                                            'base_class' => $block_class,
-                                            'variant'    => 'primary',
-                                    )
-                            );
-                            echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                                    array(
-                                            'content'    => $button2,
-                                            'base_class' => $block_class,
-                                            'variant'    => 'primary',
-                                    )
-                            );
-                            ?>
-                        </div>
+						<div class="<?php echo esc_attr( $block_class . '__buttons' ); ?>">
+							<?php
+							echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								array(
+									'content'    => $button,
+									'base_class' => $block_class,
+									'variant'    => 'primary',
+								)
+							);
+							echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								array(
+									'content'    => $button2,
+									'base_class' => $block_class,
+									'variant'    => 'primary',
+								)
+							);
+							?>
+						</div>
 					</div>
 				</div>
 
