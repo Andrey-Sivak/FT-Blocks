@@ -1,7 +1,7 @@
 'use strict';
 
 import Swiper from 'swiper';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'fslightbox';
 
 ( function () {
@@ -27,13 +27,9 @@ import 'fslightbox';
 			}
 
 			new Swiper( this.slider, {
-				modules: [ Pagination, Autoplay ],
+				modules: [ Pagination ],
 				slidesPerView: 1,
 				loop: true,
-				autoplay: {
-					delay: 3000,
-					speed: 1000,
-				},
 				grabCursor: true,
 				centeredSlides: false,
 				pagination: {
