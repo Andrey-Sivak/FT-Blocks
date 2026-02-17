@@ -10,8 +10,10 @@ import {
 import { PanelBody } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import config from '../../../config.json';
-import { ImageUploader, FTButton, ImagesSlider } from '../../components';
+import { ImageUploader, ImagesSlider } from '../../components';
 import './editor.scss';
+
+const instagramIcon = config.icons.instagram;
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -26,7 +28,8 @@ import './editor.scss';
 export default function Edit( { attributes, setAttributes } ) {
 	const [ previewImageIndex, setPreviewImageIndex ] = useState( 0 );
 
-	const { heading, content, button, images, backgroundImage } = attributes;
+	const { heading, content, instagramHandle, images, backgroundImage } =
+		attributes;
 	const { baseBlock, container, wrapper, h2 } = config.classes;
 
 	const baseClass = `${ baseBlock }-about-me`;
@@ -109,14 +112,28 @@ export default function Edit( { attributes, setAttributes } ) {
 								multiline="p"
 							/>
 
-							<div className={ `${ baseClass }__button-wrap` }>
-								<FTButton
-									baseClass={ baseClass }
-									value={ button }
+							<div
+								className={ `${ baseClass }__instagram-handle` }
+							>
+								<div
+									className={ `${ baseClass }__instagram-handle_icon` }
+									dangerouslySetInnerHTML={ {
+										__html: instagramIcon,
+									} }
+								/>
+								<RichText
+									tagName="p"
+									className={ `${ baseClass }__instagram-handle_text` }
+									value={ instagramHandle }
 									onChange={ ( value ) =>
-										setAttributes( { button: value } )
+										setAttributes( {
+											instagramHandle: value,
+										} )
 									}
-									variant="secondary"
+									placeholder={ __(
+										'instagram_handle',
+										'ft-blocks'
+									) }
 								/>
 							</div>
 						</div>

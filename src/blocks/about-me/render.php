@@ -15,11 +15,12 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 			'animated'       => $animation_class,
 			'animated-scale' => $animation_scale_class
 		] = ft_blocks_get_config_classes();
+        $instagram_icon = ft_blocks_get_config( 'icons.instagram' );
 
 		$block_class      = $base_class . '-about-me';
 		$heading          = $attributes['heading'] ?? '';
 		$content          = $attributes['content'] ?? '';
-		$button           = $attributes['button'] ?? '';
+		$instagram_handle = $attributes['instagramHandle'] ?? '';
 		$images           = $attributes['images'] ?? array();
 		$background_image = $attributes['backgroundImage'] ?? array();
 		$anchor_id        = $attributes['anchor'] ?? '';
@@ -85,18 +86,22 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 							</div>
 						<?php endif; ?>
 
-						<?php if ( ! empty( $button ) ) : ?>
-						<div class="<?php echo esc_attr( $animation_class ); ?>">
-							<?php
-							echo ft_blocks_render_button( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-								array(
-									'content'    => $button,
-									'base_class' => $block_class,
-									'variant'    => 'secondary',
-								)
-							);
-							?>
-						</div>
+						<?php if ( ! empty( $instagram_handle ) ) : ?>
+						<a
+                                href="https://www.instagram.com/<?php echo esc_attr( $instagram_handle ); ?>"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="<?php echo esc_attr( $block_class . '__instagram-handle ' . $animation_class ); ?>"
+                        >
+                            <div class="<?php echo esc_attr( $block_class . '__instagram-handle_icon' ); ?>">
+                                <?php echo wp_kses( $instagram_icon, ft_blocks_get_svg_allowed_html() ); ?>
+                            </div>
+                            <p
+                                    class="<?php echo esc_attr( $block_class . '__instagram-handle_text' ); ?>"
+                            >
+                                @<?php echo esc_attr( $instagram_handle ); ?>
+                            </p>
+						</a>
 						<?php endif; ?>
 					</div>
 				</div>
