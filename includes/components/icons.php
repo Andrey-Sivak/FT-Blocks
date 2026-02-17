@@ -79,6 +79,38 @@ if ( ! function_exists( 'ft_blocks_get_svg_allowed_html' ) ) {
 				'transform' => true,
 				'class'     => true,
 			),
+            'defs' => array(
+                'class' => true,
+                'id'    => true,
+            ),
+            'lineargradient' => array(
+                'id'                => true,
+                'x1'                => true,
+                'y1'                => true,
+                'x2'                => true,
+                'y2'                => true,
+                'gradientunits'     => true,
+                'gradienttransform' => true,
+                'spreadmethod'      => true,
+            ),
+            'radialgradient' => array(
+                'id'                => true,
+                'cx'                => true,
+                'cy'                => true,
+                'r'                 => true,
+                'fx'                => true,
+                'fy'                => true,
+                'xlink:href'        => true,
+                'href'              => true,
+                'gradientunits'     => true,
+                'gradienttransform' => true,
+                'spreadmethod'      => true,
+            ),
+            'stop' => array(
+                'offset'       => true,
+                'stop-color'   => true,
+                'stop-opacity' => true,
+            ),
 		);
 	}
 }
