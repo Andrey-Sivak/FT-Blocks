@@ -165,16 +165,16 @@
 				width: 36px;
 			}
 
-			&.ft-blocks-visible {
-				transform: scale3d(1, 1, 1) translate(-50%, -50%);
-			}
-
 			svg {
 				display: block;
 				max-width: 100%;
 				height: auto;
 			}
 		}
+	}
+
+	.ft-blocks-vip-list__feature-icon.ft-blocks-visible {
+		transform: scale3d(1, 1, 1) translate(-50%, -50%);
 	}
 
 	&__buttons {
