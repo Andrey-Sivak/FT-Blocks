@@ -28,7 +28,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 				slidesPerView: 1,
 				loop: true,
 				autoplay: {
-					delay: 7000,
+					delay: 8000,
 					speed: 1000,
 				},
 				grabCursor: true,
