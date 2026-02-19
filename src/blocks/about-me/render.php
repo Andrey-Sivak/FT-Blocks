@@ -14,8 +14,8 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 			'h2'             => $h2_class,
 			'animated'       => $animation_class,
 			'animated-scale' => $animation_scale_class
-		] = ft_blocks_get_config_classes();
-        $instagram_icon = ft_blocks_get_config( 'icons.instagram' );
+		]               = ft_blocks_get_config_classes();
+		$instagram_icon = ft_blocks_get_config( 'icons.instagram' );
 
 		$block_class      = $base_class . '-about-me';
 		$heading          = $attributes['heading'] ?? '';
