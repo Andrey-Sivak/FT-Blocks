@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'FT_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'FT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
-define( 'FT_BLOCKS_VERSION', '1.0.3' );
+define( 'FT_BLOCKS_VERSION', '1.0.4' );
 
 /**
  * Determine development mode based on multiple signals.
