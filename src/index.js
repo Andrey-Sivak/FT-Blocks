@@ -14,3 +14,4 @@ import './blocks/faq';
 import './blocks/cta-banner';
 import './blocks/testimonials';
 import './blocks/gallery';
+import './blocks/contact-form';

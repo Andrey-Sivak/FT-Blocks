@@ -204,6 +204,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Gallery', 'ft-blocks' ),
 				'description' => __( 'Display masonry grid images layout', 'ft-blocks' ),
 			),
+			'contact-form'      => array(
+				'title'       => __( 'Contact Form', 'ft-blocks' ),
+				'description' => __( 'Contact form block', 'ft-blocks' ),
+			),
 		);
 
 		foreach ( $blocks as $block => $args ) {

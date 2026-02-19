@@ -1,0 +1,212 @@
+@use "../../styles/fonts" as *;
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as *;
+@use "../../styles/mixins/container-query" as *;
+@use "../../styles/mixins/responsive-max-width" as *;
+
+.ft-blocks-contact-form {
+	$space-xl: clamp(30px, 2.982cqw + 20px, 60px);
+	$space-m: clamp(20px, 0.994cqw + 16px, 30px);
+	$space-s: clamp(10px, 0.994cqw + 6px, 20px);
+	padding-top: $space-xl;
+	padding-bottom: $space-xl;
+
+	&__form {
+		position: relative;
+		max-width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 24px 16px;
+		border-radius: 16px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+		@include responsive(ft-main, $bp-md) {
+			padding: 40px;
+		}
+
+		textarea {
+			height: 120px;
+			resize: horizontal;
+		}
+
+		textarea,
+		input[type="email"],
+		input[type="text"] {
+			background-color: #fff;
+			display: block;
+			width: 100%;
+			border: 1px solid colors.$border-color;
+			font-size: 16px;
+			line-height: 1.25;
+			transition: all ease 0.3s;
+			outline: none;
+			border-radius: 10px;
+			padding: 12px 16px;
+			color: #222;
+
+			@include responsive(ft-main, $bp-md) {
+				border-radius: 14px;
+				padding: 18px 20px;
+			}
+
+			&:focus,
+			&:focus-within,
+			&:active {
+				border: 1px solid colors.$terakotova;
+			}
+
+			&[aria-invalid="true"] {
+				border: 1px solid red;
+			}
+		}
+
+		input[type="submit"] {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.wpcf7-spinner {
+			display: none;
+		}
+
+		.wpcf7-not-valid-tip {
+			font-weight: 500;
+			position: absolute;
+			z-index: 50;
+			font-size: 13px;
+			top: 95%;
+			padding: 0 16px;
+			width: 100%;
+			max-width: 100%;
+			min-width: 100%;
+			display: block;
+			transform: translateY(-85%);
+
+			@container dm-main (min-width: #{$bp-md}) {
+				padding: 0 20px;
+				font-size: 14px;
+			}
+		}
+
+		.wpcf7-response-output {
+			width: 100%;
+			display: block;
+			margin: 20px 0 0 0 !important;
+			border: 1px solid red !important;
+			top: 100%;
+			border-radius: 6px;
+			background-color: rgba(255, 0, 0, 0.15);
+			font-size: 14px;
+
+			@container dm-main (min-width: #{$bp-md}) {
+				font-size: 16px;
+			}
+		}
+
+		&_loading,
+		&_success {
+			transition: all ease 0.3s;
+			opacity: 0;
+			z-index: -10;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: colors.$bezova-svetla;
+			width: 93%;
+			height: 93%;
+
+			.loader,
+			.success {
+				transition: all ease 0.3s;
+				transform: scale(0.75);
+				display: block;
+				height: auto;
+			}
+
+			.loader {
+				max-width: clamp(100px, 20%, 200px);
+			}
+		}
+
+		&_loading {
+
+			svg {
+
+				circle {
+					fill: colors.$terakotova;
+				}
+			}
+		}
+
+		&_success {
+			flex-direction: column;
+			gap: 20px;
+
+			&-text {
+				text-align: center;
+				font-size: 20px;
+				line-height: 1.21;
+				font-weight: 600;
+				color: colors.$terakotova;
+
+				@container dm-main (min-width: #{$bp-md}) {
+					font-size: 24px;
+				}
+
+				@container dm-main (min-width: #{$bp-xl}) {
+					font-size: 34px;
+				}
+			}
+
+			svg {
+				display: block;
+				max-width: 250px;
+				fill: colors.$terakotova;
+			}
+		}
+
+		&.ft-success {
+
+			.ft-blocks-contact-form__form_success {
+				opacity: 1;
+				z-index: 101;
+
+				.success {
+					transform: scale(1);
+				}
+			}
+		}
+
+		&.ft-loading {
+
+			.ft-blocks-contact-form__form_loading {
+				opacity: 1;
+				z-index: 100;
+
+				.loader {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	&__heading {
+		margin-top: 0;
+		text-align: center;
+		color: colors.$terakotova;
+		margin-bottom: $space-s;
+
+		@include responsive(ft-main, $bp-md) {
+			margin-bottom: $space-m;
+		}
+
+		@include responsive(ft-main, $bp-container) {
+			margin-bottom: $space-xl;
+		}
+	}
+}

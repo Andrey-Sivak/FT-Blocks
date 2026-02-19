@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ft-blocks/contact-form",
+  "version": "0.1.0",
+  "category": "ft-blocks",
+  "supports": {
+    "anchor": true,
+    "html": false,
+    "align": [ "full", "wide" ]
+  },
+  "attributes": {
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "formShortcode": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "ft-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view-script.js",
+  "render": "file:./render.php"
+}
