@@ -88,19 +88,19 @@ if ( ! function_exists( 'ft_blocks_render_about_me_block' ) ) {
 
 						<?php if ( ! empty( $instagram_handle ) ) : ?>
 						<a
-                                href="https://www.instagram.com/<?php echo esc_attr( $instagram_handle ); ?>"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="<?php echo esc_attr( $block_class . '__instagram-handle ' . $animation_class ); ?>"
-                        >
-                            <div class="<?php echo esc_attr( $block_class . '__instagram-handle_icon' ); ?>">
-                                <?php echo wp_kses( $instagram_icon, ft_blocks_get_svg_allowed_html() ); ?>
-                            </div>
-                            <p
-                                    class="<?php echo esc_attr( $block_class . '__instagram-handle_text' ); ?>"
-                            >
-                                @<?php echo esc_attr( $instagram_handle ); ?>
-                            </p>
+								href="https://www.instagram.com/<?php echo esc_attr( $instagram_handle ); ?>"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="<?php echo esc_attr( $block_class . '__instagram-handle ' . $animation_class ); ?>"
+						>
+							<div class="<?php echo esc_attr( $block_class . '__instagram-handle_icon' ); ?>">
+								<?php echo wp_kses( $instagram_icon, ft_blocks_get_svg_allowed_html() ); ?>
+							</div>
+							<p
+									class="<?php echo esc_attr( $block_class . '__instagram-handle_text' ); ?>"
+							>
+								@<?php echo esc_attr( $instagram_handle ); ?>
+							</p>
 						</a>
 						<?php endif; ?>
 					</div>
