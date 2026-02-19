@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-16T22:25:32+00:00\n"
+"POT-Creation-Date: 2026-02-19T23:13:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -52,6 +52,22 @@ msgstr ""
 #: build/blocks/blog-posts/render.php:160
 #: build/blocks/blog-posts/index.js:1
 msgid "No posts found."
+msgstr ""
+
+#: build/blocks/contact-form/render.php:49
+msgid "Loading form submission"
+msgstr ""
+
+#: build/blocks/contact-form/render.php:59
+msgid "Form submitted successfully!"
+msgstr ""
+
+#: build/blocks/contact-form/render.php:61
+msgid "I will get back to you soon ❤️"
+msgstr ""
+
+#: build/blocks/contact-form/render.php:64
+msgid "Form submitted successfully"
 msgstr ""
 
 #: build/blocks/price-list/render.php:116
@@ -173,7 +189,15 @@ msgstr ""
 msgid "Display masonry grid images layout"
 msgstr ""
 
-#: ft-blocks.php:285
+#: ft-blocks.php:208
+msgid "Contact Form"
+msgstr ""
+
+#: ft-blocks.php:209
+msgid "Contact form block"
+msgstr ""
+
+#: ft-blocks.php:289
 msgctxt "block category name"
 msgid "Fotografka Domča Blocks"
 msgstr ""
@@ -227,20 +251,6 @@ msgid "Remove image"
 msgstr ""
 
 #: build/blocks/about-me/index.js:1
-#: build/blocks/blog-posts/index.js:1
-#: build/blocks/cta-banner/index.js:1
-#: build/blocks/faq/index.js:1
-#: build/blocks/hero/index.js:1
-#: build/blocks/photo-shoot-types/index.js:1
-#: build/blocks/price-list/index.js:1
-#: build/blocks/process-steps/index.js:1
-#: build/blocks/service-info/index.js:1
-#: build/blocks/testimonials/index.js:1
-#: build/blocks/vip-list/index.js:1
-msgid "Button text"
-msgstr ""
-
-#: build/blocks/about-me/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/faq/index.js:1
 #: build/blocks/features/index.js:1
@@ -285,6 +295,7 @@ msgstr ""
 
 #: build/blocks/about-me/index.js:1
 #: build/blocks/blog-posts/index.js:1
+#: build/blocks/contact-form/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/faq/index.js:1
 #: build/blocks/features/index.js:1
@@ -299,6 +310,23 @@ msgstr ""
 
 #: build/blocks/about-me/index.js:1
 msgid "Enter your text here. You can use multiple paragraphs…"
+msgstr ""
+
+#: build/blocks/about-me/index.js:1
+msgid "instagram_handle"
+msgstr ""
+
+#: build/blocks/blog-posts/index.js:1
+#: build/blocks/cta-banner/index.js:1
+#: build/blocks/faq/index.js:1
+#: build/blocks/hero/index.js:1
+#: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/price-list/index.js:1
+#: build/blocks/process-steps/index.js:1
+#: build/blocks/service-info/index.js:1
+#: build/blocks/testimonials/index.js:1
+#: build/blocks/vip-list/index.js:1
+msgid "Button text"
 msgstr ""
 
 #: build/blocks/blog-posts/index.js:1
@@ -362,6 +390,22 @@ msgstr ""
 
 #: build/blocks/blog-posts/index.js:1
 msgid "Section label (e.g. \"Tips\")…"
+msgstr ""
+
+#: build/blocks/contact-form/index.js:1
+msgid "Contact Form 7 Shortcode"
+msgstr ""
+
+#: build/blocks/contact-form/index.js:1
+msgid "Enter the form shortcode, for example: [contact-form-7 id='123' title='Contact Form']"
+msgstr ""
+
+#: build/blocks/contact-form/index.js:1
+msgid "The form will be displayed on the website using the shortcode:"
+msgstr ""
+
+#: build/blocks/contact-form/index.js:1
+msgid "Add the Contact Form 7 shortcode to display the form."
 msgstr ""
 
 #: build/blocks/cta-banner/index.js:1

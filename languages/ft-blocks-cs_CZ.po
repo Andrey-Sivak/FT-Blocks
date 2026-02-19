@@ -118,7 +118,6 @@ msgstr "Zobrazit náhled"
 msgid "Add First Image"
 msgstr "Přidat první obrázek"
 
-#: build/blocks/about-me/index.js:1
 #: build/blocks/blog-posts/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/faq/index.js:1
@@ -138,6 +137,7 @@ msgstr "Zadejte dekorativní text"
 
 #: build/blocks/about-me/index.js:1
 #: build/blocks/blog-posts/index.js:1
+#: build/blocks/contact-form/index.js:1
 #: build/blocks/cta-banner/index.js:1
 #: build/blocks/faq/index.js:1
 #: build/blocks/features/index.js:1
@@ -494,7 +494,7 @@ msgstr "Reference"
 msgid "Display client testimonials in a slider with quotes and authors."
 msgstr "Zobrazit reference klientů v posuvníku s citáty a autory."
 
-#: ft-blocks.php:285
+#: ft-blocks.php:289
 msgctxt "block category name"
 msgid "Fotografka Domča Blocks"
 msgstr "Bloky Fotografka Domča"
@@ -546,3 +546,47 @@ msgstr "Podrobnosti…"
 #: build/blocks/price-list/view-script.js:1
 msgid "Hide details"
 msgstr "Skrýt podrobnosti"
+
+#: build/blocks/contact-form/render.php:49
+msgid "Loading form submission"
+msgstr "Odesílání formuláře..."
+
+#: build/blocks/contact-form/render.php:59
+msgid "Form submitted successfully!"
+msgstr "Formulář byl úspěšně odeslán!"
+
+#: build/blocks/contact-form/render.php:61
+msgid "I will get back to you soon ❤️"
+msgstr "Brzy se vám ozvu ❤️"
+
+#: build/blocks/contact-form/render.php:64
+msgid "Form submitted successfully"
+msgstr "Formulář úspěšně odeslán"
+
+#: ft-blocks.php:208
+msgid "Contact Form"
+msgstr "Kontaktní formulář"
+
+#: ft-blocks.php:209
+msgid "Contact form block"
+msgstr "Blok kontaktního formuláře"
+
+#: build/blocks/about-me/index.js:1
+msgid "instagram_handle"
+msgstr "Instagramový účet"
+
+#: build/blocks/contact-form/index.js:1
+msgid "Contact Form 7 Shortcode"
+msgstr "Shortcode pro Contact Form 7"
+
+#: build/blocks/contact-form/index.js:1
+msgid "Enter the form shortcode, for example: [contact-form-7 id='123' title='Contact Form']"
+msgstr "Zadejte shortcode formuláře, například: [contact-form-7 id='123' title='Kontaktní formulář']"
+
+#: build/blocks/contact-form/index.js:1
+msgid "The form will be displayed on the website using the shortcode:"
+msgstr "Formulář se na webu zobrazí pomocí shortcodu:"
+
+#: build/blocks/contact-form/index.js:1
+msgid "Add the Contact Form 7 shortcode to display the form."
+msgstr "Pro zobrazení formuláře vložte shortcode Contact Form 7."
