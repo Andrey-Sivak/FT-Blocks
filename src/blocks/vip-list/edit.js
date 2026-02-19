@@ -22,8 +22,15 @@ const wave = config.decorativeVectors.wave;
  * @return {JSX.Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const { heading, leftText, rightHeading, rightText, button, button2, features } =
-		attributes;
+	const {
+		heading,
+		leftText,
+		rightHeading,
+		rightText,
+		button,
+		button2,
+		features,
+	} = attributes;
 	const { baseBlock, wrapper, container, h2, h3 } = config.classes;
 
 	const baseClass = `${ baseBlock }-vip-list`;
