@@ -13,7 +13,7 @@ if ( ! function_exists( 'ft_blocks_get_svg_allowed_html' ) ) {
 	 */
 	function ft_blocks_get_svg_allowed_html(): array {
 		return array(
-			'svg'     => array(
+			'svg'            => array(
 				'class'               => true,
 				'xmlns'               => true,
 				'width'               => true,
@@ -29,7 +29,7 @@ if ( ! function_exists( 'ft_blocks_get_svg_allowed_html' ) ) {
 				'focusable'           => true,
 				'preserveaspectratio' => true,
 			),
-			'path'    => array(
+			'path'           => array(
 				'd'            => true,
 				'fill'         => true,
 				'stroke'       => true,
@@ -38,7 +38,7 @@ if ( ! function_exists( 'ft_blocks_get_svg_allowed_html' ) ) {
 				'clip-rule'    => true,
 				'class'        => true,
 			),
-			'circle'  => array(
+			'circle'         => array(
 				'cx'           => true,
 				'cy'           => true,
 				'r'            => true,
@@ -47,7 +47,7 @@ if ( ! function_exists( 'ft_blocks_get_svg_allowed_html' ) ) {
 				'stroke-width' => true,
 				'class'        => true,
 			),
-			'rect'    => array(
+			'rect'           => array(
 				'x'            => true,
 				'y'            => true,
 				'width'        => true,
@@ -59,7 +59,7 @@ if ( ! function_exists( 'ft_blocks_get_svg_allowed_html' ) ) {
 				'stroke-width' => true,
 				'class'        => true,
 			),
-			'line'    => array(
+			'line'           => array(
 				'x1'           => true,
 				'y1'           => true,
 				'x2'           => true,
@@ -68,49 +68,49 @@ if ( ! function_exists( 'ft_blocks_get_svg_allowed_html' ) ) {
 				'stroke-width' => true,
 				'class'        => true,
 			),
-			'polygon' => array(
+			'polygon'        => array(
 				'points' => true,
 				'fill'   => true,
 				'stroke' => true,
 				'class'  => true,
 			),
-			'g'       => array(
+			'g'              => array(
 				'fill'      => true,
 				'transform' => true,
 				'class'     => true,
 			),
-            'defs' => array(
-                'class' => true,
-                'id'    => true,
-            ),
-            'lineargradient' => array(
-                'id'                => true,
-                'x1'                => true,
-                'y1'                => true,
-                'x2'                => true,
-                'y2'                => true,
-                'gradientunits'     => true,
-                'gradienttransform' => true,
-                'spreadmethod'      => true,
-            ),
-            'radialgradient' => array(
-                'id'                => true,
-                'cx'                => true,
-                'cy'                => true,
-                'r'                 => true,
-                'fx'                => true,
-                'fy'                => true,
-                'xlink:href'        => true,
-                'href'              => true,
-                'gradientunits'     => true,
-                'gradienttransform' => true,
-                'spreadmethod'      => true,
-            ),
-            'stop' => array(
-                'offset'       => true,
-                'stop-color'   => true,
-                'stop-opacity' => true,
-            ),
+			'defs'           => array(
+				'class' => true,
+				'id'    => true,
+			),
+			'lineargradient' => array(
+				'id'                => true,
+				'x1'                => true,
+				'y1'                => true,
+				'x2'                => true,
+				'y2'                => true,
+				'gradientunits'     => true,
+				'gradienttransform' => true,
+				'spreadmethod'      => true,
+			),
+			'radialgradient' => array(
+				'id'                => true,
+				'cx'                => true,
+				'cy'                => true,
+				'r'                 => true,
+				'fx'                => true,
+				'fy'                => true,
+				'xlink:href'        => true,
+				'href'              => true,
+				'gradientunits'     => true,
+				'gradienttransform' => true,
+				'spreadmethod'      => true,
+			),
+			'stop'           => array(
+				'offset'       => true,
+				'stop-color'   => true,
+				'stop-opacity' => true,
+			),
 		);
 	}
 }
