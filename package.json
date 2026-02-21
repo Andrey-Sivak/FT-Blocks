@@ -8,6 +8,7 @@
 	"files": [
 		"build/",
 		"includes/",
+		"templates/",
 		"languages/",
 		"config.json",
 		"ft-blocks.php",
