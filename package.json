@@ -9,6 +9,7 @@
 		"build/",
 		"includes/",
 		"templates/",
+		"images/",
 		"languages/",
 		"config.json",
 		"ft-blocks.php",
