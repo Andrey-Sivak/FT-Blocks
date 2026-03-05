@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-19T23:13:05+00:00\n"
+"POT-Creation-Date: 2026-03-05T19:16:21+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ft-blocks\n"
@@ -162,6 +162,7 @@ msgid "FAQ"
 msgstr ""
 
 #: ft-blocks.php:193
+#: ft-blocks.php:213
 msgid "Display frequently asked questions with accordions."
 msgstr ""
 
@@ -197,7 +198,11 @@ msgstr ""
 msgid "Contact form block"
 msgstr ""
 
-#: ft-blocks.php:289
+#: ft-blocks.php:212
+msgid "Post FAQ"
+msgstr ""
+
+#: ft-blocks.php:293
 msgctxt "block category name"
 msgid "Fotografka Domča Blocks"
 msgstr ""
@@ -256,6 +261,7 @@ msgstr ""
 #: build/blocks/features/index.js:1
 #: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/post-faq/index.js:1
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
@@ -301,6 +307,7 @@ msgstr ""
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/post-faq/index.js:1
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
@@ -418,22 +425,27 @@ msgid "Add Button"
 msgstr ""
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Question…"
 msgstr ""
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Remove item"
 msgstr ""
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Answer…"
 msgstr ""
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Add Question"
 msgstr ""
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Add First Question"
 msgstr ""
 

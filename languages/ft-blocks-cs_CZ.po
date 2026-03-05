@@ -143,6 +143,7 @@ msgstr "Zadejte dekorativní text"
 #: build/blocks/features/index.js:1
 #: build/blocks/hero/index.js:1
 #: build/blocks/photo-shoot-types/index.js:1
+#: build/blocks/post-faq/index.js:1
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
@@ -201,6 +202,7 @@ msgstr "Zadejte text…"
 #: build/blocks/features/index.js:1
 #: build/blocks/gallery/index.js:1
 #: build/blocks/hero/index.js:1
+#: build/blocks/post-faq/index.js:1
 #: build/blocks/price-list/index.js:1
 #: build/blocks/process-steps/index.js:1
 #: build/blocks/service-info/index.js:1
@@ -371,6 +373,7 @@ msgid "FAQ"
 msgstr "Časté dotazy"
 
 #: ft-blocks.php:193
+#: ft-blocks.php:213
 msgid "Display frequently asked questions with accordions."
 msgstr "Zobrazení často kladených dotazů pomocí akordeonu."
 
@@ -459,22 +462,27 @@ msgid "Remove button"
 msgstr "Odebrat tlačítko"
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Question…"
 msgstr "Otázka…"
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Remove item"
 msgstr "Odebrat položku"
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Answer…"
 msgstr "Odpověď…"
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Add Question"
 msgstr "Přidat otázku"
 
 #: build/blocks/faq/index.js:1
+#: build/blocks/post-faq/index.js:1
 msgid "Add First Question"
 msgstr "Přidat první otázku"
 
@@ -494,7 +502,7 @@ msgstr "Reference"
 msgid "Display client testimonials in a slider with quotes and authors."
 msgstr "Zobrazit reference klientů v posuvníku s citáty a autory."
 
-#: ft-blocks.php:289
+#: ft-blocks.php:293
 msgctxt "block category name"
 msgid "Fotografka Domča Blocks"
 msgstr "Bloky Fotografka Domča"
@@ -590,3 +598,7 @@ msgstr "Formulář se na webu zobrazí pomocí shortcodu:"
 #: build/blocks/contact-form/index.js:1
 msgid "Add the Contact Form 7 shortcode to display the form."
 msgstr "Pro zobrazení formuláře vložte shortcode Contact Form 7."
+
+#: ft-blocks.php:212
+msgid "Post FAQ"
+msgstr "Časté dotazy k příspěvku"

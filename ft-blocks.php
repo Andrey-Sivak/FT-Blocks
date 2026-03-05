@@ -208,6 +208,10 @@ if ( ! function_exists( 'ft_blocks_init' ) ) {
 				'title'       => __( 'Contact Form', 'ft-blocks' ),
 				'description' => __( 'Contact form block', 'ft-blocks' ),
 			),
+            'post-faq'               => array(
+                'title'       => __( 'Post FAQ', 'ft-blocks' ),
+                'description' => __( 'Display frequently asked questions with accordions.', 'ft-blocks' ),
+            ),
 		);
 
 		foreach ( $blocks as $block => $args ) {
