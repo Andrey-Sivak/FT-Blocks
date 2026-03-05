@@ -1,0 +1,90 @@
+@use "../../styles/mixins/container-query" as *;
+@use "../../styles/breakpoints" as *;
+@use "../../styles/colors" as colors;
+@use "../../styles/fonts" as fonts;
+
+.single-post-content .ft-blocks-post-cta,
+.ft-blocks-post-cta {
+  margin: 40px 0 20px;
+  border-radius: 16px;
+  background-color: colors.$bezova-svetla;
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 16px;
+
+  @include responsive(ft-main, $bp-md) {
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  @include responsive(ft-main, $bp-lg) {
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  &__decorative-image {
+    position: absolute;
+    z-index: 20;
+    margin: 0;
+    width: 100px;
+    top: -20px;
+    left: -16px;
+
+    @include responsive(ft-main, $bp-md) {
+      width: 130px;
+      top: -26px;
+      left: -20px;
+    }
+
+    @include responsive(ft-main, $bp-lg) {
+      width: 180px;
+      top: -36px;
+      left: -27px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+
+  &__subheading {
+    color: colors.$terakotova;
+    font-family: fonts.$Allura;
+    font-size: 24px;
+    line-height: 1;
+
+    @include responsive(ft-main, $bp-md) {
+      font-size: 28px;
+    }
+
+    @include responsive(ft-main, $bp-lg) {
+      font-size: 32px;
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include responsive(ft-main, $bp-md) {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      display: block;
+    }
+  }
+}
